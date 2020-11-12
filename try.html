@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background: url(/img/tribute.jpg);
+            width: 600px;
+            height: 600px;
+        }
+        .bg_blur{
+            background: url(/img/tribute.jpg);
+            width: 100%;
+            filter: blur(15px);
+        }
+        .content{
+            position: absolute;
+            text-align: center;
+            top: 0;
+            right: 0;
+            left: 0;
+            line-height: 600px;
+        }    
+        
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="bg bg_blur"></div>
+        <div class="content">我是內容</div>
+    </div>
+</body>
+</html>
