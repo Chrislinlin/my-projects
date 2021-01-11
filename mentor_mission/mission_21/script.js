@@ -24,6 +24,22 @@ function isValidEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+// Get fieldname
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+// Check required fields
+function checkRequired(inputArr) {
+    inputArr.forEach(function(input) {
+        if(input.value.trim() === ''){
+            showError(input, `${getFieldName(input)} is required`);
+        } else {
+            showSuccess(input);
+        }
+    });
+}
+
 
 // Eventlistener
 form.addEventListener('submit', function(e) {
@@ -53,4 +69,6 @@ form.addEventListener('submit', function(e) {
     } else {
         showSuccess(password2);
     }
+
+    checkRequired([username, email, password, password2]);
 }) 
