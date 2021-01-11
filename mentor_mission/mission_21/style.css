@@ -42,7 +42,7 @@ h2{
     padding: 10px;
     font-size: 14px;
 }
-.form-group.success input{
+.form-group.success input{ /*要是是指form-group 旁的class 點旁邊不能有空格*/
     border-color: var(--success-color);
 }
 .form-group.error input{
