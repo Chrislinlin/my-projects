@@ -66,38 +66,49 @@ function checkPasswordMatch(input1, input2) {
 
 
 // Eventlistener
-form.addEventListener('submit', function(e) {
+// form.addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     if(username.value === '') {
+//         showError(username, 'Username is required');
+//     } else {
+//         showSuccess(username);
+//     }
+
+//     if(inpit === '') {
+//         showError(email, 'Email is required');
+//     }else if(!isValidEmail(email.value)){
+//         showError(email, 'Email is not valid');
+//     } else {
+//         showSuccess(email);
+//     }
+
+//     if(password.value === '') {
+//         showError(password, 'Password is required');
+//     } else {
+//         showSuccess(password);
+//     }
+
+//     if(password2.value === '') {
+//         showError(password2, 'Password2 is required');
+//     } else {
+//         showSuccess(password2);
+//     }
+
+//     checkRequired([username, email, password, password2]);
+//     checkLength(username, 3, 15);
+//     checkLength(password, 8, 16);
+//     isValidEmail(email);
+    
+
+// }) 
+form.addEventListener('keyup',function(e){
     e.preventDefault();
-    if(username.value === '') {
-        showError(username, 'Username is required');
-    } else {
-        showSuccess(username);
-    }
-
-    if(email.value === '') {
-        showError(email, 'Email is required');
-    }else if(!isValidEmail(email.value)){
-        showError(email, 'Email is not valid');
-    } else {
-        showSuccess(email);
-    }
-
-    if(password.value === '') {
-        showError(password, 'Password is required');
-    } else {
-        showSuccess(password);
-    }
-
-    if(password2.value === '') {
-        showError(password2, 'Password2 is required');
-    } else {
-        showSuccess(password2);
-    }
-
     checkRequired([username, email, password, password2]);
     checkLength(username, 3, 15);
     checkLength(password, 8, 16);
     isValidEmail(email);
+    if(!checkRequired([password, password2])){
+    checkLength(password, 8, 16);
     checkPasswordMatch(password, password2);
-
-}) 
+    }
+})
