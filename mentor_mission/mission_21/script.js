@@ -1,20 +1,21 @@
-const form = $('#form');
-const username = $('#username');
-const email = $('#email');
-const password = $('#password');
-const password2 = $('#password2');
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
 
-//show input error message
-function showError(input, message){
+// Show input error message
+function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control error';
-    const small = $('small');
+    const small = formControl.querySelector('small');
     small.innerText = message;
 }
 
+// Show success outline
 function showSuccess(input){
     const formControl = input.parentElement;
-    formControl.className = 'form-control success'
+    formControl.className = 'form-control success';
 }
 
 // Check email is valid
@@ -23,34 +24,33 @@ function isValidEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-//event listenter
-form.submit(function(e){
-    e.preventDefault;
-    // console.log(123)
-    if(username.val() === ''){
-        
-        showError(username , "Username is required")
-    }else{
+
+// Eventlistener
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if(username.value === '') {
+        showError(username, 'Username is required');
+    } else {
         showSuccess(username);
     }
 
-    if(email.val() ===''){
-        showError(email, "Email is valid")
+    if(email.value === '') {
+        showError(email, 'Email is required');
     }else if(!isValidEmail(email.value)){
         showError(email, 'Email is not valid');
-    }else{
-        showSuccess(email)
+    } else {
+        showSuccess(email);
     }
 
-    if(password.val() === ''){
-        showError(password, "Password is required")
-    }else{
+    if(password.value === '') {
+        showError(password, 'Password is required');
+    } else {
         showSuccess(password);
     }
 
-    if(password2.val() === ''){
-        showError(password, "Password2 is required")
-    }else{
-        showSuccess(password);
+    if(password2.value === '') {
+        showError(password2, 'Password2 is required');
+    } else {
+        showSuccess(password2);
     }
-})
+}) 
