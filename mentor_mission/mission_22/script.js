@@ -33,3 +33,14 @@ let ticketPrice = +$('#movie').val();//jquery沒有'.value" 只有val()
         $('#total').text(selectedSeatsCount * ticketPrice) ;
     });
 }
+//3. movie select event
+$('#movie').change(function(e){
+    ticketPrice = $(e.target).val();
+    setMovieData(e.target.selectedIndex, $(e.target).val()); //這個selectedIndex在哪
+    updateSelectedCount();
+})
+//4. save selected index movie and the price
+function setMovieData(movieIndex, moviePrice){
+    localStorage.setItem('selectMovieIndex', movieIndex);
+    localStorage.setItem('selectMoviePrice', moviePrice);
+};
