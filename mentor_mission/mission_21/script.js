@@ -101,6 +101,18 @@ function checkPasswordMatch(input1, input2) {
     
 
 // }) 
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    checkRequired([username, email, password, password2]);
+    checkLength(username, 3, 15);
+    checkLength(password, 8, 16);
+    isValidEmail(email);
+    if(!checkRequired([password, password2])){
+    checkLength(password, 8, 16);
+    checkPasswordMatch(password, password2);
+    }
+})
+
 form.addEventListener('keyup',function(e){
     e.preventDefault();
     checkRequired([username, email, password, password2]);
