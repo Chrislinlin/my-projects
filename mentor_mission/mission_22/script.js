@@ -36,7 +36,7 @@ let ticketPrice = +$('#movie').val();//jquery沒有'.value" 只有val()
 //3. movie select event
 $('#movie').change(function(e){
     ticketPrice = $(e.target).val();
-    setMovieData(e.target.selectedIndex, $(e.target).val()); //這個selectedIndex在哪
+    setMovieData(e.target.selectedIndex, $(e.target).val()); 
     updateSelectedCount();
 })
 //4. save selected index movie and the price
@@ -44,3 +44,24 @@ function setMovieData(movieIndex, moviePrice){
     localStorage.setItem('selectMovieIndex', movieIndex);
     localStorage.setItem('selectMoviePrice', moviePrice);
 };
+//5. get data from locatStorage and populate UI
+function populateUI(){
+    const selectedSeats = JSON.parse(window.localStorage.getItem('selectedSeats'));
+
+    console.log(selectedSeats);
+
+    //將localStorage的資料加入 selected屬性
+    if(selectedSeats !== null && selectedSeats.length >0){
+        seats.each(function(index, seat){
+            //indexOf> -1代表該資料在arr 中
+            if(selectedSeats.indexOf(index)>-1){
+                seat.classList.add('selected');
+            }
+        });
+    }// 在jquery裡 foreach的方式是 .each(function(index,element))和JS相反，js是foreach(function(element, index))
+
+    const selectedMovieIndex =window.localStorage.getItem('selectedMovieIndex');
+    if(selectedMovieIndex !== null){
+        $('#movie').selectedIndex = selectedMovieIndex;
+    };
+}
