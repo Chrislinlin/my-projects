@@ -1,8 +1,10 @@
 $(document).ready(function(){
     $("#form").find('button').click(function(e){
         e.preventDefault();
-        console.log('good');
-        addItem(123,123);
+        // console.log('good');
+        var name = $('#text').val();
+        var amount = $('#number').val();
+        addItem(name, amount);
     })
 })
 
@@ -18,3 +20,5 @@ function addItem(name, amount){
 function clearForm(){
     $('#form').find("input").val("");
 }
+
+//get form value
