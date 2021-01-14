@@ -28,4 +28,14 @@ $('#amout-two').change(function() {
     calculate();
 });
 
+//swap click event
+$('#swap').click(function() {
+    const temp = $('#currency-one').val();
+    $('#currency-one').val($('#currency-two').val());
+    $('#currency-two').val(temp);
+    calculate();
+})
+calculate(); 
+
+
 
