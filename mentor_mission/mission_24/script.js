@@ -1,10 +1,18 @@
 $(document).ready(function(){
+    var transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+    if(transactions.length >0){
+        initHistory(transactions);
+    }
+
     $("#form").find('button').click(function(e){
         e.preventDefault();
         // console.log('good');
         var name = $('#text').val();
         var amount = $('#number').val();
         addItem(name, amount);
+        //push（）讓陣列可以丟進內容
+        transactions.push({name: name, amount: amount});
+        localStorage.setItem('transactions', JSON.stringify(transactions));
     })
 })
 
@@ -24,4 +32,9 @@ function clearForm(){
     $('#form').find("input").val("");
 }
 
+function initHistory(transactions){
+    transactions.forEach(function(item){
+        addItem(item.name, item.amount)
+    })
+}
 
