@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    var transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+    var transactions = JSON.parse(localStorage.getItem('myTransactions')) || [];
+
     if(transactions.length >0){
         initHistory(transactions);
     }
@@ -9,21 +10,29 @@ $(document).ready(function(){
         // console.log('good');
         var name = $('#text').val();
         var amount = $('#number').val();
-        addItem(name, amount);
+        var id = generateID()
+        addItem(name, amount, id);
         //push（）讓陣列可以丟進內容
-        transactions.push({name: name, amount: amount});
-        localStorage.setItem('transactions', JSON.stringify(transactions));
+        transactions.push({id: id, name: name, amount: amount});
+        localStorage.setItem('myTransactions', JSON.stringify(transactions));
     })
 })
+
+//function generateID random ID
+function generateID(){
+    return Math.floor(Math.random()*1000000)
+};
 
 //add item in history
 function addItem(name, amount){
 
-    item_str = '<li class ="plus">'+name+'<span>'+amount+'</span>'+'<button class = "delete-btn">x</button>';
+    item_str = '<li class ="plus">'+name+'<span>'+amount+'</span>'+'<button class = "delete-btn" data-id="">x</button>';
     $('#list').append(item_str)
     clearForm();
     $('.delete-btn').last().click(function(){
         $(this).parent().remove();
+        var id =$(this).data('id');
+        console.log("delete id: ",id)
     })
 }
 
@@ -34,7 +43,7 @@ function clearForm(){
 
 function initHistory(transactions){
     transactions.forEach(function(item){
-        addItem(item.name, item.amount)
+        addItem(item.name, item.amount, item.id)
     })
 }
 
