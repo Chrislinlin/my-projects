@@ -96,3 +96,6 @@ margin: 20px 0;
   cursor: default; /*showcase的不要有指標跟放大*/
   transform: scale(1);
 }
+.text{
+    color: #fff;
+}
