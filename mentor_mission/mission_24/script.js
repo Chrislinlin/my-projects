@@ -28,20 +28,30 @@ function generateID(){
 //add item in history
 function addItem(name, amount, id ,transactions){
     // console.log(id);
-    var item_str = '<li class ="plus">'+name+'<span>'+amount+'</span>'+'<button class = "delete-btn" data-id="'+id+'">x</button>';
+    
+    var item_str = '<li class =minus>'+name+'<span>'+amount+'</span>'+'<button class = "delete-btn" data-id="'+id+'">x</button>';
     $('#list').append(item_str)
+    
+    if(amount>0){
+        $('li').toggleClass('minus')
+        $('li').addClass('plus')
+    }
+    
+    // $("li").addClass(amount>0 ? 'plus' : 'minus');
     clearForm();
     $('.delete-btn').last().click(function(){
         $(this).parent().remove();
         var id =$(this).data('id');
         console.log("delete id: ",id)
         deleteItemFormLocalstorage(transactions, id);
+        updateValues();
     })
 }
 
 //clear transaction
 function clearForm(){
     $('#form').find("input").val("");
+    
 }
 
 function initHistory(transactions){
@@ -66,17 +76,17 @@ function updateValues() {
         .map(function(transaction) {
             return transaction.amount;
         })
-        console.log(amounts)
+        // console.log(amounts)
     // reduce()方法：累加陣列中數值
-    // https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+
     
     const total = parseFloat(amounts
-        .map(Number)
+        .map(Number) //單純的amount是字串陣列
         .reduce((function(accumulator, item_str) {
             return accumulator += item_str;    // accumulator = accumulator + item;
         }),0))
         .toFixed(2);
-        console.log(total)
+        // console.log(total)
         
     // filter()方法： 經過內部函式處理後，將通過之元素回傳為新陣列
     // https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -85,9 +95,10 @@ function updateValues() {
             return item_str > 0;
         })
         .reduce((function(accumulator, item_str) {
-            return accumulator += item_str;    
-        }),0))
+            return accumulator -= item_str;    
+        }),0))*-1
         .toFixed(2);
+        console.log(income)
     const expense = parseFloat((amounts
         .filter(function(item_str) {
         return item_str < 0;
@@ -96,7 +107,7 @@ function updateValues() {
             return accumulator -= item_str;    //acc=acc-item
         }),0) * -1))
         .toFixed(2);  
-        console.log(expense) 
+        // console.log(expense) 
 
         $('#balance').text(`$${total}`);
         $('#money-plus').text(`$${income}`);
