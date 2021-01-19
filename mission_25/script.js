@@ -62,7 +62,7 @@ function pauseSong(){
     audio.pause();
     
 }
-
+// prev/ nextSong() click event
 prevBtn.click(function(){
     prevSong();
 })
@@ -89,3 +89,36 @@ function nextSong(){
     playSong();
 
 }
+
+
+//progressBar click event
+progressContainer.click(function(e){
+    setProgress(e);
+})
+function setProgress(e){
+    const width = $('#progress-container').width(); 
+    // console.log(width);
+    //指滑鼠點擊到進度條上的位置
+    const offsetX = $(e.target).offset().left;
+    // console.log(clickX);
+    const totalX = e.pageX 
+    //音樂總時間
+    const duration = audio.duration;
+    const percent = ((totalX -offsetX)/duration);
+ 
+    $('#audio')[0].currentTime = percent * duration
+
+    // audio.currentTimePercent = (clickX/width) ;
+}
+// timeupdate event 
+$('#audio').on('timeupdate', function() {
+    const duration = $('#audio')[0].duration
+    const currentTime = $('#audio')[0].currentTime
+    const progressPercent = (currentTime / duration) * 100;
+    $('#progress').css('width', `${progressPercent}%`)
+})
+
+//進度條點哪去哪的點擊事件
+progressContainer.click(function(){
+    setProgress()
+})
