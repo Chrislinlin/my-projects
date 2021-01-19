@@ -21,9 +21,9 @@ loadSong(songs[songIndex])
 
 function loadSong(song){
     title.text(song);
-    console.log(title.text)
+    // console.log(title.text)
     audio.src = `music/${song}.mp3`
-    cover.src = `images/${song}.jpg`
+    cover.src = `images/${song}.jpg`;
 }
 
 //event play/ pause click
@@ -61,4 +61,31 @@ function pauseSong(){
     playBtn.find('i.fas').addClass('fa-play');
     audio.pause();
     
+}
+
+prevBtn.click(function(){
+    prevSong();
+})
+nextBtn.click(function(){
+    nextSong();
+})
+function prevSong(){
+    songIndex--;
+    console.log(songIndex)
+    //不然index會一直小下去但原本的index只有 0,1,2
+    if(songIndex< 0){
+        songIndex = songs.length -1
+    }
+    loadSong(songs[songIndex]);
+    playSong()
+
+}
+function nextSong(){
+    songIndex++;
+    if(songIndex> songs.length -1){//因為songIndex為2，但長度為3
+        songIndex = 0 //當他大於的時候就回到第一首
+    }
+    loadSong(songs[songIndex]);
+    playSong();
+
 }
