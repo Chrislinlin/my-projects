@@ -47,7 +47,7 @@ body{
     width: inherit;
     position: absolute;
     animation: rotate 3s linear infinite;
-    /* animation-play-state: paused; 狀態是暫停的 */
+    animation-play-state: paused; /*狀態是暫停的*/
     bottom: 0;
     left: 0;
     object-fit: cover;
@@ -93,11 +93,15 @@ body{
     width: calc(100% - 40px);
     padding: 10px 10px 10px 150px;
     opacity: 0;
-    /* transform: translateY(0%);
-    transition: transform 0.3s ease-in, opacity 0.3s ease-in; */
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
     z-index: 0;
 
 }
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
 .music-info h4 {
     margin: 0;
  }

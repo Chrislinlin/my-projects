@@ -9,8 +9,24 @@ const progressContainer = $('#progress-container')
 
 // Song titles
 const songs = ['hey', 'summer', 'ukulele'];
+//因為是三首歌所以song index為2
+let songIndex = 2;
 
-//event click
+
+//load song into DOM
+loadSong(songs[songIndex])
+//songs[0] -> hey
+//songs[1] -> summer
+//songs[2] -> ukulele
+
+function loadSong(song){
+    title.text(song);
+    console.log(title.text)
+    audio.src = `music/${song}.mp3`
+    cover.src = `images/${song}.jpg`
+}
+
+//event play/ pause click
 playBtn.click(function(){
     const isPlaying = musicContainer.hasClass('play');
     // console.log(isPlaying);
@@ -21,6 +37,13 @@ playBtn.click(function(){
         playSong();
     }
 });
+
+//event prevSong click
+prevBtn.click(function(){
+    prevSong();
+});
+
+
 
 //play song
 function playSong(){
