@@ -122,3 +122,15 @@ $('#audio').on('timeupdate', function() {
 progressContainer.click(function(){
     setProgress()
 })
+// end song
+$('#audio').on('ended', function() {
+    nextSong();
+})
+function nextSong(){
+    songIndex++;
+    if(songIndex> songs.length-1){
+        songIndex = 0;
+    }
+    loadSong(songs[songIndex]);
+    playSong();
+}
