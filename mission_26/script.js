@@ -54,6 +54,10 @@ function showLoading(){
     setTimeout(function(){
         loading.removeClass('show')
     },1000);
+    setTimeout(function(){
+        page++
+        showPost();
+    },200)
     }
 showPost();
 
