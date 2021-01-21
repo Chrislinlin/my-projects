@@ -67,3 +67,27 @@ $(window).scroll(function(){
     }
 })
 
+//search in input
+$('input').on('input',function(){
+    filterSearch();
+});
+
+function filterSearch(){
+    const text = $('input').val().toLowerCase();
+    $('.post').css('display','none')
+    $(`.post:contains('${text}')`).css('display','flex')
+    ;
+    // const title = $('.post-title').text().toLowerCase();
+    // const body = $('.post-body').text().toLowerCase();
+    
+    // console.log(text);
+    // if(title.indexOf(text)>-1 || body.indexOf(text)>-1){
+    //     // $('.post').css('display','none');
+        
+    
+    //     $('.post').css('display','flex')
+     
+    // }else{
+    //     $('.post').css('display','none');
+    // }
+}
