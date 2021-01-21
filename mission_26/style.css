@@ -68,6 +68,11 @@ h1{
     display: flex;
     position: fixed;
     bottom: 50px;
+    opacity: 0;
+}
+/*定時器時間到才顯示出來*/
+.loader.show{
+    opacity: 1;
 }
 .circle{
     background-color: #fff;
