@@ -31,6 +31,9 @@ let score =0;
 //init time
 let time = 10;
 
+//init difficulty
+let difficulty = 'medium';
+
 //當畫面reload，滑鼠游標自動帶到input
 $('#text').focus();
 
@@ -76,9 +79,16 @@ $('#text').on('input',function(e){
         updateTime()
     }
 })
-//Setting btn click
+//Setting btn click event
+//有設定css 屬性transform: translateY(-100)
 $('#settings-btn').click(function(){
     $('#settings').toggleClass('hide');
+})
+
+//setting select
+$('#settings-form').change(function(e){
+    difficulty = $(e.target).val()
+    console.log(difficulty)
 })
 
 //start counting down
