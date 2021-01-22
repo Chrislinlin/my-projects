@@ -58,6 +58,9 @@ $('#text').on('input',function(e){
     let randomWord = $('h1').text();
     if(insertText == randomWord ){
         // console.log("yes!")
-        RandomWord()
+        RandomWord();
+
+        //clear
+        $(e.target).val('');
     }
 })
