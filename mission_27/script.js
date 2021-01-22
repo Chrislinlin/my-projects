@@ -54,7 +54,7 @@ function RandomWord() {
 }
 
 
-//event listener
+//Typing event listener
 $('#text').on('input',function(e){
     const insertText = $(e.target).val();
     // console.log(insertText)
@@ -69,11 +69,18 @@ $('#text').on('input',function(e){
         score++;
         $('#score').text(score);
         }
-
         //每打完一個字，clear input
         $(e.target).val('');
+        //update time by 5s
+        time +=5;
+        updateTime()
     }
 })
+//Setting btn click
+$('#settings-btn').click(function(){
+    $('#settings').toggleClass('hide');
+})
+
 //start counting down
 const timeInterval = setInterval(updateTime, 1000);
 
