@@ -31,8 +31,12 @@ let score =0;
 //init time
 let time = 10;
 
-//init difficulty
-let difficulty = 'medium';
+//設定困難度是由設定在localstorage的困難度還是'medium'
+// let difficulty = 'medium';
+let difficulty = localStorage.getItem('difficulty') !==null? localStorage.getItem('difficulty') : 'medium';
+
+//set difficulty select value
+$('#difficulty').val(localStorage.getItem('difficulty') !==null? localStorage.getItem('difficulty') : 'medium');
 
 //當畫面reload，滑鼠游標自動帶到input
 $('#text').focus();
@@ -74,8 +78,15 @@ $('#text').on('input',function(e){
         }
         //每打完一個字，clear input
         $(e.target).val('');
-        //update time by 5s
-        time +=5;
+        //set the difficulty level by time
+        if(difficulty === 'hard'){
+            time +=2;
+        }else if(difficulty === 'medium'){
+            time +=4;
+        }else{
+            time +=6;
+        }
+      
         updateTime()
     }
 })
@@ -88,7 +99,8 @@ $('#settings-btn').click(function(){
 //setting select
 $('#settings-form').change(function(e){
     difficulty = $(e.target).val()
-    console.log(difficulty)
+    // console.log(difficulty)
+    localStorage.setItem('difficulty',difficulty)
 })
 
 //start counting down
