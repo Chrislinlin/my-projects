@@ -74,5 +74,11 @@ $('#text').on('input',function(e){
         $(e.target).val('');
     }
 })
-//
+//start counting down
+const timeInterval = setInterval(updateTime, 1000);
+
+//update time 
+function updateTime(){
+    console.log(1)
+}
 
