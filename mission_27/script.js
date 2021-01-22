@@ -26,7 +26,7 @@
 let randomWord;
 
 //init score
-let score;
+let score =0;
 
 //init time
 let time = 10;
@@ -60,7 +60,16 @@ $('#text').on('input',function(e){
         // console.log("yes!")
         RandomWord();
 
-        //clear
+        //update the score
+        updateScore()
+        function updateScore(){
+        score++;
+        $('#score').text(score);
+        }
+
+        //每打完一個字，clear input
         $(e.target).val('');
     }
 })
+
+
