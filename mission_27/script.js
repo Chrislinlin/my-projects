@@ -81,5 +81,17 @@ const timeInterval = setInterval(updateTime, 1000);
 function updateTime(){
     time--;
     $('#time').text(time + 's');
-}
 
+    if(time === 0){
+        clearInterval(timeInterval);
+        gameOver();
+    }
+}
+//gameOver , show end screen
+function gameOver(){
+    $('#end-game-container').html(`
+    <h1>Time ran out</h1>
+    <p>Your final score is ${score}</p>
+    <button onclick= "location.reload()">Reload</button>
+    `).css('display','flex');
+}
