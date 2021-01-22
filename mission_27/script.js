@@ -31,6 +31,9 @@ let score =0;
 //init time
 let time = 10;
 
+//當畫面reload，滑鼠游標自動帶到input
+$('#text').focus();
+
 // //get random word 
 // function getRandomWord(){
 //     return words[Math.floor(Math.random()* words.length)]
@@ -71,5 +74,5 @@ $('#text').on('input',function(e){
         $(e.target).val('');
     }
 })
-
+//
 
