@@ -79,6 +79,7 @@ const timeInterval = setInterval(updateTime, 1000);
 
 //update time 
 function updateTime(){
-    console.log(1)
+    time--;
+    $('#time').text(time + 's');
 }
 
