@@ -40,8 +40,6 @@ let time = 10;
 //get word by API
 RandomWord()
 function RandomWord() {
-
-
     $.ajax({
         method: "get",
         url: 'https://random-word-api.herokuapp.com/word?number=1',
@@ -59,6 +57,7 @@ $('#text').on('input',function(e){
     // console.log(insertText)
     let randomWord = $('h1').text();
     if(insertText == randomWord ){
-        console.log("yes!")
+        // console.log("yes!")
+        RandomWord()
     }
 })
