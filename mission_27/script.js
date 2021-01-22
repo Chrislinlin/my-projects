@@ -1,26 +1,26 @@
 //list of words for game
-const words= [
-    'sigh',
-    'tense',
-    'airplane',
-    'ball',
-    'pies',
-    'juice',
-    'warlike',
-    'bad',
-    'north',
-    'dependent',
-    'steer',
-    'silver',
-    'hoghfalutin',
-    'superficial',
-    'quince',
-    'eight',
-    'feeble',
-    'admit',
-    'drag',
-    'loving'
-];
+// const words= [
+//     'sigh',
+//     'tense',
+//     'airplane',
+//     'ball',
+//     'pies',
+//     'juice',
+//     'warlike',
+//     'bad',
+//     'north',
+//     'dependent',
+//     'steer',
+//     'silver',
+//     'hoghfalutin',
+//     'superficial',
+//     'quince',
+//     'eight',
+//     'feeble',
+//     'admit',
+//     'drag',
+//     'loving'
+// ];
 
 //init word
 let randomWord;
@@ -53,10 +53,12 @@ function RandomWord() {
 }
 
 
-
-
-//add word to DOM
-function addWordToDOM(){
-    randomWord = getRandomWord()
-    $('#word')
-}
+//event listener
+$('#text').on('input',function(e){
+    const insertText = $(e.target).val();
+    // console.log(insertText)
+    let randomWord = $('h1').text();
+    if(insertText == randomWord ){
+        console.log("yes!")
+    }
+})
