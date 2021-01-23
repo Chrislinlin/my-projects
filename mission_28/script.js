@@ -69,4 +69,11 @@ recognition.addEventListener('end',function(){
    recognition.start(); 
 })
 
+//click event
+document.body.addEventListener('click',function(e){
+    if(e.target.id == "play-again"){
+        window.location.reload();
+    }
+})
+
 
