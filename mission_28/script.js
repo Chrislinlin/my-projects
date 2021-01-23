@@ -13,3 +13,9 @@ window.SpeechRecognition =
 
 //create object
 let recognition = new window.SpeechRecognition();
+//start recognition and game
+recognition.start();
+
+//result event listener
+recognition.addEventListener('result', getSpeakWord);
+//
