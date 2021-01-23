@@ -19,11 +19,29 @@ recognition.start();
 
 //capture user speak
 function getSpeakWord(e){
-    // console.log(e)
     const msg = e.results[0][0].transcript;
-    console.log(msg)
+
+    //call writeMessage//checkNum function
+    writeMessage(msg);
+    checkNum(msg);
+
 }
 //speak result event listener
 recognition.addEventListener('result', getSpeakWord);
+
+//write what user speaks
+function writeMessage(msg){
+    $('#msg').html(
+        `
+        <div>You said:</div>
+        <span class="box">${msg}</span>
+        <div>Go Higher</div>
+        `);
+
+}
+//check Number function
+function checkNum(){
+
+}
 
 
