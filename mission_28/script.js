@@ -35,13 +35,38 @@ function writeMessage(msg){
         `
         <div>You said:</div>
         <span class="box">${msg}</span>
-        <div>Go Higher</div>
+        
         `);
 
 }
-//check Number function
-function checkNum(){
+//check msg against Number function
+function checkNum(msg){
+const num = +msg//讓msg一定要是num
 
+//check if valid num
+if(Number.isNaN(num)){
+    $('#msg').append('<div>That is not a valid number</div>');
+    return
 }
+if(num >100 || num <1){
+    $('#msg').html('<div>Number must be between 1 and 100</div>');
+    return;
+}
+if (num === randomNum) {
+    $('body').html(`
+  <h2>Congrats! You have guessed the number! <br><br>
+  It was ${num}</h2>
+  <button class="play-again" id="play-again">Play Again</button>
+`);
+} else if (num > randomNum) {
+    $('#msg').append('<div>GO LOWER</div>');
+} else {
+    $('#msg').append('<div>GO HIGHER</div>');
+}
+}
+// ER SR service
+recognition.addEventListener('end',function(){
+   recognition.start(); 
+})
 
 
