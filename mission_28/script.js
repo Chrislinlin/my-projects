@@ -16,6 +16,14 @@ let recognition = new window.SpeechRecognition();
 //start recognition and game
 recognition.start();
 
-//result event listener
+
+//capture user speak
+function getSpeakWord(e){
+    // console.log(e)
+    const msg = e.results[0][0].transcript;
+    console.log(msg)
+}
+//speak result event listener
 recognition.addEventListener('result', getSpeakWord);
-//
+
+
