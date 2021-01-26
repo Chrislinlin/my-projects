@@ -27,6 +27,12 @@ function creatList(){
             sort: Math.random()
         }
     })
+    .sort(function(a,b){
+        return (a.sort - b.sort)
+    })
+    .map(function(a){
+        return a.value
+    })
     .forEach(function(video,index) {
         const listItem = document.createElement('li');
 
