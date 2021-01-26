@@ -16,7 +16,7 @@ body{
     background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -25,15 +25,16 @@ body{
 }
 body * {
     z-index: 1;
-  }
+}
   
 body h1{
+
     color: var(--background-color);
   }
   
 body p:first-of-type {
     color: var(--background-color);
-  }
+}
   
 body::after {
     content: '';
