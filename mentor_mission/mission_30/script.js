@@ -21,20 +21,22 @@ creatList()
 //creat List items into DOM
 function creatList(){
     [...hottestVideo]
+    //part II
     .map(function(a){
         return{
             value:a ,
             sort: Math.random()
         }
-    })
+    })//part III
     .sort(function(a,b){
         return (a.sort - b.sort)
-    })
+    })//part IV
     .map(function(a){
         return a.value
     })
     .forEach(function(video,index) {
         const listItem = document.createElement('li');
+        // listItem.classList.add('over')
 
         console.log(video);
         //index =0~9
@@ -43,7 +45,7 @@ function creatList(){
         <span class ='number'>${ index + 1 }</span>
         <div class ="draggable" draggable ="true">
             <p class ="video-name">${video}</p>
-            <i class = "fas fa-grip-lines></i>
+            <i class="fas fa-grip-lines"></i>
         </div>
         `;
         listItems.push(listItem);
