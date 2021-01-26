@@ -51,7 +51,7 @@ body::after {
     color: var(--text-color);
     padding: 0;
     list-style-type: none;
-
+    z-index: 1;
 }
   
 .draggable-list li {

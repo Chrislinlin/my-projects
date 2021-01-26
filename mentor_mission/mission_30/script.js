@@ -51,7 +51,36 @@ function creatList(){
         listItems.push(listItem);
         draggableList.appendChild(listItem);
         
+        addEventListeners()
     });
+}
+function dragStart() {
+    console.log('event: ' , 'drapstart')
+  }
+  function dragOver() {
+    console.log('event: ' , 'drapover')
+  }
+  function dragDrop() {
+    console.log('event: ' , 'drapDrop')
+  }
+  function dragLeave() {
+    console.log('event: ' , 'dragleave')
+  }
+  function dragEnter() {
+    console.log('event: ' , 'dragenter')
+  }
 
+function addEventListeners(){
+    const draggables = document.querySelectorAll('.draggable')
+    const dragListItems = document.querySelectorAll('.draggable-list li')
+    draggables.forEach(function(draggable){
+        draggable.addEventListener('dragstart', dragStart);
+    });
+    dragListItems.forEach(function (item) {
+        item.addEventListener('dragover', dragOver);
+        item.addEventListener('drop', dragDrop);
+        item.addEventListener('dragenter', dragEnter);
+        item.addEventListener('dragleave', dragLeave);
+      });
 
 }
