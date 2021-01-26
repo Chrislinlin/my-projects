@@ -21,8 +21,16 @@ creatList()
 //creat List items into DOM
 function creatList(){
     [...hottestVideo]
+    .map(function(a){
+        return{
+            value:a ,
+            sort: Math.random()
+        }
+    })
     .forEach(function(video,index) {
         const listItem = document.createElement('li');
+
+        console.log(video);
         //index =0~9
         listItem.setAttribute('data-index', index);
         listItem.innerHTML = `
