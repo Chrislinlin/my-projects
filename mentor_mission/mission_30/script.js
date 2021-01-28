@@ -70,7 +70,7 @@ function dragStart() {
     swapItems(dragStartIndex, dragEndIndex);
     this.classList.remove('over');
   }
-
+  //swap item function
   function swapItems(fromIndex, toIndex){
     //   console.log(124);
     const itemOne = listItems[fromIndex].querySelector('.draggable')
@@ -78,7 +78,6 @@ function dragStart() {
     // console.log(itemOne, itemTwo);
     listItems[fromIndex].appendChild(itemTwo);
     listItems[toIndex].appendChild(itemOne);
-
   }
   function dragLeave() {
     // console.log('event: ' , 'dragleave');
@@ -102,5 +101,13 @@ function addEventListeners(){
         item.addEventListener('dragenter', dragEnter);
         item.addEventListener('dragleave', dragLeave);
       });
+}
+$('#check-btn').click(checkOrder);
 
+function checkOrder(){
+    listItems.forEach(function(listItem, index){
+        const videoName = listItem.querySelector('.draggable').innerText.trim();
+         console.log(videoName)
+
+    })
 }
