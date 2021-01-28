@@ -59,13 +59,21 @@ function dragStart() {
     dragStartIndex = +this.closest('li').getAttribute('data-index');
     // console.log(dragStartIndex);
   }
-  function dragOver() {
+  function dragOver(e) {
     // console.log('event: ' , 'drapover')
-    
+    e.preventDefault();
   }
   function dragDrop() {
     // console.log('event: ' , 'drapDrop')
+    
+    const dragEndIndex = +this.getAttribute('data-index')
+    swapItems(dragStartIndex, dragEndIndex);
     this.classList.remove('over');
+    
+  }
+
+  function swapItems(fromIndex, toIndex){
+      console.log(124);
   }
   function dragLeave() {
     // console.log('event: ' , 'dragleave');
