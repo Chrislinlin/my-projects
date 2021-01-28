@@ -28,7 +28,6 @@ body * {
 }
   
 body h1{
-
     color: var(--background-color);
   }
   
@@ -62,7 +61,7 @@ body::after {
   
 .draggable-list li:not(:last-of-type) {
     border-bottom: 10px solid var(--border-color);
-  }
+}
   
 .draggable-list .number {
     background-color: var(--background-color);
@@ -75,7 +74,7 @@ body::after {
   }
   
 .draggable-list li.over .draggable {
-    background-color: #eaeaea;
+    background-color: #be4a4a;
     
 }
   

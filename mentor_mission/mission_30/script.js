@@ -34,7 +34,7 @@ function creatList(){
     .map(function(a){
         return a.value
     })
-    .forEach(function(video,index) {
+    .forEach(function(video, index) {
         const listItem = document.createElement('li');
         // listItem.classList.add('over')
 
@@ -55,24 +55,30 @@ function creatList(){
     });
 }
 function dragStart() {
-    console.log('event: ' , 'drapstart')
+    // console.log('event: ' , 'drapstart')
+
   }
-  function dragOver() {
-    console.log('event: ' , 'drapover')
+  function dragOver(e) {
+    // console.log('event: ' , 'drapover')
+    e.preventDefault();
   }
   function dragDrop() {
-    console.log('event: ' , 'drapDrop')
+    // console.log('event: ' , 'drapDrop')
+    this.classList.remove('over');
   }
   function dragLeave() {
-    console.log('event: ' , 'dragleave')
+    // console.log('event: ' , 'dragleave');
+    this.classList.remove('over');
   }
   function dragEnter() {
-    console.log('event: ' , 'dragenter')
+    // console.log('event: ' , 'dragenter')
+    this.classList.add('over');
   }
 
 function addEventListeners(){
     const draggables = document.querySelectorAll('.draggable')
     const dragListItems = document.querySelectorAll('.draggable-list li')
+
     draggables.forEach(function(draggable){
         draggable.addEventListener('dragstart', dragStart);
     });
