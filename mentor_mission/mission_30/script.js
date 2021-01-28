@@ -38,7 +38,7 @@ function creatList(){
         const listItem = document.createElement('li');
         // listItem.classList.add('over')
 
-        console.log(video);
+        // console.log(video);
         //index =0~9
         listItem.setAttribute('data-index', index);
         listItem.innerHTML = `
@@ -69,11 +69,16 @@ function dragStart() {
     const dragEndIndex = +this.getAttribute('data-index')
     swapItems(dragStartIndex, dragEndIndex);
     this.classList.remove('over');
-    
   }
 
   function swapItems(fromIndex, toIndex){
-      console.log(124);
+    //   console.log(124);
+    const itemOne = listItems[fromIndex].querySelector('.draggable')
+    const itemTwo = listItems[toIndex].querySelector('.draggable');
+    // console.log(itemOne, itemTwo);
+    listItems[fromIndex].appendChild(itemTwo);
+    listItems[toIndex].appendChild(itemOne);
+
   }
   function dragLeave() {
     // console.log('event: ' , 'dragleave');
