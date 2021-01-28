@@ -56,11 +56,12 @@ function creatList(){
 }
 function dragStart() {
     // console.log('event: ' , 'drapstart')
-
+    dragStartIndex = +this.closest('li').getAttribute('data-index');
+    // console.log(dragStartIndex);
   }
-  function dragOver(e) {
+  function dragOver() {
     // console.log('event: ' , 'drapover')
-    e.preventDefault();
+    
   }
   function dragDrop() {
     // console.log('event: ' , 'drapDrop')
