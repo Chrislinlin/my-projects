@@ -107,7 +107,13 @@ $('#check-btn').click(checkOrder);
 function checkOrder(){
     listItems.forEach(function(listItem, index){
         const videoName = listItem.querySelector('.draggable').innerText.trim();
-         console.log(videoName)
+        //  console.log(videoName)
+         if(videoName !== hottestVideo[index]){
+            listItem.classList.add('wrong');
+        }else{
+            listItem.classList.remove('wrong');
+            listItem.classList.add('right');
+        }
 
     })
 }
