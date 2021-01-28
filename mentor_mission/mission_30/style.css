@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+:root {
+    --border-color: #e3e5e4;
+    --background-color: #c3c7ca;
+    --text-color: #34444f;
+  }
+
+body{
+    background-image: url(./img/br.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "lato", serif;
+    font-size: 16px;
+}
+body * {
+    z-index: 1;
+}
+  
+body h1{
+    color: var(--background-color);
+  }
+  
+body p:first-of-type {
+    color: var(--background-color);
+}
+  
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+.draggable-list {
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0;
+    list-style-type: none;
+    z-index: 1;
+}
+  
+.draggable-list li {
+    background-color: #fff;
+    display: flex;
+    flex: 1;
+}
+  
+.draggable-list li:not(:last-of-type) {
+    border-bottom: 10px solid var(--border-color);
+}
+  
+.draggable-list .number {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+  }
+  
+.draggable-list li.over .draggable {
+    background-color: #be4a4a;
+    
+}
+  
+  .draggable-list .video-name {
+    margin: 0 20px 0 0;
+    font-size: 10px;
+    color: var(--text-color)
+  }
+  
+.draggable-list li.right .video-name {
+    color: #3ae374;
+}
+  
+.draggable-list li.wrong .video-name {
+    color: #ff3838;
+}
+  
+.draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+  }
+  
+.check-btn {
+    background-color: #ffffff;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+  
+.check-btn:active {
+    transform: scale(0.98);
+  }
+  
+.check-btn:focus {
+    outline: none;
+  }
