@@ -1,9 +1,9 @@
 //創造變數，得知現在是幾年
 const currentYear = new Date().getFullYear();
-console.log(currentYear);
+// console.log(currentYear);
 //
 const countDownTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
- console.log(countDownTime)
+//  console.log(countDownTime)
 function remainTime(){
     const timeNow = new Date();
     // console.log(timeNow)
@@ -27,4 +27,14 @@ function remainTime(){
 function timeExpress(time){
     return time <10 ? `0${time}` :time;
 }
-remainTime()
+
+const timeinterval = setInterval(function(){
+    var t = countDownTime - (new Date());
+    // console.log(t)
+    if(t<0){
+        clearInterval(timeinterval);
+    }else{
+        remainTime()
+    }
+},1000);
+
