@@ -16,6 +16,17 @@ body{
     margin: 0;
     text-align: center;
     font-family: 'Lato' 'sans-serif';
+    overflow: hidden;
+}
+/*使表面加上一層暗暗的*/
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .3);
 }
 
 /*把body 內部的東西全部蓋在最上層*/
@@ -39,7 +50,6 @@ h1:hover{
 }
 .countdown {
     display: flex;
-  
     /* 放大或是縮小的倍率 */
     transform: scale(2);
 }
@@ -53,12 +63,17 @@ h1:hover{
 .time h2 {
     margin: 0 0 5px;
 }
-.year{
-    font-size: 200px;
-    z-index: -1;
-    opacity: .2;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+@media(max-width:500px){
+    h1{
+        font-size: 45px;
+    }
+    .time{
+        margin: 5px;
+    }
+    .time h2{
+        font-size: 15px;
+    }
+    .time small{
+        font-size: 10px;
+    }
 }
