@@ -38,13 +38,15 @@ function getRepoData(){
         method:'GET',
         datatype:'json',
         success: function(data55){
-            console.log(data55)
+            data = data55;
+            showRepo(data);
         },
         error: function(){
             console.log('ohhno again!')
         }
     })
 }
+//show profile
 function showProfile(user){
 $('#profile').html(
     `<div class="card card-body border-0">
@@ -77,9 +79,34 @@ $('#profile').html(
 
 </div>
 `
-)
+)}
+//show repo
+function showRepo(repos){
+    repos.forEach(function(repo){
+        //把repodata東西加在getRepoData中創建的容器後
+        const repoData = $('<div class = "card card-body mb-2 border-0"></div>').appendTo('#repos');
+        let repoDes = repo.description !== null ? repo.description : '';
+        repoData.html(`
+            <div class="row shadow-sm p-3 bg-white rounded">
+                <div class="col-md-6">
+                    <a href="${repo.html_url}" target="_blank">
+                        <h3>${repo.name}</h3>
+                    </a>
+                    <p>${repoDes}</p>
+                </div>
+                <div class="col-md-6">
+                    <span class="badge badge-warning m-1">Stars ${repo.stargazers_count}</span>
+                    <span class="badge badge-success m-1">Watchers ${repo.watchers_count}</span>
+                    <span class="badge badge-info m-1">Forks ${repo.forks_count}</span>
+                </div>
+            </div>
+        `)
+    } 
+        
+    );
 }
 searchBtn.click(function(){
+    userName = searchUser.val();
     getUserData();
     getRepoData();
 })
