@@ -52,9 +52,9 @@ function getRepoData(){
         url:`https://api.github.com/users/${userName}/repos?per_page=5&sort=created: asc`,
         method:'GET',
         datatype:'json',
-        success: function(data){
-            getData = data;
-            showRepo(getData);
+        success: function(res){
+            data = res;
+            showRepo(data);
         }
     })
 }
