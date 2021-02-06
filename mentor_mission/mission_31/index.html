@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+
+    <title>Github Searcher</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary mb-3">
+        <div class="container">
+            <a href="#" class="navbar-brand">Search in GitHub</a>
+        </div>
+    </nav>
+    <div class="container searchContainer" >
+        <!--直接添加css在屬性上-->
+      <div class="search card card-body border-0">
+          
+          <h1>Search GitHub Users</h1>
+          <p class="lead">Enter a username to fetch a user profile and repos</p>
+          <div class="search-bar">
+            <input type="text" id="searchUser" class="form-control" placeholder="Enter Username or repo name...">
+            
+            <a class="search-btn"><i class="fa fa-search"></i></a>
+          </div>
+
+      </div>  
+    </div>
+
+    <div id="profile" class="mt-5">
+        <!-- 模板Content Sample
+        <div class="card card-body border-0">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid rounded-circle mb-2" src="https://avatars.githubusercontent.com/u/27384?v=4">
+                    <h5 class="mt-2 text-center">name</h5>
+                    <a href="#" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
+                </div>
+                <div class="col-md-9">
+                    <div class="container mt-2 px-0">
+                        <span class="badge badge-primary">Public Repos: 4</span>
+                        <span class="badge badge-secondary">Public Gists: 4</span>
+                        <span class="badge badge-success">Followers: 4</span>
+                        <span class="badge badge-info">Following: 4</span>
+                    </div>
+                    <ul class="list-group list-group-flush mt-2">
+                        <li class="list-group-item">Company: company</li>
+                        <li class="list-group-item">Website/Blog: blog</li>
+                        <li class="list-group-item">Location: location</li>
+                        <li class="list-group-item">Member Since: yyyy-mm-dd</li>
+                        <li class="list-group-item">Member Since: yyyy-mm-dd</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-9">
+            <h3 class="page-heading mb-3">Latest Repos</h3>
+            <div id="repos">
+                <div class="card card-body mb-2  border-0">
+                    <div class="row shadow-sm p-3 bg-white rounded">
+                        <div class="col-md-6">
+                            <a href="#" target="_blank">
+                                <h3>repo.name</h3>
+                            </a>
+                            <p>repo.description</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge badge-warning m-1">Stars</span>
+                            <span class="badge badge-success m-1">Watchers</span>
+                            <span class="badge badge-info m-1">Forks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-body mb-2  border-0">
+                    <div class="row shadow-sm p-3 bg-white rounded">
+                        <div class="col-md-6">
+                            <a href="#" target="_blank">
+                                <h3>repo.name</h3>
+                            </a>
+                            <p>repo.description</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge badge-warning m-1">Stars</span>
+                            <span class="badge badge-success m-1">Watchers</span>
+                            <span class="badge badge-info m-1">Forks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    -->
+    </div>
+    <footer>
+        <div class="mt-5 text-center p-3" style="background-color: #bfdeec">
+            Search in GitHub by Chrislinlin © 2021
+        </div>
+    </footer>
+    
+    <!--bootstrap script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
+
