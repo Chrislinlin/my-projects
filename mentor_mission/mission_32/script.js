@@ -83,7 +83,7 @@ function selectCity(data){
 function changeImg(weatherDescription){
     if(weatherDescription === '多雲時晴' || weatherDescription === '晴時多雲' ){
         return '<img src="./img/sun.png" alt="sun-cloudy">'
-    }else if(weatherDescription === '多雲' || weatherDescription === '陰時多雲'){
+    }else if(weatherDescription === '多雲' || weatherDescription === '陰時多雲' || weatherDescription === '多雲時陰'){
         return '<img src="./img/cloudy.png" alt="cloudy">'
     }else{
         return '<img src="./img/drop.png" alt="rainy">'
