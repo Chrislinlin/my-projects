@@ -19,11 +19,18 @@ function todayWeather(data){
     $('#weatherNow').html('');
     chooseCity = data.location[0].locationName
     // console.log(chooseCity);
-    todayDate = new Date().toString().split("GMT")[0]
+    todayDate = new Date().toString().split("GMT")[0];
+   
+    const weather = data.location[0].weatherElement;
+    todayWeather = weather[6].time[0].elementValue[0].value;
+    let weatherImg = changeImg(todayWeather);
+    
 
     $('.weather_now').html(`
     <h1>${chooseCity}</h1>
     <h2>${todayDate}</h2>
+    ${weatherImg}
+    <div class="now-description">${todayWeather}</div>
 
     `)
     
@@ -40,6 +47,12 @@ function selectCity(data){
     }
     // console.log(city);
 
+}
+
+function changeImg(){
+    if(todayWeather === '多雲時晴'){
+        return '<img src="./img/sun.png" alt="sun-cloudy">'
+    }
 }
 $('#select').click(function() {
     // console.log(123)
