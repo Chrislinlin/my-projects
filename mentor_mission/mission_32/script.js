@@ -12,6 +12,7 @@ $.ajax({
         // console.log(city);
         todayWeather(data);
         selectCity(city);
+        weekWeather(data);
     }
 })
 function todayWeather(data){
@@ -22,18 +23,45 @@ function todayWeather(data){
     todayDate = new Date().toString().split("GMT")[0];
    
     const weather = data.location[0].weatherElement;
-    todayWeather = weather[6].time[0].elementValue[0].value;
-    let weatherImg = changeImg(todayWeather);
+    weatherDescription = weather[6].time[0].elementValue[0].value;
+    let weatherImg = changeImg(weatherDescription);
     
 
     $('.weather_now').html(`
     <h1>${chooseCity}</h1>
     <h2>${todayDate}</h2>
     ${weatherImg}
-    <div class="now-description">${todayWeather}</div>
+    <div class="now-description">${weatherDescription}</div>
 
     `)
     
+}
+function weekWeather(){
+    $('#week').html('');
+    let oneWeek =['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    let weekDay =[]
+    for (i = 1; i < 7; i++) {
+        let timeIndex = 2 * i;
+        const day = $('<div></div>').attr('class', `day-${i}`);
+        nextWeekNum = new Date().getDay()+1;
+        const weather = data.location[0].weatherElement;
+    
+        weatherDescription = weather[6].time[timeIndex].elementValue[0].value;
+
+        let weatherImg = changeImg(weatherDescription);
+
+        const rainyPercent = `${weather[0].time[timeIndex].elementValue[0].value}`
+
+
+    day.html(`
+        <h3>${oneWeek[i]}</h3>
+        ${weatherImg}
+        <div class="week-description">${weatherDescription}</div>
+         <div class="rainy-percent">${rainyPercent} %</div>
+    `);
+    $('#week').append(day);
+    }
+
 }
 function selectCity(data){
     const $ = document.querySelector.bind(document);
@@ -49,10 +77,15 @@ function selectCity(data){
 
 }
 
-function changeImg(){
-    if(todayWeather === '多雲時晴'){
+function changeImg(weatherDescription){
+    if(weatherDescription === '多雲時晴' || weatherDescription === '晴時多雲' ){
         return '<img src="./img/sun.png" alt="sun-cloudy">'
+    }else if(weatherDescription === '多雲' || weatherDescription === '陰時多雲'){
+        return '<img src="./img/cloudy.png" alt="cloudy">'
+    }else{
+        return '<img src="./img/drop.png" alt="rainy">'
     }
+    
 }
 $('#select').click(function() {
     // console.log(123)
