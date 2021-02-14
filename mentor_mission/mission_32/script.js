@@ -44,15 +44,15 @@ function weekWeather(data, ){
     let weekDay =[]
     for (i = 1; i < 7; i++) {
         let timeIndex = 2 * i;
-        let day = $('<div></div>').attr('class', `day-${i}`);
+        let day = $('<div></div>').attr('class', `day`);
         nextWeekNum = new Date().getDay()+1;
-        let weather = data.location[0].weatherElement;
+        let weather = data.location[cityNum].weatherElement;
     
         weatherDescription = weather[6].time[timeIndex].elementValue[0].value;
         let weatherTemp  = data.location[cityNum].weatherElement[1].time[timeIndex].elementValue[0].value;
         let weatherImg = changeImg(weatherDescription);
 
-        const rainyPercent = `${weather[0].time[timeIndex].elementValue[0].value}`
+
 
 
     day.html(`
