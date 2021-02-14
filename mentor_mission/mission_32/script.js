@@ -1,5 +1,6 @@
 let data;
 let city;
+let cityNum = 0;
 
 $.ajax({
     url:'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWB-373C6328-6BF2-41B3-BB3B-147802B82875&format=JSON&locationName=&elementName=&sort=time',
@@ -10,20 +11,21 @@ $.ajax({
         // console.log(data);
         city = data.location;
         // console.log(city);
-        todayWeather(data);
+        todayWeather(data, cityNum);
         selectCity(city);
-        weekWeather(data);
+        weekWeather(data, cityNum);
     }
 })
-function todayWeather(data){
+function todayWeather(data, cityNum){
     // console.log(123)
     $('#weatherNow').html('');
-    chooseCity = data.location[0].locationName
+    chooseCity = data.location[cityNum].locationName
     // console.log(chooseCity);
     todayDate = new Date().toString().split("GMT")[0];
    
-    const weather = data.location[0].weatherElement;
+    let weather = data.location[cityNum].weatherElement;
     weatherDescription = weather[6].time[0].elementValue[0].value;
+    let weatherTemp  = data.location[cityNum].weatherElement[1].time[0].elementValue[0].value;
     let weatherImg = changeImg(weatherDescription);
     
 
@@ -32,22 +34,22 @@ function todayWeather(data){
     <h2>${todayDate}</h2>
     ${weatherImg}
     <div class="now-description">${weatherDescription}</div>
-
+    <p>溫度: ${weatherTemp} °C</p>
     `)
     
 }
-function weekWeather(){
+function weekWeather(data, ){
     $('#week').html('');
     let oneWeek =['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     let weekDay =[]
     for (i = 1; i < 7; i++) {
         let timeIndex = 2 * i;
-        const day = $('<div></div>').attr('class', `day-${i}`);
+        let day = $('<div></div>').attr('class', `day-${i}`);
         nextWeekNum = new Date().getDay()+1;
-        const weather = data.location[0].weatherElement;
+        let weather = data.location[0].weatherElement;
     
         weatherDescription = weather[6].time[timeIndex].elementValue[0].value;
-
+        let weatherTemp  = data.location[cityNum].weatherElement[1].time[timeIndex].elementValue[0].value;
         let weatherImg = changeImg(weatherDescription);
 
         const rainyPercent = `${weather[0].time[timeIndex].elementValue[0].value}`
@@ -57,7 +59,8 @@ function weekWeather(){
         <h3>${oneWeek[i]}</h3>
         ${weatherImg}
         <div class="week-description">${weatherDescription}</div>
-         <div class="rainy-percent">${rainyPercent} %</div>
+        <p>溫度: ${weatherTemp} °C</p>
+
     `);
     $('#week').append(day);
     }
@@ -87,7 +90,9 @@ function changeImg(weatherDescription){
     }
     
 }
-$('#select').click(function() {
+$('#select').change(function() {
     // console.log(123)
-    cityIndex = $('#select :selected').val()
+    cityNum = $('#select :selected').val();
+    todayWeather(data, cityNum);
+    weekWeather(data, cityNum);
 });
