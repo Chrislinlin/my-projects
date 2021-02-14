@@ -10,19 +10,27 @@ $.ajax({
         // console.log(data);
         city = data.location;
         // console.log(city);
-        todayWeather();
+        todayWeather(data);
         selectCity(city);
     }
 })
-function todayWeather(){
+function todayWeather(data){
     // console.log(123)
     $('#weatherNow').html('');
+    chooseCity = data.location[0].locationName
+    // console.log(chooseCity);
+    todayDate = new Date().toString().split("GMT")[0]
+
+    $('.weather_now').html(`
+    <h1>${chooseCity}</h1>
+    <h2>${todayDate}</h2>
+
+    `)
     
 }
 function selectCity(data){
     const $ = document.querySelector.bind(document);
-    let select = $('select');
-    
+    let select = $('select'); 
     for(let i =0;i< data.length;i++){
         city = data[i].locationName;
         let value =i;
@@ -30,10 +38,10 @@ function selectCity(data){
         <option value="${value}">${city}</option>
     `;
     }
-    console.log(city);
+    // console.log(city);
 
 }
 $('#select').click(function() {
-    console.log(123)
+    // console.log(123)
     cityIndex = $('#select :selected').val()
 });
