@@ -16,10 +16,11 @@ $.ajax({
         weekWeather(data, cityNum);
     }
 })
+
 function todayWeather(data, cityNum){
     // console.log(123)
     $('#weatherNow').html('');
-    chooseCity = data.location[cityNum].locationName
+    chooseCity = data.location[cityNum].locationName;
     // console.log(chooseCity);
     todayDate = new Date().toString().split("GMT")[0];
    
@@ -28,7 +29,6 @@ function todayWeather(data, cityNum){
     let weatherTemp  = data.location[cityNum].weatherElement[1].time[0].elementValue[0].value;
     let weatherImg = changeImg(weatherDescription);
     
-
     $('.weather_now').html(`
     <h1>${chooseCity}</h1>
     <h2>${todayDate}</h2>
@@ -38,7 +38,7 @@ function todayWeather(data, cityNum){
     `)
     
 }
-function weekWeather(data, ){
+function weekWeather(data, cityNum){
     $('#week').html('');
     let oneWeek =['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     let weekDay =[]
@@ -51,9 +51,6 @@ function weekWeather(data, ){
         weatherDescription = weather[6].time[timeIndex].elementValue[0].value;
         let weatherTemp  = data.location[cityNum].weatherElement[1].time[timeIndex].elementValue[0].value;
         let weatherImg = changeImg(weatherDescription);
-
-
-
 
     day.html(`
         <h3>${oneWeek[i]}</h3>
