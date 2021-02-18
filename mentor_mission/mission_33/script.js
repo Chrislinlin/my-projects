@@ -16,24 +16,41 @@ $(document).ready(function(){
 
 function vedioSearch(key, search, maxResult){
     $('#videos').html('');
-   
     $.get("https://www.googleapis.com/youtube/v3/search",{
         key: 'AIzaSyCSwkueGwGH8xdWDDgcMMAdXDRxKg0uEiE',
         type: 'video',
         part: 'snippet, id',
         maxResults: maxResult,
         q: search,
+        
+        
     }, 
     function(data){
+        let nextPageToken = data.nextPageToken;
+        let prevPageToken = data.prevPageToken;
         console.log(data);
         
         data.items.forEach(item => {
             video = getOutput(item);
             $("#videos").append(video);
         });
-    })
-}
 
+        //show button
+        let buttons =getButton(nextPageToken, prevPageToken);
+        $('#button').append(buttons);
+    })
+
+
+
+}
+//create the button
+function getButton(prevPageToken, nextPageToken){
+    let btnOutput = '<div class ="button-container">' + 
+    '<button id = "next-button" class = "paging-button" data-token= "'
+     +nextPageToken+'"  onclick = nextPage();">next page</button>';
+    console.log(btnOutput);
+    return btnOutput;
+}
 //output
 function getOutput(item){
     var videoId = item.id.videoId;
