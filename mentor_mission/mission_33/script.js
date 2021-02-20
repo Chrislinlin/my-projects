@@ -1,34 +1,33 @@
 
-    let API_Key = 'AIzaSyCSwkueGwGH8xdWDDgcMMAdXDRxKg0uEiE';
+    let API_Key = 'AIzaSyCDVAPlbWLLCZf6WFNo_mEsYPyZynkK7hE';
     let video ='';
     let videos = $('#videos');
     let q;
     $('#form').submit(function(event){
         event.preventDefault();
-
-        let search = $('#search').val();
-        vedioSearch(API_Key, search, 10);
+        vedioSearch(q, 5);
     })
 
 
 //search function
 
 
-function vedioSearch(key, q, maxResult){
+function vedioSearch(q, maxResult){
     $('#videos').html('');
     $('#buttons').html('');
 
      q = $('#search').val();
     $.get("https://www.googleapis.com/youtube/v3/search",{
-        key: 'AIzaSyCSwkueGwGH8xdWDDgcMMAdXDRxKg0uEiE',
+        key: 'AIzaSyCDVAPlbWLLCZf6WFNo_mEsYPyZynkK7hE',
         type: 'video',
         part: 'snippet, id',
         maxResults: maxResult,
-        q: q,
+        q: q
     }, 
     function(data){
-        let nextPageToken = data.nextPageToken;
+
         let prevPageToken = data.prevPageToken;
+        let nextPageToken = data.nextPageToken;
         console.log(data);
         
         data.items.forEach(item => {
@@ -37,19 +36,11 @@ function vedioSearch(key, q, maxResult){
         });
 
         //show button
-        let buttons =getButton(nextPageToken, prevPageToken);
+        let buttons =getButton(prevPageToken, nextPageToken );
         $('#button').append(buttons);
     })
 }
 
-
-//create the button
-function getButton(nextPageToken){
-    let q;
-    var btnOutput = '<div class="button-container">' + '<button id="next-button" class="paging-button" data-token="' +nextPageToken+'" data-query="'+q+'"+ onclick="nextPage();">Next Page</button></div>'; 
-
-    return btnOutput;
-}
 
 //nextpage button
 function nextPage(){
@@ -64,7 +55,42 @@ function nextPage(){
     q = $("#search").val();
 
     $.get("https://www.googleapis.com/youtube/v3/search",{
-        key: 'AIzaSyCSwkueGwGH8xdWDDgcMMAdXDRxKg0uEiE',
+        key: 'AIzaSyCDVAPlbWLLCZf6WFNo_mEsYPyZynkK7hE',
+        type: 'video',
+        part: 'snippet, id',
+        pageToken: token,
+        q: q,
+    }, 
+    function(data){
+
+        let prevPageToken = data.prevPageToken;
+        let nextPageToken = data.nextPageToken;
+        console.log(data);
+        
+        data.items.forEach(item => {
+            video = getOutput(item);
+            $("#videos").append(video);
+        });
+
+        //show button
+        let buttons =getButton(prevPageToken, nextPageToken);
+        $('#button').append(buttons);
+    })
+}
+//prevpage button
+function prevPage(){
+
+    let token = $('#prev-button').data('token');
+    console.log(token)
+    let q = $('#prev-button').data('query');
+
+    $('#videos').html('');
+    $('#button').html('');
+
+    q = $("#search").val();
+
+    $.get("https://www.googleapis.com/youtube/v3/search",{
+        key: 'AIzaSyCDVAPlbWLLCZf6WFNo_mEsYPyZynkK7hE',
         type: 'video',
         part: 'snippet, id',
         pageToken: token,
@@ -81,9 +107,23 @@ function nextPage(){
         });
 
         //show button
-        let buttons =getButton(nextPageToken, prevPageToken);
+        let buttons =getButton(prevPageToken, nextPageToken);
         $('#button').append(buttons);
     })
+}
+
+//create the button
+function getButton(prevPageToken, nextPageToken){
+    let q;
+    if(!prevPageToken){
+        var btnOutput = '<div class="button-container">' + '<button id="next-button" class="paging-button" data-token="' +nextPageToken+'" data-query="'+q+'"+ onclick="nextPage();">Next Page</button></div>'; 
+    }else{
+        var btnOutput = '<div class="button-container">' + 
+        '<button id="prev-button" class="paging-button" data-token="' +prevPageToken+'" data-query="'+q+'"+ onclick="prevPage();">Previous Page</button>'+
+        '<button id="next-button" class="paging-button" data-token="' +nextPageToken+'" data-query="'+q+'"+ onclick="nextPage();">Next Page</button> </div>'; 
+    }
+
+    return btnOutput;
 }
 //output
 function getOutput(item){
@@ -120,7 +160,7 @@ function getOutput(item){
     "</li>" +
     '<div class="clearfix"></div>' +
     "";
-
+// console.log(output)
   return output;
  
 }
