@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <!--bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--jQuery fancybox-->
@@ -16,51 +17,63 @@
     <title>Youtube API</title>
 </head>
 <body>
-    <div class="header">
-        <br>
-        <h1>SearchVidz</h1>
-        <p>Search all Youtube videos</p>
-    </div>
-    <div class="input_text">
-        <form id = "form">
-            <div class="form-group">
-                <input type="text" id="search">
+    <div class="container">
+        <div class="header">
+            <br>
+            <h1>Search<span>Vids</span></h1>
+            <p>Search all Youtube videos</p>
+        </div>
+        <div class="input_text">
+            <form id = "form">
+                <div class="form-group">
+                    <input type="text" id="search">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class ="btn btn-danger"value="search" id="input">
+                </div>
+    
+            </form>
+    
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="video" id="videos"></div>
+            <!-- <div class="video_1">
+                <h3>this is video1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
             </div>
-            <div class="form-group">
-                <input type="submit" class ="btn btn-danger"value="search" id="input">
+            <div class="video_1">
+                <h3>this is video1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
             </div>
+            <div class="video_1">
+                <h3>this is video1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
+            </div>
+            <div class="video_1">
+                <h3>this is video1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
+            </div>
+            <div class="video_1">
+                <h3>this is video1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
+            </div> -->
 
-        </form>
+            <!--preBtn & nextBtn-->
+            <div id="button"></div>
+            <footer>
+                <p>Copyright &copy; <span id="year"></span>, All Rights Reserved </p>
+            </footer>
+            </div>
+    </div>
+
+
 
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="video" id="videos"></div>
-        <!-- <div class="video_1">
-            <h3>this is video1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
-        </div>
-        <div class="video_1">
-            <h3>this is video1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
-        </div>
-        <div class="video_1">
-            <h3>this is video1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
-        </div>
-        <div class="video_1">
-            <h3>this is video1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
-        </div>
-        <div class="video_1">
-            <h3>this is video1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odio repudiandae, similique accusamus ad optio quas asperiores quis beatae impedit quasi doloremque debitis magnam deserunt enim provident dicta laudantium sint!</p>
-        </div> -->
-        <!--preBtn & nextBtn-->
-        <div id="button"></div>
-        </div>
-
-    </div>
+    <!--footer time-->
+    <script>
+        $('#year').text(new Date().getFullYear());
+    </script>
 
     <!--bootstrap-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
