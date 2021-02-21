@@ -77,21 +77,21 @@ li {
     overflow: auto;
 }
   
-  .list-left {
+.list-left {
     float: left;
     width: 20%;
-  }
+}
   
-  .list-left img {
+.list-left img {
     width: 100%;
     padding: 3px;
     border: solid #ccc 2px;
-  }
+}
   
-  .list-right {
+.list-right {
     float: right;
-    width: 78%;
-  }
+    width: 80%;
+}
   
 .list-right h3 {
     padding: 0.8rem 0px;
@@ -103,23 +103,23 @@ li {
     border-radius: 10px;
     cursor: pointer;
     outline: none;
-    background: white;
+    background: #fff;
     border: 2px solid rgb(94, 94, 94);
     transition: 0.4s;
   }
   
-  .paging-button:hover {
+.paging-button:hover {
     background-color: rgb(94, 94, 94);
-    color: white;
-  }
+    color: #fff;
+}
   
-  .button-container {
+.button-container {
     margin: 2rem 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
+}
 
 footer {
     padding: 1rem;
