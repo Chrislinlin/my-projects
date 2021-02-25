@@ -11,6 +11,7 @@
             background-color: $color-dark;
             position: fixed;
             left: -50vw;
+            //由四個點來決定動畫的速度曲線(可以用到trasition, transform裡面)
             transition: left .8s cubic-bezier(1, 0, 0, 1);
 
             @media (max-width:800px) {
@@ -88,7 +89,7 @@
                 list-style: none;
             }
 
-            // letter-spacing+transition放慢可以做出QQ的文字特效
+            // letter-spacing+transition做出慢慢放出動畫QQ2的文字特效
 
             &-link {
                 font-family: $font-dancingScript;
@@ -113,7 +114,7 @@
         }
     }
 }
-
+// :checked 偽類 可不用js的切換狀態
 .checkbox:checked~.navbar-navigation .navbar-navigation-left {
     left: 0;
 }

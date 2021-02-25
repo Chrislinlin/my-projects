@@ -27,6 +27,8 @@
         &-line {
             width: 100%;
             height: 4px;
+            // 改變兩直線旋轉的圓心，讓兩條直線變成x
+            // 這邊設計為右邊直線的底端固定，並且作旋轉
             background-color: $color-primary;
             transform-origin: right;
             transition: all .5s .5s;
