@@ -30,11 +30,13 @@ function todayWeather(data, cityNum){
     let weatherImg = changeImg(weatherDescription);
     
     $('.weather_now').html(`
-    <h1>${chooseCity}</h1>
+
+    <h1 ">${chooseCity}</h1>
     <h2>${todayDate}</h2>
     ${weatherImg}
     <div class="now-description">${weatherDescription}</div>
     <p>溫度: ${weatherTemp} °C</p>
+
     `)
     
 }
@@ -45,6 +47,7 @@ function weekWeather(data, cityNum){
     for (i = 1; i < 7; i++) {
         let timeIndex = 2 * i;
         let day = $('<div></div>').attr('class', `day`);
+        
         nextWeekNum = new Date().getDay()+1;
         let weather = data.location[cityNum].weatherElement;
     
@@ -55,9 +58,8 @@ function weekWeather(data, cityNum){
     day.html(`
         <h3>${oneWeek[i]}</h3>
         ${weatherImg}
-        <div class="week-description">${weatherDescription}</div>
+        <div class="week-description ">${weatherDescription}</div>
         <p>溫度: ${weatherTemp} °C</p>
-
     `);
     $('#week').append(day);
     }

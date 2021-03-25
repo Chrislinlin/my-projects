@@ -18,7 +18,7 @@ body{
 }
 .selector{
     margin: 10px 0;
-    width: 30%;
+    width: 50%;
     height: 40px;
 }
 .selector select {
@@ -52,7 +52,14 @@ body{
 .weather_week img{
     
     margin: 10px 10px;
-    width: 150px;
+    width: 100%;
+}
+@media(max-width: 190px){
+    .weather_week img{
+    
+        margin: 10px 10px;
+        width: 100px;
+    }
 }
 .day{
     border-radius: 15px;
