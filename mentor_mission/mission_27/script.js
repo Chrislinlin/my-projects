@@ -102,11 +102,11 @@ $('#text').on('input',function(e){
 
         //set the difficulty level by time
         if(difficulty === 'hard'){
-            time +=2;
+            time +=5;
         }else if(difficulty === 'medium'){
-            time +=4;
+            time +=10;
         }else{
-            time +=6;
+            time +=15;
         }
     }
 })
