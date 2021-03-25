@@ -67,7 +67,7 @@ function RandomWord() {
 function updateTime(){
     timeInterval = setInterval(function () {
         time--;
-        $('#time').html(time + 's');
+        $('#time').text(`${time}s`);
     
         if(time === 0){
             clearInterval(timeInterval);
@@ -95,15 +95,11 @@ $('#text').on('input',function(e){
     if(insertText == randomWord ){
         // console.log("yes!")
         RandomWord();
-
-        //update the score
-        updateScore()
-        function updateScore(){
+        //每打完一個字，clear input
+        $(this).val('');
         score++;
         $('#score').text(score);
-        }
-        //每打完一個字，clear input
-        $(e.target).val('');
+
         //set the difficulty level by time
         if(difficulty === 'hard'){
             time +=2;
@@ -112,8 +108,6 @@ $('#text').on('input',function(e){
         }else{
             time +=6;
         }
-      
-        updateTime()
     }
 })
 //Setting btn click event
@@ -129,19 +123,7 @@ $('#settings-form').change(function(e){
     localStorage.setItem('difficulty',difficulty)
 })
 
-//start counting down
-const timeInterval = setInterval(updateTime, 1000);
 
-//update time 
-function updateTime(){
-    time--;
-    $('#time').text(time + 's');
-
-    if(time === 0){
-        clearInterval(timeInterval);
-        gameOver();
-    }
-}
 //gameOver , show end screen
 function gameOver(){
     $('#end-game-container').html(`
