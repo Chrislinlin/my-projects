@@ -29,11 +29,9 @@ let randomWord;
 let score =0;
 
 //init time
-<<<<<<< HEAD
-let time = 10;
-=======
 let time = 20;
->>>>>>> 27_typing_game
+
+
 
 //設定困難度是由設定在localstorage的困難度還是'medium'
 // let difficulty = 'medium';
@@ -42,14 +40,6 @@ let difficulty = localStorage.getItem('difficulty') !==null? localStorage.getIte
 //set difficulty select value
 $('#difficulty').val(localStorage.getItem('difficulty') !==null? localStorage.getItem('difficulty') : 'medium');
 
-<<<<<<< HEAD
-=======
-// //start counting down
-// const timeInterval = setInterval(updateTime, 1000);
-
-
-
->>>>>>> 27_typing_game
 //當畫面reload，滑鼠游標自動帶到input
 $('#text').focus();
 
@@ -61,10 +51,7 @@ $('#text').focus();
 
 //get word by API
 RandomWord()
-<<<<<<< HEAD
-=======
 updateTime()
->>>>>>> 27_typing_game
 function RandomWord() {
     $.ajax({
         method: "get",
@@ -76,8 +63,6 @@ function RandomWord() {
     });
 }
 
-<<<<<<< HEAD
-=======
 //update time 
 function updateTime(){
     timeInterval = setInterval(function () {
@@ -101,22 +86,16 @@ function gameOver(){
 }
 
 
->>>>>>> 27_typing_game
 
 //Typing event listener
 $('#text').on('input',function(e){
     const insertText = $(e.target).val();
     // console.log(insertText)
-<<<<<<< HEAD
-    let randomWord = $('h1').text();
-=======
     const randomWord = $('h1').text();
->>>>>>> 27_typing_game
     if(insertText == randomWord ){
         // console.log("yes!")
         RandomWord();
 
-<<<<<<< HEAD
         //update the score
         updateScore()
         function updateScore(){
@@ -137,27 +116,6 @@ $('#text').on('input',function(e){
         updateTime()
     }
 })
-=======
-        //每打完一個字，clear input
-        $(e.target).val('');
-        score++;
-        $('#score').text(score);
-        //set the difficulty level by time
-        if(difficulty === 'hard'){
-            time +=3;
-        }else if(difficulty === 'medium'){
-            time +=5;
-        }else{
-            time +=7;
-        }
-
-        
-    }
-})
-
-
-
->>>>>>> 27_typing_game
 //Setting btn click event
 //有設定css 屬性transform: translateY(-100)
 $('#settings-btn').click(function(){
@@ -171,7 +129,6 @@ $('#settings-form').change(function(e){
     localStorage.setItem('difficulty',difficulty)
 })
 
-<<<<<<< HEAD
 //start counting down
 const timeInterval = setInterval(updateTime, 1000);
 
@@ -193,7 +150,3 @@ function gameOver(){
     <button onclick= "location.reload()">Reload</button>
     `).css('display','flex');
 }
-=======
-
-
->>>>>>> 27_typing_game
