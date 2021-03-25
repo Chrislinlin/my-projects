@@ -148,7 +148,7 @@ $('#text').on('input',function(e){
         }else if(difficulty === 'medium'){
             time +=5;
         }else{
-            time +=9;
+            time +=7;
         }
 
         
