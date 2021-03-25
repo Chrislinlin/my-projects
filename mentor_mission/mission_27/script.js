@@ -105,11 +105,11 @@ $('#text').on('input',function(e){
         $('#score').text(score);
         //set the difficulty level by time
         if(difficulty === 'hard'){
-            time +=3;
-        }else if(difficulty === 'medium'){
             time +=5;
+        }else if(difficulty === 'medium'){
+            time +=10;
         }else{
-            time +=7;
+            time +=15;
         }
 
         
