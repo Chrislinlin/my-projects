@@ -46,7 +46,10 @@ function weekWeather(data, cityNum){
     let weekDay =[]
     for (i = 1; i < 7; i++) {
         let timeIndex = 2 * i;
-        let day = $('<div></div>').attr('class', `day`);
+        let day = $('<div></div>').attr({'class':('day col-sm')});
+        // day.attr('class', 'col-md-2')
+        // day.attr('class', 'col-sm-12')
+
         
         nextWeekNum = new Date().getDay()+1;
         let weather = data.location[cityNum].weatherElement;
