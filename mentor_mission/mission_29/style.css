@@ -5,7 +5,8 @@
 }
 
 body{
-    background: url('https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit-crop&w=1349&q=80');
+    background: url(./img/star.jpeg) no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,4 +77,16 @@ h1:hover{
     .time small{
         font-size: 10px;
     }
+}
+.typing{
+    animation: typing 3s steps(15) infinite;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    width: 900px;
+}
+
+@keyframes typing{
+    from{ width: 0;}
+
 }
