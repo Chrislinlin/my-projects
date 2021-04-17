@@ -12,6 +12,17 @@ body {
 
     background-color: crimson;
 }
+.menu-right-toggle2{
+    display: dl;
+}
+.search-btn{
+    background: none;
+    border: none;
+    outline: none;
+}
+.search-btn:focus{
+    outline: none;
+}
 
 /*---戲院介紹-------*/
 .section_3{
@@ -47,4 +58,25 @@ width: 100%;
 }
 .environment-title{
     font-weight: 700;
+}
+/*---footer-------*/
+footer{
+    text-align: center;
+    position: relative;
+}
+.footer-r {
+    margin: auto;
+}
+.footer-r a{
+    margin: 10px 20px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.footer-copyright{
+    padding-top: 10px;
+}
+.footer-icon{
+    position: absolute;
+    right: 10%;
 }

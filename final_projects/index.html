@@ -19,42 +19,41 @@
     <!--第0區域 nav bar-->
     <header>
         <div class="header_control">
-            <nav class="navbar navbar-light light-blue lighten-4">
-                <!-- Navbar brand -->
-                <div class="logo_img">
-                    <a class="navbar-brand" href="./index.html"> <img src="./image/cinema-film.svg" alt="logo">Lin!in
-                        Cinema</a>
-                </div>
-                <!-- Collapse button -->
-                <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
-                    aria-label="Toggle navigation"><span class="dark-blue-text"><i
-                            class="fas fa-bars fa-1x"></i></span></button>
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <a class="navbar-brand font-weight-bold text-light" href="#">Lin!in</a>
+                <button class="navbar-toggler btn-light" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-light"></span>
+                </button>
 
-                <!-- Collapsible content -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                    <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">立即購票<span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-light" href="#">立即購票 <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">現正熱映</a>
+                            <a class="nav-link text-light" href="#">現正熱映</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">即將上片</a>
+                            <a class="nav-link text-light" href="#">即將上片</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">會員登入</a>
+                            <a class="nav-link text-light" href="#">戲院介紹</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">餐飲選擇</a>
+                            <a class="nav-link text-light" href="#">優惠資訊</a>
                         </li>
+
+
                     </ul>
-                    <!-- Links -->
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-                <!-- Collapsible content -->
             </nav>
+
         </div>
         <!--end of Navbar-->
         <!-------第一部分 輪播區塊------->
@@ -151,57 +150,27 @@
         <!-------end of第三部分戲院介紹-------->
 
         <!---------footer-------------------->
-        <footer class="siteFooter">
-            <!---social-item-icon----->
-            <div class="siteFooter-socialItem">
-                <ul>
-                    <li><a href="#" class="link"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#" class="link"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" class="link"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" class="link"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#" class="link"><i class="fab fa-google-plus"></i></a></li>
-                </ul>
-            </div>
-            <!--end of social-item-icon------>
-            <!----footer-link-------------->
-            <div class="siteFooter-link">
-                <div class="section-container">
-                    <div class="section">
-                        <h3>立即購票</h3>
-                        <ul class="footer-list">
-                            <li><a href="#" class="link">gogogo</a></li>
-                        </ul>
-                    </div>
-                    <div class="section">
-                        <h3>現正熱映</h3>
-                        <ul class="footer-list">
-                            <li><a href="#" class="link">gogogo</a></li>
-                        </ul>
-                    </div>
-                    <div class="section">
-                        <h3>即將上片</h3>
-                        <ul class="footer-list">
-                            <li><a href="#" class="link">gogogo</a></li>
-                        </ul>
-                    </div>
-                    <div class="section">
-                        <h3>會員登入</h3>
-                        <ul class="footer-list">
-                            <li><a href="#" class="link">gogogo</a></li>
-                        </ul>
+        <footer>
+            <div class="container">
+                <!---social-item-icon----->
+                <div class="footer-icon">
+                    <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
+                </div>
+                <!--end of social-item-icon------>
+                <!----footer-link-------------->
+                <div class="footer-r">
+                    <a href="#">隱私權保護</a>｜
+                    <a href="#">服務條款</a>｜
+                    <a href="#">聯絡我們</a>｜
+                    <a href="#">回到首頁</a>
+                    <div class="footer-copyright">
+                        <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
                     </div>
                 </div>
-
             </div>
-            <!----end of footer-link-------------->
-            <!----------copyright------------------>
-            <div class="siteFooter-copyright">
-                <div class="col-xs-12 col-md-4 copyright">
-                    <span class="copyright">&copy; Copyright 2021 Lin!in Theatres</span>
-                </div>
-            </div>
-            <!----------end of copyright------------------>
-
         </footer>
         <!---------end of footer-------------------->
 
