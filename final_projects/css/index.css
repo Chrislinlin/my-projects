@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    /* background-color: #000; */
+}
+.header{
+    margin: 50px auto;
+    text-align: center;
+
+    background-color: crimson;
+}
+
+/*---戲院介紹-------*/
+.section_3{
+width: 100%;
+}
+.envir-item{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+
+}
+.envir-img{
+    width: 60%;
+}
+.envir-img img{
+    width: 100%;
+   height: 100%;
+}
+
+.envir-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 40%;
+    margin-left: 20px;
+    /* color: cornsilk; */
+}
+.envir-text-2 {
+    margin-right: 20px;
+    order: -1;
+}
+.environment-title{
+    font-weight: 700;
+}
