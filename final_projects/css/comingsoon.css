@@ -1,0 +1,228 @@
+body{
+    box-sizing:border-box ;
+    background-color: #000;
+}
+.section_1{
+    width: 100%;
+}
+.section_1_box{
+    width: 90%;
+    margin: 0 auto;
+
+}
+.section_1_item{
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    display: block;
+    /* position: relative; */
+    /* background-color: #4a555f; */
+}
+.movie_img{
+    width: 100%;
+    text-decoration: none ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3c4146;
+    /* padding: 5px; */
+}
+.movie_img > img{
+width: 100%;
+
+}
+.movie-info{
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-size: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 5px;
+}
+.movie_playdate{
+    font-size: 1.5rem;
+    color: #9e9a99;
+    font-weight: 500;
+}
+.movie_title{
+    font-size: 20px;
+}
+/* @media (min-width:768px) and (max-width:1200px) {} */
+
+.movie_title > h3{
+
+    font-weight: bold;
+    /* display: inline-block; */
+}
+.movie_title > h5{
+    font-size: 30px;
+    color: #717236;
+}
+.movie-type{
+    font-size: 1.5rem;
+}
+.movie_runtime{
+    color: #9e9a99;
+    font-size: 1.5rem;
+}
+.movie_actor{
+    font-size: 20px;
+}
+/*----ＲＷＤ----*/
+@media (min-width:768px) and (max-width:1200px) {
+    .section_1_box{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .section_1_item{
+        width: calc((100% -10px)/2);
+    }
+    .movie_playdate{
+        font-size: 2rem;
+    }
+    .movie_time{
+        font-size: 2.5rem;
+    }
+    .movie-info{
+        font-size: 2rem;
+    }
+}
+/* 大於 1200px 之後 切換成另一個畫面呈現 */
+@media (min-width: 1200px){
+    .section_1{
+        display: none !important ;
+    }
+    .section_2{
+        display: block  !important;
+    }
+    .movie_playdate{
+        border-bottom: 2px solid #464f69;
+        font-size: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+    }
+    .movie_info{
+        margin-top: 25px;
+        font-size: 2rem;
+    }
+    .movie_info .movie-titles{
+        font-size: 2.5rem;
+    }
+}
+
+/*------section 2 的處理-----------*/
+.section_2{
+    width: 100%;
+    display: none
+}
+.section_2_box{
+    width: 90%;
+    margin: 0 auto;
+
+}
+.circle_top{
+    width: 200px;
+    height: 200px;
+    background-color: #464f69;
+    border-radius: 50%;
+    margin: 30px auto 0 auto;
+
+}
+.circle_top .circle-word{
+    position: relative;
+    color: #fff;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding-top: 70px;
+    /* border-bottom: 2px solid #9e9a99; */
+    
+
+    /* background-color: #9e9a99; */
+    margin: 30px auto 0 auto;
+
+}
+.bottom-line{
+    width: 80%;
+    margin: 5px auto 0 auto;
+    left: 50%;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+.s2_content_box {
+    display: flex;
+    position: relative;
+}
+.circle_bot{
+    width: 100px;
+    height: 100px;
+    background-color: #56648d;
+    border-radius: 50%;
+    margin: 0px auto 30px auto;
+    bottom: 30px;
+ 
+}
+.center_line{
+    height: 100%;
+    position: absolute;
+    border-left: 5px solid #464f69;
+    left: 50%;
+    transform:translate(-50%, 0) ;
+}
+.s2_left_box{
+    width: 50%;
+}
+.s2_item_box{
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+}
+.s2_item_left {
+    width: 50%;
+}
+.s2_item_img{
+    margin: 50px auto 0 auto;
+    width: 90%;
+}
+.s2_item_img >img{
+    width: 100%;
+}
+/* ---- 右半邊 ----- */
+.s2_item_right{
+    width: 50%;
+    margin: 10px;
+}
+.s2_right_box{
+    width: 50%;
+}
+.s2_item_box_right_1 {
+    padding-top: 300px;
+}
+.movie_info_right {
+    padding-left: 20px;
+}
+/* 電影照片 hover 效果 */
+.s2_item_img {
+    overflow: hidden;
+}
+
+.s2_item_img > img {
+    transition: all 0.6s ease-in-out;
+}
+.s2_item_img > img:hover {
+    transform: scale(1.1);
+}
+
+
