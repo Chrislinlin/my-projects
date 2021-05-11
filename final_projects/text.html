@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!!test</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'
+        integrity='sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=='
+        crossorigin='anonymous' />
+</head>
+
+<body>
+    <div class="form-group stars">
+        <p>你的評分：</p>
+        <div id="todolist">r1111</div>
+        <textarea name="content" id="input" cols="30" rows="10"></textarea>
+
+        <button type="submit" class="btn btn-light" id="c-btn">Submmit</button>
+
+        <div class="user-star">
+            <span><i id="star" class="far fa-star"></i></span>
+            <span><i id="star" class="far fa-star"></i></span>
+            <span><i id="star" class="far fa-star"></i></span>
+            <span><i id="star" class="far fa-star"></i></span>
+            <span><i id="star" class="far fa-star"></i></span>
+            <div class="info"></div>
+            <button type="submit" id="btn">button</button>
+            <button id="del">delete</button>
+            <ul class="list" id="list">
+                <li></li>
+            </ul>
+
+        </div>
+        <button type="button" id="clickBtn">ClickNum</button>
+
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
+        integrity='sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=='
+        crossorigin='anonymous'></script>
+    <script>
+        $(function () {
+
+            var stars = $('span')
+            console.log(stars)
+            var grades = ['一分', '二分', '三分', '四分', '五分']
+            var active = -1 //是哪顆
+
+            for (var i = 0; i < stars.length; i++) {
+                stars[i].index = i
+                stars[i].onmouseover = function () {
+                    setStar(this.index)
+                };
+                stars[i].onmouseout = function () {
+                    setStar(active)
+                };
+                stars[i].click = setClick;
+            }
+
+            function setStar(nub) {
+                var name = '';
+                for (var i = 0; i < stars.length; i++) {
+                    if (stars[i].className = i <= nub) {
+                        stars[i].className = "aaa"
+                    } else {
+                        stars[i].className = "bbb"
+                    }
+                }
+                let gotGrade = $('.info').html(grades[nub]);
+                gotGrade1 = grades[nub];
+
+                console.log(gotGrade1)
+            }
+
+            function setClick() {
+                active = stars.index;
+            }
+
+        })
+    </script>
+</body>
+
+</html>

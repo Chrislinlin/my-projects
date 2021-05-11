@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    background-color: rgb(61, 58, 58);
+}
+.header_control{
+    top: 0;
+    width: 100%;
+    position: sticky;
+    z-index: 99;
+    border-bottom: 1px solid #878787;
+
+}
+
+.menu-right-toggle2{
+    display: dl;
+}
+.search-btn{
+    background: none;
+    border: none;
+    outline: none;
+}
+.search-btn:focus{
+    outline: none;
+}
+/*------title box-----*/
+.title-box{
+    padding: 20px 5px 20px 5px;
+    margin-top: 70px;
+    text-align: left;
+    color: #fff;
+    border-bottom: 1px solid #878787;
+}
+.title-box h1{
+    font-weight: 300;
+    letter-spacing: 5px;
+    font-size: 40px;
+    display: inline-block;
+    margin: 0;
+}
+@media screen and (max-width: 1200px) {
+    .title-box{
+        padding: 10px 20px 20px 20px;
+        margin-top: 20px;
+    }
+}
+/*------swiper -----*/
+.slider-banner{
+    margin: 50px 0;
+}
+.swiper-container{
+    width: 100%;
+    height: 100%;
+
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    
+}
+.movie-list{
+    color: #fff;
+    padding: 20px 30px;
+}
+.movie-info-box h1{
+    margin: 10px 0;
+}
+.s2_book_btn{
+    background-color: rgb(51, 42, 42);
+    color: #fff;
+}
+@media screen and (max-width: 500px) {
+    .movie-box{
+        position: relative;
+        top: 0%;
+}
+.movie-inner{
+        width: 100%;
+        height: 100%;
+        /* background: rgba(0, 0, 0, 0.3);    */
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        padding:30px 20px ;
+
+}
+.movie_inner:hover {
+    opacity: 0; 
+ }
+}
+
+.s2_book_btn{
+    padding: 10px;
+    border-radius: 10%;
+
+}
+
+
+/*---戲院介紹-------*/
+.section_3{
+width: 100%;
+}
+.section_3-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.header-box{
+    padding: 20px 10px 20px 10px;
+    margin: 70px 20px 20px 20px;
+    text-align: left;
+    color: cornsilk;
+    border-bottom: 1px solid #878787;
+}
+.envir-item{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+
+}
+.envir-img{
+    width: 60%;
+    position: relative;
+}
+.envir-img img{
+    width: 100%;
+   height: 100%;
+}
+
+.envir-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 40%;
+    margin-left: 20px;
+    color: rgb(252, 247, 227);
+}
+.envir-text-2 {
+    margin-right: 20px;
+    order: -1;
+}
+.environment-title{
+    font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+    .section_3-box{
+        width: 100%;
+    }
+    .envir-item{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .envir-img{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 0px;
+
+    }
+
+    .envir-text{
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+    .envir-text-2 {
+        order: 0;
+    }
+}
+/*---footer-------*/
+footer{
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+.footer-r {
+    margin: auto;
+}
+.footer-r a{
+    margin: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 30px;
+}
+.footer-r a:hover{
+    color: #878787;
+}
+
+.footer-copyright{
+    margin: 20px auto;
+    padding-top: 10px;
+  
+}
+.footer-icon{
+    position: absolute;
+    right: 10%;   
+    
+}
+.footer-icon i{
+    color: #fff;
+}
+.footer-icon i:hover{
+    color: #878787;
+}
+@media screen and (max-width: 768px) {
+    .footer-icon{
+        position: static;
+        margin-top: 10px;
+        bottom: 50px;
+    }
+    .footer-icon i{
+        margin-bottom: 15px;
+    }
+}
