@@ -1,8 +1,8 @@
 
 var mySwiper = new Swiper(".swiper-container",{
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
-    slidesPerGroup: 3,
+
     loop: true,
     loopFillGroupWithBlank: true,
     navigator:{
@@ -10,7 +10,7 @@ var mySwiper = new Swiper(".swiper-container",{
         prevEl:".swiper-button-prev"
     },
     autoplay:{
-        delay:2500,
+        delay:3000,
         disableOnInteraction: false,
     },
     breakpoints: {
@@ -27,7 +27,7 @@ var mySwiper = new Swiper(".swiper-container",{
           spaceBetween: 40,
         },
        1680: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 50,
         },
       }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-------index.css--------->
-    <link rel="stylesheet" href="./css\/index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Lin!in Cinema</title>
     <!-- Swiper v4.1.0 -->
     <link rel="stylesheet" href="./vendors/swiper/swiper.min.css">
@@ -21,18 +21,21 @@
     <!--第0區域 nav bar-->
     <header>
         <div class="header_control">
-            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand font-weight-bold text-light" href="#">Lin!in</a>
-                <button class="btn-light navbar-toggler " type="button" data-toggle="collapse"
+                <button class="btn-light navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <!-- <i class="fal fa-bars" style="color:#fff; font-size:28px;"></i> -->
+                    </span>
                 </button>
 
                 <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link text-light" href="#">立即購票 <span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-light" href="./bookingTickets.html">立即購票 <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#">現正熱映</a>
@@ -41,7 +44,7 @@
                             <a class="nav-link text-light" href="#">即將上片</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">場次查詢</a>
+                            <a class="nav-link text-light" href="#">戲院介紹</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#">優惠資訊</a>
@@ -69,23 +72,22 @@
 
             <!--end of 輪播底線--->
             <div class="carousel-inner">
-                <a href="#" class="promotion-link">
-                    <div class="carousel-item active">
+                <div class="carousel-item active">
+                    <a href="#" class="promotion-link">
                         <img class="d-block w-100" src="./image/promotion/activity_banner_01.png" alt="promotion_1">
-
-
-                    </div>
-                </a>
-                <a href="#" class="promotion-link">
-                    <div class="carousel-item">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" class="promotion-link">
                         <img class="d-block w-100" src="./image/promotion/activity_banner_02.png" alt="promotion_2">
-                    </div>
-                </a>
-                <a href="#" class="promotion-link">
-                    <div class="carousel-item">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" class="promotion-link">
                         <img class="d-block w-100" src="./image/promotion/activity_banner_03.jpg" alt="promotion_3">
-                    </div>
-                </a>
+                    </a>
+                </div>
+
 
             </div>
         </div>
@@ -204,7 +206,10 @@
         <!-----end of 本週上映--------->
         <!-------第三部分  戲院介紹-------->
         <section class="section_3">
-            <h1 class="header">戲院介紹</h1>
+            <div class="header-box">
+
+                <h1 class="header">戲院介紹</h1>
+            </div>
             <div class="section_3-box">
 
                 <div class="envir-item">
