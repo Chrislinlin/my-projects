@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /* display: flex; */
+    color: #fff
+}
+.step-item :hover{
+  color :red;
+  transition: 1s;
+}
+section{
+    width: 100%;
+}
+.container{
+    
+    margin-bottom:30px
+}
+.screen{
+    background-color: #fff;
+    width: 200px;
+    height: 60px;
+    transform: rotateX(60deg);
+    box-shadow: 0 3px 10pc rgba(255, 255, 255, 0.2);
+    margin: 15px 0;
+}
+.seat{
+    width: 15px;
+    height: 12px;
+    background-color: #444451;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.seat.selected{
+    background-color: #6feaf6;
+}
+/* 選取座位區第二個元素並使用margin-left把走道做出來 */
+.seat:nth-of-type(1) {
+    margin-right: 18px;
+}
+/* 選取倒數第二個處理走道 */
+.seat:nth-last-of-type(1) {
+    margin-left: 18px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <ul id="ex2">
+            <li>{{titles}}</li>
+            <li v-for="(item ,index) in nums">{{item}}</li>
+        </ul>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'
+        integrity='sha512-gh+25Y0CTHtw1FSJ4gDKYDFlZ84oV0l1bY5v7xrIwep7M1aV+7JgUaTu55bMerCblbPUD22MKlStyUwO9lHq4w=='
+        crossorigin='anonymous'></script>
+
+    <script>
+        let data = {
+            titles: 'ssssdsd',
+            nums: [
+                1, 2, 3, 4, 5
+            ]
+        }
+
+        let vm = new Vue({
+            el: '#ex2',
+            data: data
+        })
+    </script>
+
+</body>
+
+</html>
