@@ -39,7 +39,7 @@
     <!--第0區域 nav bar-->
     <header>
         <div class="header_control">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
                 <a class="navbar-brand font-weight-bold text-light" href="#">Lin!in</a>
                 <button class="btn-light navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -92,47 +92,53 @@
         </div>
     </div>
     <!----end of breadcrumb------------->
-    <div class="main-box">
-        <!-- 第0步驟 訂位條 -->
-        <section class="section section_1 step-all">
-            <div class="container">
-                <div class="step-box row">
 
-                    <div class="step-item col-md-3">
-                        <h4>購買電影票</h4>
-                    </div>
-                    <div class="step-item col-md-3">
-                        <h4>選擇位置</h4>
-                    </div>
-                    <div class="step-item col-md-3">
-                        <h4>確認資訊</h4>
-                    </div>
-                    <div class="step-item col-md-3">
-                        <h4>完成訂位</h4>
-                    </div>
+    <!-- 第0步驟 訂位條 -->
+    <section class="section section_1 step-all">
+        <div class="container">
+            <div class="step-box row">
 
+                <div class="step-item col-md-3">
+                    <h4>購買電影票</h4>
                 </div>
+                <div class="step-item col-md-3">
+                    <h4>選擇位置</h4>
+                </div>
+                <div class="step-item col-md-3">
+                    <h4>確認資訊</h4>
+                </div>
+                <div class="step-item col-md-3">
+                    <h4>完成訂位</h4>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
+    <div class="main-box" id="app">
         <!-- 第1部分 選擇票數 -->
+
         <section class="section section_2 ticket_sel col-md-12 ">
-            <div id="app" class="ticket-list">
+            <div class="ticket-list">
                 <div class="container">
                     <table>
                         <thead>
-                            <th>票種</th>
-                            <th>數量</th>
-                            <th>價格</th>
+                            <th class="th">票種</span>
+                            </th>
+                            <th class="th">數量</th>
+                            <th class="th">價格</th>
 
                         </thead>
                         <tbody>
                             <tr v-for="(item, index) in tickets">
-                                <td>{{item.types}}</td>
+                                <td class="tdClass">{{item.types}}</td>
 
                                 <td>
-                                    <button v-on:click="minusBtn(index)"><i class="fas fa-minus"></i></button>
-                                    {{item.num}}
-                                    <button v-on:click="plusBtn(index)"><i class="fas fa-plus"></i></button>
+                                    <button class="numBtn" v-on:click="minusBtn(index)"><i
+                                            class="fas fa-minus"></i></button><span class="item-num">
+                                        {{item.num}}</span>
+
+                                    <button class="numBtn" v-on:click="plusBtn(index)"><i
+                                            class="fas fa-plus"></i></button>
                                 </td>
                                 <td>{{item.prices}}</td>
 
@@ -141,7 +147,15 @@
 
                         </tbody>
                     </table>
-                    <div>總額: {{total}}</div>
+                    <div class="total">總額: <span class="total-price">{{total}}</span>元 </div>
+                    <div class="nextBtn">
+                        <button class="btn btn-outline-secondary btn-lg">
+                            <a href="#" class=" ticket_next_btn">下一步</a>
+                        </button>
+                    </div>
+
+
+
                 </div>
             </div>
 
@@ -149,15 +163,22 @@
         <!------- 第2部分 選擇位置 ------>
         <section class="theater">
             <div class="container">
-                <div class="col-md-12">
-                    <h3>可滑動進行選為</h3>
-                    <div class="check-seat">
-                        <h4>已選取<span id="seat-select">0</span>尚有<span id="seat-selected"></span>個未選取<br>
-                            <span id="seat-info"></span></h4>
+                <div class="col-md-12" id="app">
+                    <div class="theater-title">
+                        <h3>可進行點選 {{totalTickets}} 個</h3>
+                        <div class="check-seat">
+                            <h4>已選取<span>{{selTotal}}</span>尚有<span id="seat-selected"></span>個未選取<br>
+                                <span id="seat-info"></span></h4>
+                        </div>
                     </div>
+
                     <div class="container">
                         <div class="screen"></div>
-                        <div class="row">
+                        <!-- <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
                             <div class="seat"></div>
                             <div class="seat"></div>
                             <div class="seat"></div>
@@ -165,13 +186,22 @@
                             <div class="seat"></div>
                         </div>
                         <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
                             <div class="seat"></div>
                             <div class="seat selected"></div>
                             <div class="seat"></div>
                             <div class="seat"></div>
                             <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
                         </div>
                         <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
                             <div class="seat"></div>
                             <div class="seat"></div>
                             <div class="seat"></div>
@@ -185,11 +215,38 @@
                             <div class="seat"></div>
                             <div class="seat"></div>
                             <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
                         </div>
                     </div>
-                    <a href="#" class="btn-condfirm btn-member-bottom btn-block ticket_next_btn">下一步</a>
+                    <div class="nextBtn">
+                        <button class="btn btn-outline-secondary btn-lg">
+                            <a href="#" class=" ticket_next_btn">下一步</a>
+                        </button>
+                    </div> -->
+                        <!-- 用vue的方法 -->
+                        <div id="container" class="container" v-on:click="increase">
+                            <div class="row" v-for="i in 3">
+                                <div id="seat" class="seat" v-for="j in 9">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nextBtn">
+                            <button class="btn btn-outline-secondary btn-lg">
+                                <a href="#" class=" ticket_next_btn">下一步</a>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
                 </div>
-            </div>
+
+
         </section>
         <!-- 第３部分完成訂位       -->
         <section class="final-info">
@@ -223,41 +280,43 @@
                     <li>300</li>
                 </div>
             </ul>
+
             <div>
                 <a href="#" class="btn-condfirm btn-member-bottom btn-block ticket_next_btn">下一步</a>
             </div>
         </section>
 
+    </div>
 
-
-        <!---------footer-------------------->
-        <footer>
-            <div class="container">
-                <!---social-item-icon----->
-                <div class="footer-icon">
-                    <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
-                </div>
-                <!--end of social-item-icon------>
-                <!----footer-link-------------->
-                <div class="footer-r">
-                    <a href="#">隱私權保護</a>｜
-                    <a href="#">服務條款</a>｜
-                    <a href="#">聯絡我們</a>｜
-                    <a href="#">回到首頁</a>
-                    <div class="footer-copyright">
-                        <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
-                    </div>
+    <!---------footer-------------------->
+    <footer>
+        <div class="container">
+            <!---social-item-icon----->
+            <div class="footer-icon">
+                <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
+            </div>
+            <!--end of social-item-icon------>
+            <!----footer-link-------------->
+            <div class="footer-r">
+                <a href="#">隱私權保護</a>｜
+                <a href="#">服務條款</a>｜
+                <a href="#">聯絡我們</a>｜
+                <a href="#">回到首頁</a>
+                <div class="footer-copyright">
+                    <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
                 </div>
             </div>
-        </footer>
-        <!---------end of footer-------------------->
-        <script src="./vendors/vue.js"></script>
-        <!-- chooseticket.js -->
-
-        <script src="./js/chooseTickets.js"></script>
+        </div>
+    </footer>
+    <!---------end of footer-------------------->
+    <script src="./vendors/vue.js"></script>
+    <script src="./js/chooseTickets.js"></script>
+    <script src="./js/chooseSeat.js"></script>
+    <!-- chooseticket.js -->
+    ，
 
 </body>
 

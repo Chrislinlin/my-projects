@@ -1,6 +1,4 @@
 
-
-
 let vm= new Vue({
     el: '#app',
     data: {
@@ -18,6 +16,7 @@ let vm= new Vue({
 
             },
         ],
+        selTotal:0
 
     },
     computed:{
@@ -27,6 +26,14 @@ let vm= new Vue({
                 price = price+this.tickets[i].num*this.tickets[i].prices
             }return price
         },
+        totalTickets(){
+            let a =0;
+            this.tickets.forEach(b =>{
+                a +=b.num
+            })
+            return a
+        },
+
     },
 
     methods:{
@@ -39,6 +46,16 @@ let vm= new Vue({
         },
         plusBtn(index){
             this.tickets[index].num++
+        },
+        increase(){
+            const selectSeats = document.querySelectorAll('.selected')
+            console.log(selectSeats)
+            selectSeatsLength = selectSeats.length;
+            console.log(selectSeatsLength)
+            if(selectSeatsLength>0){
+                this.selTotal =selectSeatsLength
+            }
+
         }
     }
 })
