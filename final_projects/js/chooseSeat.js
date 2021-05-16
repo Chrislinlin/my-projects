@@ -1,4 +1,4 @@
-const selectSeats = document.querySelectorAll('.selected')
+
 const rows = document.querySelector('.row');
 const container = document.getElementById('container')
 console.log('sss')
