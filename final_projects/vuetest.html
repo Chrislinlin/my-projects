@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue test</title>
+    <style>
+        .box {
+            width: 300px;
+            display: flex;
+            height: 100px;
+            margin: 5px;
+            background: blue
+        }
+
+        .box2 {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            background: red
+        }
+    </style>
+</head>
+
+<body>
+    <div id='app'>
+        <div class="box seat" v-for="i in 5" v-on:click="increase">
+            <div class="box2 seat" v-for="j in i">
+                <div></div>
+            </div>
+        </div>
+        <p class="box" v-on:click="increase">1212{{sum}}</p>
+    </div>
+    <div class="box2">{{list2}}</div>
+
+
+    <script src="/final_projects/vendors/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                divs: [],
+                sum: 0
+            },
+            methods: {
+                increase: function () {
+                    this.sum++
+                }
+            }
+
+
+
+
+
+        });
+    </script>
+    <script>
+        console.log('111')
+        const container = document.getElementById('app')
+        console.log(container)
+        container.addEventListener('click', function (e) {
+            if (e.target.classList.contains('seat')) {
+                console.log('aaa')
+                e.target.classList.toggle('selected')
+                // updateSelectCount()
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
