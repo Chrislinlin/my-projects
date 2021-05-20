@@ -234,8 +234,8 @@
                                 </div>
                             </div> -->
                             <div class="row" v-for="i in totalSeats">
-                                <div class="seat" :class="test ? 'selected' : ''" v-for="(j,index) in i.list"
-                                    :key='index' v-on:click="increaseSeat(i,j)">
+                                <div class="seat" :class="test ? 'selected' : ''" v-for="j in i.list" :key='j.n
+                                    v-on:click="increaseSeat(i,j)">
 
                                 </div>
                             </div>
