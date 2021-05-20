@@ -167,7 +167,7 @@
                     <div class="theater-title">
                         <h3>可進行點選 {{totalTickets}} 個</h3>
                         <div class="check-seat">
-                            <h4>已選取<span>{{selTotal}}</span>尚有<span id="seat-selected"></span>個未選取<br>
+                            <h4>已選取<span>{{sum}}</span>尚有<span id="seat-selected"></span>個未選取<br>
                                 <span id="seat-info"></span></h4>
                         </div>
                     </div>
@@ -227,9 +227,15 @@
                         </button>
                     </div> -->
                         <!-- 用vue的方法 -->
-                        <div id="container" class="container" v-on:click="increase">
-                            <div class="row" v-for="i in 3">
-                                <div class="seat" v-for="j in 9">
+                        <div id="container" class="container">
+                            <!-- <div class="row" v-for="i in 3">
+                                <div class="seat" v-for="j in 9" v-on:click="increase">
+
+                                </div>
+                            </div> -->
+                            <div class="row" v-for="i in totalSeats">
+                                <div class="seat" :class="test ? 'selected' : ''" v-for="j in i.list" :key='j.n
+                                    v-on:click="increaseSeat(i,j)">
 
                                 </div>
                             </div>
