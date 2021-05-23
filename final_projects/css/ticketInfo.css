@@ -1,0 +1,43 @@
+@media screen and (max-width:376px) {
+     .page_title{
+         font-size: 50px;
+         font-weight: 300;
+         color: red;
+     }
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.notice{
+    margin: 50px auto;
+    width: 100%;
+    height: 100%;
+}
+.page_title{
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+}
+h6 >i {
+    
+    font-size: 20px;
+}
+h6 >span{
+    margin: 0 5px;
+    color: #fff;
+}
+table{
+    text-align: ;
+}
+td{
+    font-size: 20px;
+}
+td >p{
+    font-size: 10px;
+    font-weight: 200;
+}

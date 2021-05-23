@@ -3,7 +3,7 @@ main{
 }
 .section_1{
     width: 90%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 .s1_item{
     text-decoration: none;
@@ -67,6 +67,9 @@ main{
     padding: 10px;
     background-color: rgb(54, 53, 49);
 
+}
+.nowComing-col{
+    margin-bottom: 50px;
 }
 .movie-info h3{
     color: #fff;

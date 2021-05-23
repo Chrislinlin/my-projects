@@ -56,24 +56,19 @@
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">現正熱映</a>
+                            <a class="nav-link text-light" href="./nowComingOut.html">現正熱映</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">即將上片</a>
+                            <a class="nav-link text-light" href="./commingsoon.html">即將上片</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#">戲院介紹</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">優惠資訊</a>
+                            <a class="nav-link text-light" href="./ticketInfo.html">票價資訊</a>
                         </li>
-
-
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+
                 </div>
             </nav>
 
@@ -86,7 +81,7 @@
             <ul class="breadcrumb_list">
                 <li><a href="./index.html" class="breadcrumb_link">首頁</a></li>
                 <li><a href="./bookingTickets.html" class="breadcrumb_link">立即訂票</a></li>
-                <li><a href="./movieIntroduction.html" class="breadcrumb_link">電影介紹</a></li>
+                <li><a href="./movieIntroduction.html" class="breadcrumb_link">立即購票</a></li>
                 <li><a class="now_page">訂位頁面</a></li>
             </ul>
         </div>
@@ -234,7 +229,7 @@
                                 </div>
                             </div> -->
                             <div class="row" v-for="i in totalSeats">
-                                <div class="seat" :class="test ? 'selected' : ''" v-for="j in i.list" :key='j.n
+                                <div class="seat" :class="test ? 'selected' : "" " v-for="j in i.list" :key='j.n
                                     v-on:click="increaseSeat(i,j)">
 
                                 </div>

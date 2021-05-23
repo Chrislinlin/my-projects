@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------font awesome----------------->
+    <link rel="stylesheet" href="./vendors/fontawesome-free-5.15.2-web/css/all.css">
+    <!----bootstrap cdn------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-------index.css--------->
+    <link rel="stylesheet" href="./css//index.css">
+    <!-------booktickets.css--------->
+    <link rel="stylesheet" href="./css/ticketInfo.css">
+    <!--------breadcrumb-------->
+    <link rel="stylesheet" href="./css/breadcrumb.css">
+    <title>立即購票</title>
+    <!---- Swiper v4.1.0 -->
+    <link rel=" stylesheet" href="./vendors/swiper/swiper.min.css">
+</head>
+
+<body>
+    <!--第0區域 nav bar-->
+    <header>
+        <div class="header_control">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand font-weight-bold text-light" href="#">Lin!in</a>
+                <button class="btn-light navbar-toggler " type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="./bookingTickets.html">立即購票 <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./nowComingOut.html">現正熱映</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./commingsoon.html">即將上片</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./ticketInfo.html">票價資訊</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+        </div>
+        <!--end of Navbar-->
+        <!-- ----第一部分 麵包屑 breadcrumb---- -->
+        <div class="breadcrumb">
+            <div class="breadcrumb_box">
+                <ul class="breadcrumb_list">
+                    <li><a href="./index.html" class="breadcrumb_link">首頁</a></li>
+                    <li><a class="now_page">票價資訊</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 主要內容 文字 -->
+        <!-------第二部分 票價資訊------>
+        <div class="container">
+            <!-- 頁面提示 文字 -->
+            <h2 class="page_title">
+                票價資訊
+            </h2>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <table class="table table-dark">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">票種</th>
+                                <th scope="col">金額</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>全票
+                                    <p style="color: #fff;">Adult Tickets</p>
+                                </td>
+
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td>半票
+                                    <p class="price-ticket__subtitle">ConcessionTicket</p>
+                                </td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-------end of 票價資訊---------------->
+        <!--------注意事項--------------------->
+        <section class="notice">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <h6><i class="fas fa-exclamation-triangle text-light"></i><span>注意事項 NOTICE</span></h6>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container notice-words">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-12 li-group">
+                        <ul class="text-light">
+                            <li>．請勿攜帶熱食進入影廳</li>
+                            <li>．退票零錢請當面確認點清離櫃後恕不負責</li>
+                            <li>．退票僅限於開演前20分鐘</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <ul class=" text-light">
+                            <li>．超過九十公分之民眾，需購票進場</li>
+                            <li>．購買學生票/老人票請需出示證件</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            </div>
+
+        </section>
+
+
+
+        <!---------footer-------------------->
+        <footer>
+            <div class="container">
+                <!---social-item-icon----->
+                <div class="footer-icon">
+                    <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
+                </div>
+                <!--end of social-item-icon------>
+                <!----footer-link-------------->
+                <div class="footer-r">
+                    <a href="#">隱私權保護</a>｜
+                    <a href="#">服務條款</a>｜
+                    <a href="#">聯絡我們</a>｜
+                    <a href="#">回到首頁</a>
+                    <div class="footer-copyright">
+                        <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!---------end of footer-------------------->
+
+
+    </header>
+
+    <!---導入jQuery--------->
+    <script src="./vendors/jQuery/js/jquery-3.5.1.min.js"></script>
+    <!--bootstraps cdn--->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!----swiper------------->
+    <!--swiper js-->
+    <script src="./vendors/swiper/swiper.min.js"></script>
+    <script src="./js/swiper.js"></script>
+
+
+
+</body>
+
+</html>
