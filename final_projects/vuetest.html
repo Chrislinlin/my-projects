@@ -7,67 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue test</title>
     <style>
-        .box {
-            width: 300px;
-            display: flex;
-            height: 100px;
-            margin: 5px;
-            background: blue
+        .red {
+            color: red
         }
 
-        .box2 {
-            width: 80px;
-            height: 80px;
-            margin: 10px;
-            background: red
+        .bigger {
+            font-size: 40px;
         }
     </style>
 </head>
 
 <body>
-    <div id='app'>
-        <div class="box seat" v-for="i in 5" v-on:click="increase">
-            <div class="box2 seat" v-for="j in i">
-                <div></div>
-            </div>
-        </div>
-        <p class="box" v-on:click="increase">1212{{sum}}</p>
+
+
+    <div id="app">
+        <ul>
+            <template v-for="(item, index) in new_item">
+                <li>index: {{index}}, <input type="text" :placeholder=" item.name ">{{ item.name }}</li>
+            </template>
+        </ul>
     </div>
-    <div class="box2">{{list2}}</div>
 
 
-    <script src="/final_projects/vendors/vue.js"></script>
+    <script src="/final_projects/vendors/vue.js"> </script>
     <script>
-        let vm = new Vue({
+        var vam = new Vue({
             el: '#app',
             data: {
-                divs: [],
-                sum: 0
+                list: [{
+                        id: 1,
+                        name: "Chris",
+                        city: "Taoyuan",
+                        age: 10,
+                    },
+                    {
+                        name: "Sonia",
+                        city: "Taipei",
+                        age: 11,
+                        id: 2,
+                    },
+                    {
+                        name: "Elsa",
+                        city: "Taipei2",
+                        age: 12,
+                        id: 3
+                    },
+                    {
+                        name: "Reina",
+                        city: "Taipei3",
+                        age: 13,
+                        id: 4
+                    },
+
+                ]
             },
-            methods: {
-                increase: function () {
-                    this.sum++
+            computed: {
+                new_item: function () {
+                    let name = this.list;
+                    console.log(name)
+                    return name.reverse()
                 }
-            }
-
-
-
-
-
-        });
-    </script>
-    <script>
-        console.log('111')
-        const container = document.getElementById('app')
-        console.log(container)
-        container.addEventListener('click', function (e) {
-            if (e.target.classList.contains('seat')) {
-                console.log('aaa')
-                e.target.classList.toggle('selected')
-                // updateSelectCount()
             }
         })
     </script>
+
 
 
 </body>
