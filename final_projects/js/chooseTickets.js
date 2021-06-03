@@ -2,16 +2,20 @@
 let vm= new Vue({
     el: '#app',
     data: {
+        step: 0,
+        show1: true,
+        show2: false,
+        show3: false,
         tickets:[
             {
                 types:"全票",
-                num: 1,
+                num: 0,
                 prices: 200
 
             },
             {
                 types:"半票",
-                num: 1,
+                num: 0,
                 prices: 100
 
             },
@@ -178,6 +182,18 @@ let vm= new Vue({
     },
 
     methods:{
+        btn1(){
+            this.show1 = false;
+            this.show2 =true;
+            this.step++
+            console.log(this.step)
+        },
+        btn2(){
+            this.show2 = false;
+            this.show3 =true;
+            this.step++;
+            console.log(this.step)
+        },
 
         minusBtn(index){
             this.tickets[index].num--

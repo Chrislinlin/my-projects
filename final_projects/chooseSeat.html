@@ -80,7 +80,7 @@
             <ul class="breadcrumb_list">
                 <li><a href="./index.html" class="breadcrumb_link">首頁</a></li>
                 <li><a href="./bookingTickets.html" class="breadcrumb_link">立即訂票</a></li>
-                <li><a href="./movieIntroduction.html" class="breadcrumb_link">立即購票</a></li>
+                <li><a href="./movieIntroduction.html" class="breadcrumb_link">電影介紹</a></li>
                 <li><a class="now_page">訂位頁面</a></li>
             </ul>
         </div>
@@ -88,30 +88,41 @@
     <!----end of breadcrumb------------->
 
     <!-- 第0步驟 訂位條 -->
-    <section class="section section_1 step-all">
-        <div class="container">
-            <div class="step-box row">
-
-                <div class="step-item col-md-3">
-                    <h4>購買電影票</h4>
-                </div>
-                <div class="step-item col-md-3">
-                    <h4>選擇位置</h4>
-                </div>
-                <div class="step-item col-md-3">
-                    <h4>確認資訊</h4>
-                </div>
-                <div class="step-item col-md-3">
-                    <h4>完成訂位</h4>
-                </div>
-
-            </div>
-        </div>
-    </section>
     <div class="main-box" id="app">
+        <section class="section section_1 step-all">
+            <div class="container">
+                <div class="step-box row">
+
+                    <div class="step-item col-md-3">
+                        <div :class="step == 0 ? 'head_title arrow_right' : '' ">
+
+                            <h4>購買電影票</h4>
+                        </div>
+
+                    </div>
+                    <div class="step-item col-md-3">
+                        <div :class="step == 1 ? 'head_title arrow_right' : '' ">
+
+                            <h4>選擇位置</h4>
+                        </div>
+                    </div>
+                    <div class="step-item col-md-3">
+                        <div :class="step ==2 ? 'head_title arrow_right' : ''">
+
+                            <h4>確認資訊</h4>
+                        </div>
+                    </div>
+                    <div class="step-item col-md-3">
+                        <h4>完成訂位</h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- 第1部分 選擇票數 -->
 
-        <section class="section section_2 ticket_sel col-md-12 ">
+        <section class="section section_2 ticket_sel col-md-12 " v-if="show1">
             <div class="ticket-list">
                 <div class="container">
                     <table>
@@ -143,7 +154,7 @@
                     </table>
                     <div class="total">總額: <span class="total-price">{{ total_price }}</span>元 </div>
                     <div class="nextBtn">
-                        <button class="btn btn-outline-secondary btn-lg">
+                        <button class="btn btn-outline-secondary btn-lg" @click="btn1">
                             <a href="#" class=" ticket_next_btn">下一步</a>
                         </button>
                     </div>
@@ -155,9 +166,10 @@
 
         </section>
         <!------- 第2部分 選擇位置 ------>
-        <section class="theater">
+
+        <section class="theater" v-if="show2">
             <div class="container">
-                <div class="col-md-12" id="app">
+                <div class="col-md-12">
                     <div class="theater-title">
                         <h3>可進行點選 {{totalTickets}} 個</h3>
                         <div class="check-seat">
@@ -166,7 +178,8 @@
                         </div>
                         <!-- 選個什麼位置 -->
                         <div v-if="selected_seats.length > 0">
-                            <span v-for="seat in selected_seats" :key="seat.id">{{seat.row}}-{{ seat.name }}、</span>
+                            <span v-for="seat in selected_seats"
+                                :key="seat.id">{{seat.row}}-{{ seat.name }}&nbsp&nbsp</span>
                         </div>
                     </div>
 
@@ -238,13 +251,10 @@
                             </div>
                         </div>
                         <div class="nextBtn">
-                            <button class="btn btn-outline-secondary btn-lg">
+                            <button class="btn btn-outline-secondary btn-lg" @click="btn2">
                                 <a href="#" class=" ticket_next_btn">下一步</a>
                             </button>
                         </div>
-
-
-
 
                     </div>
                 </div>
@@ -252,37 +262,48 @@
 
         </section>
         <!-- 第３部分完成訂位       -->
-        <section class="final-info">
-            <ul>
-                <div class="bottom-line">
-                    <li class="tit">片名：</li>
-                    <li><span class="txt-b">名偵探柯南</span><span class="txt-s">Dective Conan</span></li>
-                </div>
-                <div class="bottom-line">
-                    <li class="tit"></li>
-                    <li>110分鐘</li>
-                </div>
-                <div class="bottom-line">
-                    <li class="tit">時間</li>
-                    <li>
-                        <span class="txb">14:00</span>
-                    </li>
-                </div>
-                <div class="bottom-line">
-                    <li class="tit">座位</li>
-                    <li> <span v-for="seat in selected_seats" :key="seat.id">{{seat.row}}-{{ seat.name }}、</span></li>
-                </div>
-                <div class="bottom-line">
-                    <li class="tit">總計</li>
-                    <li><span class="total-price">{{ total_price }}</span>元</li>
+        <section class="final-info" v-if="show3">
+            <ul class='container'>
+                <div class="row">
+
+                    <div class="info-box">
+
+                        <div class="bottom-line">
+                            <li class="tit">片名：</li>
+                            <li><span class="txt-b">名偵探柯南</span><span class="txt-s">Dective Conan</span></li>
+                        </div>
+                        <div class="bottom-line">
+                            <li class="tit">片長 :&nbsp</li>
+                            <li>110分鐘</li>
+                        </div>
+                        <div class="bottom-line">
+                            <li class="tit">時間 : </li>
+                            <li>
+                                <!-- &nbsp是html的空格 -->
+                                <span class="txb">&nbsp14:00</span>
+                            </li>
+                        </div>
+                        <div class="bottom-line">
+                            <li class="tit">座位：</li>
+                            <li> <span v-for="seat in selected_seats"
+                                    :key="seat.id">{{seat.row}}-{{ seat.name }}&nbsp&nbsp</span>
+                            </li>
+                        </div>
+                        <div class="bottom-line">
+                            <li class="tit">總計</li>
+                            <li><span class="total-price">{{ total_price }}</span>元</li>
+                        </div>
+
+                        <div class="nextBtn">
+                            <button class="btn btn-outline-secondary btn-lg">
+                                <a href="#" class=" ticket_next_btn">下一步</a>
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
             </ul>
 
-            <div>
-                <button class="btn btn-outline-secondary btn-lg">
-                    <a href="#" class=" ticket_next_btn">下一步</a>
-                </button>
-            </div>
         </section>
 
     </div>

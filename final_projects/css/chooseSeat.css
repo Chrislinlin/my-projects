@@ -5,6 +5,16 @@ body{
     /* display: flex; */
     color: #fff
 }
+.step-box{
+
+}
+.step-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   /* background-color: brown; */
+}
 .step-item :hover{
   color :red;
   transition: 1s;
@@ -101,12 +111,22 @@ a:link,a:visited{
     margin: 15px 0;
 }
 .seat{
-    width: 15px;
-    height: 12px;
+    width: 25px;
+    height: 22px;
     background-color: #444451;
-    margin: 3px;
+    margin: 8px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+@media screen and (max-width:376px){
+    .seat{
+        width: 15px;
+        height: 12px;
+        background-color: #444451;
+        margin: 3px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    } 
 }
 .seat.selected{
     background-color: #6feaf6;
@@ -117,9 +137,71 @@ a:link,a:visited{
 }
 /* 選取座位區第二個元素並使用margin-left把走道做出來 */
 .seat:nth-of-type(1) {
+    margin-right: 28px;
+}
+/* 選取倒數第二個處理走道 */
+.seat:nth-last-of-type(1) {
+    margin-left: 28px;
+}
+@media screen and (max-width:376px){
+   /* 選取座位區第二個元素並使用margin-left把走道做出來 */
+.seat:nth-of-type(1) {
     margin-right: 18px;
 }
 /* 選取倒數第二個處理走道 */
 .seat:nth-last-of-type(1) {
     margin-left: 18px;
+} 
 }
+/* 第三部分完成訂位 */
+.final-info{
+    width: 100%;
+}
+.bottom-line{
+    display: flex;
+}
+
+.info-box{
+    width: 90%;
+    font-size: 30px;
+    margin: 50px auto;
+}
+
+.head_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding: 15px 10px;
+    border: 1px solid #fff;
+    background-color: blue; 
+    /* z-index: 1; */
+   
+   
+}
+h4{
+ 
+}
+.arrow_right{
+    
+    /* width: 180px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 5px;
+    margin-left: 30px;
+    border: 1px solid #009a61;
+    padding: 4px; */
+}
+.arrow_right:before,
+.arrow_right:after{
+    content: '';
+    display: block;
+    position: absolute;
+    /* color:green; */
+    width: 0;
+    height: 0;
+    left: 150px;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-left: 20px solid rgb(255, 249, 249);
+}
+
