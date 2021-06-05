@@ -194,6 +194,12 @@ let vm= new Vue({
             this.step++;
             console.log(this.step)
         },
+        btn3(){
+            this.show3 = false;
+            this.show4 =true;
+            this.step++;
+            console.log(this.step)
+        },
 
         minusBtn(index){
             this.tickets[index].num--
