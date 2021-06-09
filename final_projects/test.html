@@ -28,23 +28,67 @@
             background-color: blue;
         }
     </style>
+    <script src="./js/textboard.js"></script>
+    <script src="./vendors/jQuery/js/jquery-3.5.1.min.js"></script>
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 aa">aa</div>
-            <div class="col-md-9 bb">
-                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-            </div>
-        </div>
+    <div class="container" id='box'>
+        <ul>
+            <li v-for='(i, index) in stars' :key=index>
+                {{ index}}----{{ i.rate}}----{{i.time}}
+            </li>
+
+
+        </ul>
+        <input type="text" v-model="message">
+        <div>{{message}}</div>
+        <div>{{time2}}</div>
+
+        <!-- 
+        <ul>
+            <li v-for='(j, index) in filterDate' :key=index>{{j.time}}</li>
+        </ul> -->
+
+
+
+        <button @click="sort('rate')">rate</button>
+        <button @click="sort('time')">time+</button>
+        <button @click="sort('time3')">time-</button>
+        <!-- <button @click="sortFn(2)">--</button>
+        <button @click="sortTfn(3)">time-</button> -->
+        <div id="todolist">aaa</div>
+        <section class="section_1">
+
+            <form action="">
+
+                <div class="form-group stars">
+                    <label for="name">你的評分：</label>
+                    <div class="original-star">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <textarea name="content" id="input" cols="30" rows="10"></textarea>
+                </div>
+                <button type="button" class="btn btn-light" id="c-btn">Submmit</button>
+            </form>
+        </section>
     </div>
 
 
-    <!------bs script-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+
+    <script src="./vendors/vue.js"></script>
+
+
+    <script src="./js/sortCommand.js"></script>
 
 </body>
 
