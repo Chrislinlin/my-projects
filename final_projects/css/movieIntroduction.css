@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #000;
+    /* background-color: #000; */
     width: 100%;
     color: #fff;
 }
@@ -14,12 +14,17 @@ main{
     margin: 0 auto;
     height: 100%;
 }
-.bg{
+.movie-introduction{
+    top:16px;
     width: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image :  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url(/image/movie-introduction/conan_banner1.jpeg);   
+    height: 100%;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover  ; 
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: multiply;
+    /* background-color: red; */
+    background-image: url(/final_projects/image/movie-introduction/conan_banner1.jpeg);   
 }
 
 
@@ -51,10 +56,13 @@ main{
 }
 .newmovie_top_inner h1{
     font-size: 50px;
+    font-weight: 700;
 }
 .newmovie_top_inner h3{
     font-size: 16px;
     font-weight: 200;
+    line-height: 20px;
+    margin-bottom: 5px;
 }
 .member{
     border-bottom: 2px solid #ffffff;
@@ -175,15 +183,31 @@ main{
     width: 100%;
 }
 .star-box > img{
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    /* background-color: #fff; */
 }
-.original-star{}
-.original-star span,.user-star span{
+/*-----第五部分--------*/
+.msg-box{
+    background-color: rgb(78, 78, 78);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.rate-words{
+    margin: 10px 0;
+}
+.star-box{
+    margin: 0px 0 5px 0;
+}
+.submit-btn{
+    color: #fff;
+}
+
+/* .original-star span,.user-star span{
     font-size: 50px;
     margin-left: 10px;
-}
+} */
 /*
 .original-star span:after, .user-star span:after{
     content: '☆';

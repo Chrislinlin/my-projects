@@ -61,13 +61,8 @@
                             <a class="nav-link text-light" href="./commingsoon.html">即將上片</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">戲院介紹</a>
+                            <a class="nav-link text-light" href="./ticketInfo.html">票價資訊</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">優惠資訊</a>
-                        </li>
-
-
                     </ul>
                 </div>
             </nav>
@@ -84,169 +79,169 @@
                 </ul>
             </div>
         </div>
-        <!----end of breadcrumb------------->
-        <div class="container-fluid section_1">
+    </header>
+    <!----end of breadcrumb------------->
 
-            <div class="container bg">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="movie-img">
-                            <img src="./image/movie-introduction/conanMoviePoster.jpeg" alt="" srcset="">
-                        </div>
+
+    <div class=" bg movie-introduction">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="movie-img">
+                    <img src="./image/movie-introduction/conanMoviePoster.jpeg" alt="" srcset="">
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-12 newmovie_top_inner">
+                <h1>名偵探柯南：緋色的彈丸</h1>
+                <h3>Detective Conan the Movie: The Scarlet Bullet</h3>
+                <h3>
+                    2021/04/16 </h3>
+                <h3>
+                    長度 |
+                    111 min </h3>
+                <h3>
+                    級別 |
+                    普遍級 </h3>
+                <h3>
+                    導演 |
+                    永岡智佳 </h3>
+                <h3>
+                    演員 |
+                    高山南, 池田秀一, 森川智之, 田中敦子 </h3>
+                <p>世界最大的體育盛會暌違多年將在東京舉辦。知名大會贊助商匯集的會場中，各大企業老闆卻在光天化日下相繼被綁架。此時發現赤井秀一竟在背地指揮FBI成員們的行動。同時，柯南想起15年前美國波士頓連續綁架事件也是由FBI偵查，然而各種證據顯示出的不在場證明，難以讓真相水落石出……
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-----ueser comment--------->
+    <div class="container-fluid section_1">
+        <div class="box" id="box">
+            <div class="user-comment-box" id="comment-box">
+                <!-- <h1>影評精選</h1> -->
+                <div class="user_talk_box">
+                    <div class="user_talk_content_1 ">
+                        <div class="comment_title">會員短評</div>
+                        <div class="comment_num">{{stars.length}}則</div>
                     </div>
-                    <div class="col-md-6 col-xs-6 col-sm-12 newmovie_top_inner">
-                        <h1>名偵探柯南：緋色的彈丸</h1>
-                        <h3>Detective Conan the Movie: The Scarlet Bullet</h3>
-                        <h3>
-                            2021/04/16 </h3>
-                        <h3>
-                            長度 |
-                            111 min </h3>
-                        <h3>
-                            級別 |
-                            普遍級 </h3>
-                        <h3>
-                            導演 |
-                            永岡智佳 </h3>
-                        <h3>
-                            演員 |
-                            高山南, 池田秀一, 森川智之, 田中敦子 </h3>
-                        <p>世界最大的體育盛會暌違多年將在東京舉辦。知名大會贊助商匯集的會場中，各大企業老闆卻在光天化日下相繼被綁架。此時發現赤井秀一竟在背地指揮FBI成員們的行動。同時，柯南想起15年前美國波士頓連續綁架事件也是由FBI偵查，然而各種證據顯示出的不在場證明，難以讓真相水落石出……
-                        </p>
+                    <div class="user_talk_content_2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="filter_icon_box">
+                                        <div>排序: </div>
+                                        <div class="filter_on" @click="sort('time')">發表時間(新到舊)</div>
+                                        <div class="filterbtn" @click="sort('num')">評分(低到高)</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="comment-btn">
+                                        <div class="iwanttext">我要寫短評</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </div>
-            <!-----ueser comment--------->
-            <div class="box" id="box">
-                <div class="user-comment-box" id="comment-box">
-                    <!-- <h1>影評精選</h1> -->
-                    <div class="user_talk_box">
-                        <div class="user_talk_content_1 ">
-                            <div class="comment_title">會員短評</div>
-                            <div class="comment_num">{{stars.length}}則</div>
-                        </div>
-                        <div class="user_talk_content_2">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="filter_icon_box">
-                                            <div>排序: </div>
-                                            <div class="filter_on" @click="sort('time')">發表時間(新到舊)</div>
-                                            <div class="filterbtn" @click="sort('num')">評分(低到高)</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <a href="#" class="comment-btn">
-                                            <div class="iwanttext">我要寫短評</div>
-                                        </a>
+
+                <div class="user_talk_content_4">
+                    <i id="more" class="fas fa-chevron-down fa-3x"></i>
+                </div>
+                <ul>
+                    <div class="member member_5" v-for="(i, index) in stars">
+                        <div class=" container" style="background-color: rgb(66, 76, 83);">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="user_img">
+                                        <img :src="i.imgUrl" alt="">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="col-md-9">
+                                    <div class="comment-text-box">
+                                        <!---text1----star-->
+                                        <div class="comment-text-1">
+                                            <div>網友評分：
+                                                <span style="color: rgb(255, 255, 153);">{{i.star}}</span>
 
-                    </div>
-
-                    <div class="user_talk_content_4">
-                        <i id="more" class="fas fa-chevron-down fa-3x"></i>
-                    </div>
-                    <ul>
-                        <div class="member member_5" v-for="(i, index) in stars">
-                            <div class=" container" style="background-color: rgb(66, 76, 83);">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="user_img">
-                                            <img :src="i.imgUrl" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="comment-text-box">
-                                            <!---text1----star-->
-                                            <div class="comment-text-1">
-                                                <div>網友評分：
-                                                    <span style="color: rgb(255, 255, 153);">{{i.star}}</span>
-
-                                                </div>
+                                        <!---text2----text comment-->
+                                        <div class="comment-text-3">
+                                            <div>
+                                                <div>回應評論：</div>
                                             </div>
-                                            <!---text2----text comment-->
-                                            <div class="comment-text-3">
-                                                <div>
-                                                    <div>回應評論：</div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>
-                                                        {{i.comment}}
-                                                    </p>
-                                                </div>
+                                            <div class="text">
+                                                <p>
+                                                    {{i.comment}}
+                                                </p>
                                             </div>
-                                            <!---text3----comment time---->
-                                            <div class="comment-text-4">
-                                                回應時間：{{ i.time}}
-                                            </div>
+                                        </div>
+                                        <!---text3----comment time---->
+                                        <div class="comment-text-4">
+                                            回應時間：{{ i.time}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div id="todolist"></div>
-                        <section class="section_1">
-
-                            <form action="">
-
-                                <div class="form-group stars">
-                                    <label for="name">你的評分：</label>
-                                    <!-- <div class="original-star">
+                    </div>
+                    <!-------- 留言的地方 ----------->
+                    <section class="msg-box">
+                        <form action="">
+                            <div class="form-group stars">
+                                <label class="rate-words" for="name">你的評分：</label>
+                                <!-- <div class="original-star">
                                         <span>★</span>
                                         <span>★</span>
                                         <span>★</span>
                                         <span>★</span>
                                         <span>★</span>
                                     </div> -->
-                                    <div class="star-box">
-                                        <img v-for="(i, index) in starArray " :src="i.src" @click='rating(index)'
-                                            alt="starimg">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea name="content" id="input" cols="30" rows="10"
-                                            v-model='comment'></textarea>
-                                    </div>
-                                    <button type="button" class="btn btn-light" id="c-btn"
-                                        @click='addto'>Submmit</button>
-                            </form>
-                        </section>
-                    </ul>
-                </div>
-
+                                <div class="star-box">
+                                    <img v-for="(i, index) in starArray " :src="i.src" @click='rating(index)'
+                                        alt="starimg">
+                                </div>
+                                <div class="form-group yellow-border ">
+                                    <textarea class="form-control" name="content" id="input" cols="50" rows="7"
+                                        v-model='comment'></textarea>
+                                </div>
+                                <button type="button" class="btn btn-secondary submit-btn btn-lg" id="c-btn"
+                                    @click='addto'>Submmit</button>
+                            </div>
+                        </form>
+                    </section>
+                </ul>
             </div>
+
         </div>
-        <!---------footer-------------------->
-        <footer>
-            <div class="container">
-                <!---social-item-icon----->
-                <div class="footer-icon">
-                    <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
-                </div>
-                <!--end of social-item-icon------>
-                <!----footer-link-------------->
-                <div class="box" id="box">
-                    <div class="footer-r">
-                        <a href="#">隱私權保護</a>｜
-                        <a href="#">服務條款</a>｜
-                        <a href="#">聯絡我們</a>｜
-                        <a href="#">回到首頁</a>
-                        <div class="footer-copyright">
-                            <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
-                        </div>
+    </div>
+    <!---------footer-------------------->
+    <footer>
+        <div class="container">
+            <!---social-item-icon----->
+            <div class="footer-icon">
+                <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
+            </div>
+            <!--end of social-item-icon------>
+            <!----footer-link-------------->
+            <div class="box" id="box">
+                <div class="footer-r">
+                    <a href="#">隱私權保護</a>｜
+                    <a href="#">服務條款</a>｜
+                    <a href="#">聯絡我們</a>｜
+                    <a href="#">回到首頁</a>
+                    <div class="footer-copyright">
+                        <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
                     </div>
                 </div>
-        </footer>
-        <!---------end of footer-------------------->
+            </div>
+    </footer>
+    <!---------end of footer-------------------->
 
-        <!-- <div class="member member_1">
+    <!-- <div class="member member_1">
             <div class=" container" style="background-color: rgb(66, 76, 83);">
                 <div class="row">
                     <div class="col-md-3">
@@ -419,14 +414,14 @@
             </div>
         </div> -->
 
-        <!----textboard js------->
+    <!----textboard js------->
 
-        <!-- <script src="./js/textboard.js"></script> -->
+    <!-- <script src="./js/textboard.js"></script> -->
 
-        <script src="./vendors/vue.js"></script>
-        <!----movieintroduction.js------>
-        <script src="./js/movieintroduction.js"></script>
-        <script src="./js/sortCommand.js"></script>
+    <script src="./vendors/vue.js"></script>
+    <!----movieintroduction.js------>
+    <script src="./js/movieintroduction.js"></script>
+    <script src="./js/sortCommand.js"></script>
 </body>
 
 </html>
