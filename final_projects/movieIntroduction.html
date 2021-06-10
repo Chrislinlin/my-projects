@@ -47,7 +47,6 @@
                         <!-- <i class="fal fa-bars" style="color:#fff; font-size:28px;"></i> -->
                     </span>
                 </button>
-
                 <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -66,7 +65,6 @@
                     </ul>
                 </div>
             </nav>
-
         </div>
         <!--end of Navbar-->
         <!-- ----第一部分 麵包屑 breadcrumb---- -->
@@ -81,8 +79,6 @@
         </div>
     </header>
     <!----end of breadcrumb------------->
-
-
     <div class=" bg movie-introduction">
         <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -141,11 +137,6 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="user_talk_content_4">
-                    <i id="more" class="fas fa-chevron-down fa-3x"></i>
                 </div>
                 <ul>
                     <div class="member member_5" v-for="(i, index) in stars">
@@ -168,7 +159,7 @@
                                         <!---text2----text comment-->
                                         <div class="comment-text-3">
                                             <div>
-                                                <div>回應評論：</div>
+                                                <div class="comment-text-word">回應評論：</div>
                                             </div>
                                             <div class="text">
                                                 <p>
@@ -177,7 +168,7 @@
                                             </div>
                                         </div>
                                         <!---text3----comment time---->
-                                        <div class="comment-text-4">
+                                        <div class="comment-text-word">
                                             回應時間：{{ i.time}}
                                         </div>
                                     </div>
@@ -202,8 +193,8 @@
                                         alt="starimg">
                                 </div>
                                 <div class="form-group yellow-border ">
-                                    <textarea class="form-control" name="content" id="input" cols="50" rows="7"
-                                        v-model='comment'></textarea>
+                                    <textarea class="form-control" name="content" id="input" cols="40" rows="7"
+                                        placeholder="Please enter your comment...." v-model='comment'></textarea>
                                 </div>
                                 <button type="button" class="btn btn-secondary submit-btn btn-lg" id="c-btn"
                                     @click='addto'>Submmit</button>
@@ -212,7 +203,6 @@
                     </section>
                 </ul>
             </div>
-
         </div>
     </div>
     <!---------footer-------------------->
@@ -240,184 +230,6 @@
             </div>
     </footer>
     <!---------end of footer-------------------->
-
-    <!-- <div class="member member_1">
-            <div class=" container" style="background-color: rgb(66, 76, 83);">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="user_img">
-                            <img src="./image/movie-introduction/head_01.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="comment-text-box">
-                            <div class="comment-text-1">
-                                <div>網友評分：</div>
-                                <div class="star_img">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-
-                                </div>
-                            </div>
-                     
-                            <div class="comment-text-2">
-                                <div>回應評論</div>
-                            </div>
-                           
-                            <div class="comment-text-3">
-                                <div class="text">
-                                    <p>
-                                        好看⋯推推，好看值得推薦歡迎大家帶家庭小朋友一起來看好看喔真的非常好看推推推推
-                                    </p>
-                                </div>
-                            </div>
-                    
-                            <div class="comment-text-4">
-                                發表時間：2021-05-03 17:02:55
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="member member_2">
-            <div class=" container" style="background-color: rgb(66, 76, 83);">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="user_img">
-                            <img src="./image/movie-introduction/head_02.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="comment-text-box">
-                
-                            <div class="comment-text-1">
-                                <div>網友評分：</div>
-                                <div class="star_img">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-
-                                </div>
-                            </div>
-                        
-                            <div class="comment-text-2">
-                                <div>回應評論</div>
-                            </div>
-                           
-                            <div class="comment-text-3">
-                                <div class="text">
-                                    <p>
-                                        名偵探柯南：緋色的不在場證明要先看~~~ 再來看緋色的彈丸才會銜接的上這部 然後真空超導新幹線的創新很不錯 緋色的彈丸也太神 飛這麼久
-                                        還這麼準 演的不錯 東奧真的辦不成了 而且是一年前的電影延後上映
-                                    </p>
-                                </div>
-                            </div>
-                      
-                            <div class="comment-text-4">
-                                發表時間：2021-05-02 18:02:55
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="member member_3">
-            <div class=" container" style="background-color: rgb(66, 76, 83);">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="user_img">
-                            <img src="./image/movie-introduction/head_03.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="comment-text-box">
-                     
-                            <div class="comment-text-1">
-                                <div>網友評分：</div>
-                                <div class="star_img">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-
-                                </div>
-                            </div>
-                    
-                            <div class="comment-text-2">
-                                <div>回應評論</div>
-                            </div>
-                          
-                            <div class="comment-text-3">
-                                <div class="text">
-                                    <p>
-                                        覺得好看，赤井真的很帥，但比想像中出現的少，但灰原這次戲份很多，超開心
-                                    </p>
-                                </div>
-                            </div>
-                       
-                            <div class="comment-text-4">
-                                發表時間：2021-05-01 17:02:55
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="member member_4">
-            <div class=" container" style="background-color: rgb(66, 76, 83);">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="user_img">
-                            <img src="./image/movie-introduction/head_01.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="comment-text-box">
-                     
-                            <div class="comment-text-1">
-                                <div>網友評分：</div>
-                                <div class="star_img">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-
-                                </div>
-                            </div>
-                
-                            <div class="comment-text-2">
-                                <div>回應評論</div>
-                            </div>
-                      
-                            <div class="comment-text-3">
-                                <div class="text">
-                                    <p>
-                                        超好看的,加上主題曲後勁很強,想再2刷一次
-                                    </p>
-                                </div>
-                            </div>
-                  
-                            <div class="comment-text-4">
-                                發表時間：2021-04-29 20:02:55
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-    <!----textboard js------->
-
-    <!-- <script src="./js/textboard.js"></script> -->
-
     <script src="./vendors/vue.js"></script>
     <!----movieintroduction.js------>
     <script src="./js/movieintroduction.js"></script>
@@ -425,3 +237,6 @@
 </body>
 
 </html>
+<!-- <div class="user_talk_content_4">
+    <i id="more" class="fas fa-chevron-down fa-3x"></i>
+</div> -->

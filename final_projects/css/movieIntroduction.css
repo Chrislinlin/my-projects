@@ -151,13 +151,8 @@ main{
 .comment-text-box{
     margin: 20px 15px;
 }
-.comment-text-1{
-    display: flex;
-
-    
-}
-.comment-text-2{
-    display: flex;
+.comment-text-word{
+    margin: 5px 0;
 }
 .comment-img-box{
     margin: 0 20px;
