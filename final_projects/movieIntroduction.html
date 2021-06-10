@@ -39,7 +39,7 @@
     <header>
         <div class="header_control">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand font-weight-bold text-light" href="#">Lin!in</a>
+                <a class="navbar-brand font-weight-bold text-light" href="./index.html">Lin!in</a>
                 <button class="btn-light navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -124,7 +124,7 @@
                     <div class="user_talk_box">
                         <div class="user_talk_content_1 ">
                             <div class="comment_title">會員短評</div>
-                            <div class="comment_num">168則</div>
+                            <div class="comment_num">{{stars.length}}則</div>
                         </div>
                         <div class="user_talk_content_2">
                             <div class="container">
@@ -164,13 +164,14 @@
                                             <!---text1----star-->
                                             <div class="comment-text-1">
                                                 <div>網友評分：
-                                                    {{i.num}}
+                                                    <span style="color: rgb(255, 255, 153);">{{i.star}}</span>
+
                                                 </div>
                                             </div>
                                             <!---text2----text comment-->
                                             <div class="comment-text-3">
                                                 <div>
-                                                    <div>回應評論</div>
+                                                    <div>回應評論：</div>
                                                 </div>
                                                 <div class="text">
                                                     <p>
@@ -180,7 +181,7 @@
                                             </div>
                                             <!---text3----comment time---->
                                             <div class="comment-text-4">
-                                                {{ i.time}}
+                                                回應時間：{{ i.time}}
                                             </div>
                                         </div>
                                     </div>
@@ -202,21 +203,22 @@
                                         <span>★</span>
                                         <span>★</span>
                                     </div> -->
-                                    <input type="text" v-model='rate'>
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="content" id="input" cols="30" rows="10"
-                                        v-model='comment'></textarea>
-                                </div>
-                                <button type="button" class="btn btn-light" id="c-btn" @click='addto'>Submmit</button>
+                                    <div class="star-box">
+                                        <img v-for="(i, index) in starArray " :src="i.src" @click='rating(index)'
+                                            alt="starimg">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="content" id="input" cols="30" rows="10"
+                                            v-model='comment'></textarea>
+                                    </div>
+                                    <button type="button" class="btn btn-light" id="c-btn"
+                                        @click='addto'>Submmit</button>
                             </form>
                         </section>
                     </ul>
                 </div>
 
             </div>
-
-
         </div>
         <!---------footer-------------------->
         <footer>

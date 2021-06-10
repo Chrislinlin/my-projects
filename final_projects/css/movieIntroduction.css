@@ -171,8 +171,13 @@ main{
 #more {
     transition: all 0.5s;
 }
-.original-star, .user-star{
+.star-box{
     width: 100%;
+}
+.star-box > img{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
 }
 .original-star{}
 .original-star span,.user-star span{

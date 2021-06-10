@@ -13,6 +13,16 @@
         .aaa {
             display: flex;
         }
+
+        .gread-box {
+            display: flex;
+
+        }
+
+        .gread-box>img {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 
@@ -27,10 +37,15 @@
 
         <div class="filterbtn" @click="sort('num')">評分(低到高)</div>
         <li class="aaa" v-for="(i,index) in stars">{{i.num}}
+            <p>aaa{{i.star}}</p>
             <p>{{i.comment}}</p>
             <button type="button" class="btn-delete" @click='removeto(index)'>刪除</button>
             <br />
         </li>
+        <div>num:{{starNum}}</div>
+        <div class="gread-box">
+            <img v-for="(i, index) in starArray " :src="i.src" @click='rating(index)' alt="starimg">
+        </div>
     </div>
 
 
