@@ -11,8 +11,8 @@
 @media (max-width: 768px) {
     .breadcrumb{
      display:none;
-}   
-}
+}    
+} 
 .breadcrumb_box{
     width: 90%;
     margin: 10px auto;

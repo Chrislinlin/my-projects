@@ -276,6 +276,10 @@ footer{
     .swiper-slide{
         width: 150px;
     }
+    footer{
+        position: relative;
+        z-index: 99;
+    }
     .footer-icon{
         position: static;
         margin-top: 10px;
