@@ -11,14 +11,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-------index.css--------->
-    <link rel="stylesheet" href="./css//index.css">
-    <!-------booktickets.css--------->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-------ticket info.css--------->
     <link rel="stylesheet" href="./css/ticketInfo.css">
     <!--------breadcrumb-------->
     <link rel="stylesheet" href="./css/breadcrumb.css">
-    <title>立即購票</title>
-    <!---- Swiper v4.1.0 -->
-    <link rel=" stylesheet" href="./vendors/swiper/swiper.min.css">
+    <title>票價資訊</title>
+
 </head>
 
 <body>
@@ -26,7 +25,7 @@
     <header>
         <div class="header_control">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand font-weight-bold text-light" href="#">Lin!in</a>
+                <a class="navbar-brand font-weight-bold text-light" href="./index.html">Lin!in</a>
                 <button class="btn-light navbar-toggler " type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -68,7 +67,8 @@
 
         <!-- 主要內容 文字 -->
         <!-------第二部分 票價資訊------>
-        <div class="container">
+        <div class="bg"></div>
+        <div class="container top-title">
             <!-- 頁面提示 文字 -->
             <h2 class="page_title">
                 票價資訊
@@ -109,7 +109,7 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 notice-title">
 
                         <h6><i class="fas fa-exclamation-triangle text-light"></i><span>注意事項 NOTICE</span></h6>
 
@@ -143,7 +143,36 @@
             </div>
 
         </section>
+        <!---------------影城介紹--------------->
+        <h5>特殊影廳</h5>
+        <div class="cinema-introduction">
+            <li>
+                <div class="intro-txt">
+                    LUXURY SEAT
+                </div>
+                <img class="intro-img" src="./image/superseat.jpeg" alt="" srcset="">
 
+            </li>
+            <li>
+                <div class="intro-txt">
+                    DOLBY
+                </div>
+                <img class=" intro-img" src="./image/dolby.jpeg" alt="" srcset="">
+            </li>
+            <li>
+                <div class="intro-txt">
+                    D-BOX
+                </div>
+                <img class=" intro-img" src="./image/d-box.jpeg" alt="" srcset="">
+            </li>
+
+        </div>
+        <!-------google map api----------->
+        <div class="mapbox">
+            <h3>影城詳細位置</h3>
+            <div id="map"></div>
+
+        </div>
 
 
         <!---------footer-------------------->
@@ -180,11 +209,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <!----swiper------------->
     <!--swiper js-->
-    <script src="./vendors/swiper/swiper.min.js"></script>
-    <script src="./js/swiper.js"></script>
-
+    <script src="./js/ticketInfo.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeAWVHXoluofS9sf4aFOjYK7IgtkGsXZs&callback=initMap"
+        async defer>
+    </script> -->
 
 
 </body>
