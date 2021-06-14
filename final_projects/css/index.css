@@ -210,6 +210,7 @@ footer{
 }
 .footer-r {
     margin: auto;
+  
 }
 .footer-r a{
     margin: 10px 20px;
@@ -232,12 +233,29 @@ footer{
     right: 10%;   
     
 }
-.footer-icon i{
+.footer-icon .link{
     color: #fff;
 }
-.footer-icon i:hover{
-    color: #878787;
+.footer-icon .link:nth-child(1):hover{
+    color: rgb(0, 107, 230);
+    transition: .8s;
 }
+.footer-icon a:nth-child(2):hover{
+    color: rgb(92, 160, 177);
+    transition: .8s;
+}
+.footer-icon a:nth-child(3):hover{
+    color: rgb(230, 0, 210);
+    transition: .8s;
+}
+.footer-icon a:nth-child(4):hover{
+    color: rgb(230, 0, 0);
+    transition: .8s;
+}
+/* .footer-icon i:hover{
+    color: #878787;
+    transition: .8s;
+} */
 @media screen and (max-width: 1200px) {
     .title-box{
         padding: 10px 20px 20px 20px;
