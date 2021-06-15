@@ -1,6 +1,6 @@
 
-let starOn = '/final_projects/image/movie-introduction/yellowStar.png';
-let starOff = '/final_projects/image/movie-introduction/blackStar.png';
+let starOn = './image/movie-introduction/yellowStar.png';
+let starOff = './image/movie-introduction/blackStar.png';
 let vm = new Vue({
 
     el:'#box',
