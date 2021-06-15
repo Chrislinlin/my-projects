@@ -25,7 +25,7 @@ main{
     background-color: rgba(0, 0, 0, 0.85);
     background-blend-mode: multiply;
     /* background-color: red; */
-    background-image: url(/final_projects/image/movie-introduction/conan_banner1.jpeg);   
+    background-image: url(../image/movie-introduction/conan_banner1.jpeg);   
 }
 
 
@@ -53,7 +53,7 @@ main{
     width: 100%;
 }
 .newmovie_top_inner {
-    padding: 10px 50px;
+    padding: 100px 50px;
 }
 .newmovie_top_inner h1{
     font-size: 50px;
@@ -205,6 +205,9 @@ main{
     color: #fff;
 }
 @media screen and (min-width:376px) and (max-width:1024px){
+    .newmovie_top_inner {
+        padding: 40px 50px;
+    }
     .movie-introduction{
         height: 10% !important;
     }
