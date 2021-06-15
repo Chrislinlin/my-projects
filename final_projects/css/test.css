@@ -1,0 +1,179 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    width: 100%;
+    background-color: grey;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+    
+}
+.t-box{
+    width: 90%;
+    height: 700px;
+    margin: 20px;
+    padding: 20px 0;
+    background-color: #fff;
+    /* border: 2px solid #000; */
+    position: relative;
+    display: inline-block;
+}
+
+.t-box:before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-width: 30px 0px 0px 30px;
+    border-radius: 50px 0px 0px 50px;
+    border-style:solid;
+    border-color: gray transparent transparent gray;
+    right:-15px;
+    top:520px;
+}
+.t-box:after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-width: 0px 30px 30px 0px;
+    border-radius: 0px 50px 50px 0px;
+    border-style:solid;
+    border-color:  transparent gray gray transparent ;
+    left:-15px;
+    top: 520px;
+}
+.small-img-box{
+
+    width: 100%;
+    height: 60%;
+    background-color: blue;
+}
+.inner-img-box >img{
+    width: 100%;
+    height: 420px;
+
+}
+
+.t-title{
+    padding-top: 10px;
+    margin: 5px 10px;
+
+}
+.t-title >p{
+    color: gray;
+    font-size: 12px;
+}
+.t-title >h4{
+    font-weight: 700;
+    font-size: 20px;
+    margin: 5px 0;
+}
+.inner-box{
+    width: 90%;
+    /* background-color: red; */
+    margin: 35px 20px 10px 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px dotted #000;
+    display: flex;
+    justify-content: space-between;
+}
+.inner-box-1, .inner-box-2{
+  
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.screen-num, .row-num, .seat-num{
+    font-size: 40px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.price-num, .date-num, .time-num{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.inner-text{
+    margin-top: 10px;
+}
+.inner-text >h5{
+    font-size: 16px;
+    color: gray;
+}
+.barcode-box{
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    background: url(../image/barcode-img.png);
+    background-color: red;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (min-width: 767px ) {
+    .t-box{
+        width: 350px;
+        height: 100%;
+        margin: 0;
+        position: relative;
+    }
+    .small-img-box{
+        display: none;
+    }
+    .total-box{
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        background-color: yellow;
+    }
+    .lg-img-box{
+        width: 30%;
+        height: 312px;
+    }
+    .lg-img-box >img{
+        width: 100%;
+        height: 100%;
+    }
+}
+

@@ -323,41 +323,61 @@
             <ul>
                 <!-- <div class="row"> -->
                 <h5 class="final-title">完成訂位</h5>
-                <div class="final-box">
 
-                    <div class="ticket-box">
-                        <div class="img-box">
-                            <img src="./image/movie-introduction/conanMoviePoster.jpeg" alt="" srcset="">
+
+                <div class="total-box">
+                    <div class="t-box">
+
+                        <div class="t-title">
+                            <p>Lin!in CINEMA PRESENT</p>
+                            <h4>名偵探柯南: 緋色的彈丸</h4>
                         </div>
-                        <!-- <li class="tit">片名：</li> -->
-                        <div class="final-info">
-                            <li class="ticket-info ticket-title"><i class="fas fa-ticket"></i>&nbspTickets:</li>
-                            <li class="ticket-info"><span>名偵探柯南<br></span><span class="txt-s">Dective Conan</span></li>
-                            <li class="ticket-info">
-                                <span><i class="fas fa-clock"></i>&nbsp110分鐘</span></li>
-                            <li class="ticket-info">
-                                <!-- &nbsp是html的空格 -->
-                                <span><i class="fas fa-map-marker-alt"></i>&nbspLin!in
-                                    Cinema&nbspA廳</span>
-                            </li>
-                            <li class="ticket-info">
-                                <!-- &nbsp是html的空格 -->
-                                <span><i class="fas fa-calendar"></i>&nbsp6月6號&nbsp14:00</span>
-                            </li>
-                            <li class="ticket-info"> <i class="fas fa-chair"></i><span v-for="seat in selected_seats"
-                                    :key="seat.id">{{seat.row}}-{{ seat.name }}&nbsp&nbsp</span>
-                            </li>
+                        <div class="small-img-box">
+                            <img src="./image/now_play/11_conanMoviePoster.jpeg" alt="" srcset="">
                         </div>
+
+                        <div class="inner-box">
+                            <div class="inner-box-1">
+                                <div class="inner-text">
+                                    <h5>SCREEN</h5>
+                                    <div class="screen-num">12</div>
+                                </div>
+                                <div class="inner-text">
+                                    <h5>PRICE</h5>
+                                    <div class="price-num">$100</div>
+                                </div>
+                            </div>
+                            <div class="inner-box-2">
+                                <div class="inner-text">
+                                    <h5>ROW</h5>
+                                    <div class="row-num" v-for="seat in selected_seats" :key="seat.id">{{seat.row}}
+                                    </div>
+                                </div>
+                                <div class="inner-text">
+                                    <h5>DATE</h5>
+                                    <div class="date-num">6/14</div>
+                                </div>
+                            </div>
+                            <div class="inner-box-3">
+                                <div class="inner-text">
+                                    <h5>SEAT</h5>
+                                    <div class="seat-num" v-for="seat in selected_seats" :key="seat.id">{{ seat.name }}
+                                    </div>
+                                </div>
+                                <div class="inner-text">
+                                    <h5>TIME</h5>
+                                    <div class="time-num">15:00</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="barcode-box"></div>
                     </div>
-
-                    <!-- <div class="bottom-line">
-                            <li class="tit">總計</li>
-                            <li><span class="total-price">{{ total_price }}</span>元</li>
-                        </div> -->
-
-
-
+                    <div class="lg-img-box">
+                        <img src="./image/now_play/11_conanMoviePoster.jpeg" alt="" srcset="">
+                    </div>
                 </div>
+
                 <div class="nextBtn">
                     <button class="btn btn-outline-secondary btn-lg btn-block">
                         <a href="./index.html" class=" ticket_next_btn">回首頁</a>

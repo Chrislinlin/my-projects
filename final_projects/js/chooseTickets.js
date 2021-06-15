@@ -6,6 +6,7 @@ let vm= new Vue({
         show1: true,
         show2: false,
         show3: false,
+        show4: false,
         tickets:[
             {
                 types:"全票",
