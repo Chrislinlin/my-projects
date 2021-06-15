@@ -1,16 +1,18 @@
 .breadcrumb a{
     text-decoration: none;
+
 }
 .breadcrumb{
     width: 100%;
     background-color: #2f3541;
+    margin-bottom: 0;
 
 }
 @media (max-width: 768px) {
     .breadcrumb{
      display:none;
-}   
-}
+}    
+} 
 .breadcrumb_box{
     width: 90%;
     margin: 10px auto;
@@ -46,5 +48,5 @@
 .page_title{
     text-align: center;
     font-size: 2.6rem;
-    margin: 10px 0;
+    
 }

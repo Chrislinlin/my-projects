@@ -7,67 +7,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue test</title>
     <style>
-        .box {
-            width: 300px;
-            display: flex;
-            height: 100px;
-            margin: 5px;
-            background: blue
+        .red {
+            color: red
         }
 
-        .box2 {
-            width: 80px;
-            height: 80px;
-            margin: 10px;
-            background: red
+        .bigger {
+            font-size: 40px;
         }
     </style>
 </head>
 
 <body>
-    <div id='app'>
-        <div class="box seat" v-for="i in 5" v-on:click="increase">
-            <div class="box2 seat" v-for="j in i">
-                <div></div>
-            </div>
+
+
+    <div id="box" class="box">
+        <div class="table-top">
+            <input type="text" v-model="searchVal"><button>搜索</button>
         </div>
-        <p class="box" v-on:click="increase">1212{{sum}}</p>
+        <table border="1px" class="table-content">
+            <tr>
+                <th>商品名</th>
+                <th>单价
+                    <span @click="orderFn('price', false)">↑</span>
+                    <span @click="orderFn('price', true)">↓</span>
+                </th>
+                <th>销量
+                    <span @click="orderFn('sales', false)">↑</span>
+                    <span @click="orderFn('sales', true)">↓</span>
+                </th>
+            </tr>
+            <tr v-for='(item, key) in list'>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.sales}}万</td>
+            </tr>
+        </table>
+        <span>总价: {{ total }} 元</span>
+        <div id="todolist"></div>
     </div>
-    <div class="box2">{{list2}}</div>
 
 
-    <script src="/final_projects/vendors/vue.js"></script>
-    <script>
-        let vm = new Vue({
-            el: '#app',
+
+    <script src="/final_projects/vendors/vue.js"> </script>
+    <script src="./js/textboard.js"></script>
+    <script type="text/javascript">
+        var myVue = new Vue({
+            el: '#box',
             data: {
-                divs: [],
-                sum: 0
+                goodsList: [{
+                        name: '三星-s8',
+                        price: 5600,
+                        sales: 1.2
+                    },
+                    {
+                        name: '锤子-坚果pro',
+                        price: 2500,
+                        sales: 0.8
+                    },
+                    {
+                        name: 'iphone-6s',
+                        price: 4300,
+                        sales: 3.2
+                    },
+                    {
+                        name: 'iphone-7',
+                        price: 5200,
+                        sales: 2.6
+                    }
+                ],
+                searchVal: '', //默认输入为空
+                letter: '', //默认不排序 // 排序字段
+                original: false, //默认从小到大排列
+                total: 0 //默认总价
             },
             methods: {
-                increase: function () {
-                    this.sum++
+                orderFn(letter, original) {
+                    this.letter = letter; //排序字段
+                    this.original = original; //排序方式
+                }
+            },
+            // 通过计算属性过滤数据
+            computed: {
+                list: function () {
+                    var _this = this;
+                    // 筛选
+                    var arrGoods = [];
+                    for (var i = 0; i < this.goodsList.length; i++) {
+                        // 如果匹配成功, 向空数组添加数据
+                        if (this.goodsList[i].name.search(this.searchVal) != -1) {
+                            arrGoods.push(this.goodsList[i]);
+                        }
+                    }
+
+                    // 升序降序排列
+                    // false:升序  true:降序
+                    if (this.letter != '') {
+                        arrGoods.sort(function (a, b) {
+                            if (_this.original) {
+                                return b[_this.letter] - a[_this.letter];
+                            } else {
+                                return a[_this.letter] - b[_this.letter];
+                            }
+                        });
+                    }
+                    _this.total = 0;
+                    for (var i = 0; i < arrGoods.length; i++) {
+                        _this.total += arrGoods[i].price;
+                    }
+                    return arrGoods;
+                },
+                total: function () {
+                    return this.total;
                 }
             }
-
-
-
-
-
         });
     </script>
-    <script>
-        console.log('111')
-        const container = document.getElementById('app')
-        console.log(container)
-        container.addEventListener('click', function (e) {
-            if (e.target.classList.contains('seat')) {
-                console.log('aaa')
-                e.target.classList.toggle('selected')
-                // updateSelectCount()
-            }
-        })
-    </script>
+
 
 
 </body>

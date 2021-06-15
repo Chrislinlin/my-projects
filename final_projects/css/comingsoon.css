@@ -65,18 +65,18 @@ width: 100%;
     /* display: inline-block; */
 }
 .movie_title > h5{
-    font-size: 30px;
+    font-size: 15px;
     color: #717236;
 }
 .movie-type{
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 .movie_runtime{
     color: #9e9a99;
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 .movie_actor{
-    font-size: 20px;
+    font-size: 10px;
 }
 /*----ＲＷＤ----*/
 @media (min-width:768px) and (max-width:1200px) {
@@ -87,15 +87,40 @@ width: 100%;
     }
     .section_1_item{
         width: calc((100% -10px)/2);
+        /* height: 900px; */
+    
     }
-    .movie_playdate{
-        font-size: 2rem;
+    .movie_playdate, .movie-info{
+        margin: 10px;
+        font-size: 1.5rem;
+ 
+        line-height: 1.5;
     }
     .movie_time{
         font-size: 2.5rem;
     }
-    .movie-info{
-        font-size: 2rem;
+    .comingout-title{
+        width: 100%;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align:center ;
+        height: 50px;
+        /* background-color: red; */
+        background-image: linear-gradient(#b6b6b6, #555555);
+        background-position: left bottom;
+        background-size: 0 2.5px;
+        background-repeat: no-repeat;
+        color: #fff;
+        transition: background-size 0.55s;
+    }
+    .comingout-title:hover {
+        background-size: 100% 2.5px;
+  
     }
 }
 /* 大於 1200px 之後 切換成另一個畫面呈現 */
@@ -118,6 +143,58 @@ width: 100%;
     }
     .movie_info .movie-titles{
         font-size: 2.5rem;
+    }
+}
+@media (max-width: 376px){
+    .movie_playdate, .movie-info{
+        margin: 5px;
+        font-size: 1rem;
+   
+    }
+    .movie_time{
+        font-size: 1rem;
+    }
+    .movie_title{
+        font-size: 20px;
+    }
+    .movie_title > h3{
+
+        font-weight: bold;
+        /* display: inline-block; */
+    }
+    .movie_title > h5{
+        font-size: 15px;
+        color: #717236;
+    }
+    .movie-type{
+        font-size: 15px;
+    }
+    .comingout-title{
+        width: 100%;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align:center ;
+        margin-top: 10px;
+        height: 30px;
+        /* background-color: red; */
+        background-image: linear-gradient(#b6b6b6, #555555);
+        background-position: left bottom;
+        background-size: 0 2.5px;
+        background-repeat: no-repeat;
+        color: #fff;
+        transition: background-size 0.55s;
+    }
+    .comingout-title:hover {
+        background-size: 100% 2.5px;
+  
+    }
+    .movie-info{
+        line-height: 1.5;
     }
 }
 

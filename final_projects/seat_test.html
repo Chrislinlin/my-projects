@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        main {
+            width: 100%;
+            display: flex;
+        }
+
+        .seatbox {
+
+            background-color: red;
+
+
+        }
+
+        .seat {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            margin: 10px;
+
+        }
+
+        .seat.selected {
+            background-color: #6feaf6;
+        }
+    </style>
+    <title>seat_test</title>
+</head>
+
+<body>
+    <div id="app">
+        <main>
+            <div class="seatbox" v-for="i in seat_data">
+                <div class="seat" v-for="j in i.list" @click="selected(i, j,$event)"></div>
+            </div>
+            <div class="seat_description" v-for="seat in selected_data">----{{seat.row}}-{{ seat.col}}-----{{seat.id}}
+            </div>
+
+        </main>
+
+    </div>
+    </div>
+    <script src="/final_projects/vendors/vue.js"></script>
+    <script src="./vendors/jQuery/js/jquery-3.5.1.min.js"></script>
+    <script>
+        let vam = new Vue({
+            el: '#app',
+            data: {
+                seat_data: [{
+                        row: "no1",
+                        list: [{
+                                col: "1好",
+                                id: 1
+                            },
+                            {
+                                col: "2好",
+                                id: 2
+                            },
+                            {
+                                col: "3好",
+                                id: 3
+                            },
+                            {
+                                col: "4好",
+                                id: 4
+                            },
+                            {
+                                col: "5好",
+                                id: 5
+                            },
+                        ]
+                    },
+                    {
+                        row: "no2",
+                        list: [{
+                                col: "1好",
+                                id: 1
+                            },
+                            {
+                                col: "2好",
+                                id: 2
+                            },
+                            {
+                                col: "3好",
+                                id: 3
+                            },
+                            {
+                                col: "4好",
+                                id: 4
+                            },
+                            {
+                                col: "5好",
+                                id: 5
+                            },
+                        ]
+                    },
+                    {
+                        row: "no3",
+                        list: [{
+                                col: "1好",
+                                id: 1
+                            },
+                            {
+                                col: "2好",
+                                id: 2
+                            },
+                            {
+                                col: "3好",
+                                id: 3
+                            },
+                            {
+                                col: "4好",
+                                id: 4
+                            },
+                            {
+                                col: "5好",
+                                id: 5
+                            },
+                        ]
+                    }
+                ],
+                selected_data: [],
+            },
+            computed: {
+                seat_str() {
+
+                    let seat_string = this.selected_data.map(item => {
+                        return item.id
+                    })
+                    return seat_string
+                    console.log(seat_string)
+                }
+            },
+            methods: {
+                selected(r, l, event) {
+                    event.target.classList.toggle('selected');
+                    //用id判斷有沒有在arr裡面，把id變成index 然後
+                    //看select_data有沒有東西，沒有=> 就加上選上的，有就比對
+                    if (!this.selected_data.length > 0) {
+                        this.selected_data.push({
+                            row: r.row,
+                            col: l.col,
+                            id: l.id
+                        })
+                    } else if (this.seat_str.indexOf(l.id) > -1) {
+                        this.selected_data.splice(this.seat_str.indexOf(l.id), 1)
+                    } else {
+                        this.selected_data.push({
+                            row: r.row,
+                            col: l.col,
+                            id: l.id
+                        })
+                    }
+                }
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -1,34 +1,38 @@
 
 var mySwiper = new Swiper(".swiper-container",{
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 10,
 
     loop: true,
     loopFillGroupWithBlank: true,
-    navigator:{
+
+    navigation:{
         nextEl:".swiper-button-next",
-        prevEl:".swiper-button-prev"
+        prevEl:".swiper-button-prev",
     },
-    autoplay:{
-        delay:3000,
-        disableOnInteraction: false,
-    },
+    // autoplay:{
+    //     delay:2000,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
-        400: {
+
+
+        480: {
             slidesPerView: 1,
             spaceBetween: 10,
           },
-        640: {
+        769: {
           slidesPerView: 2,
-          spaceBetween: 30,
+          spaceBetween: 20,
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 40,
+          spaceBetween: 20,
         },
        1680: {
-          slidesPerView: 3,
-          spaceBetween: 50,
+          slidesPerView: 5,
+         
+          spaceBetween: 30,
         },
       }
 });

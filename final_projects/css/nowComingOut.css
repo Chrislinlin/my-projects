@@ -3,8 +3,10 @@ main{
 }
 .section_1{
     width: 90%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
+
+
 .s1_item{
     text-decoration: none;
     margin: 0 auto;
@@ -14,9 +16,16 @@ main{
     flex-direction: column;
     /* padding: 10px; */
     display: block;
-    
+    background-color: black;
+    transition: all .2s ease-out
+}
+.s1_item:hover{
+
+    transform: scale(1.1);
+   
 }
 .s1_item_img{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +34,7 @@ main{
     width: 100%;
 }
 .s1_item_img img{
+
     width: 100%;
     vertical-align: middle;
 }
@@ -57,7 +67,7 @@ main{
 
 .s1_item_img:hover .hover-icon{
     opacity: 1;
-    
+    transition: .2s
 }
 
 .movie-info{
@@ -68,6 +78,9 @@ main{
     background-color: rgb(54, 53, 49);
 
 }
+.nowComing-col{
+    margin-bottom: 50px;
+}
 .movie-info h3{
     color: #fff;
     font-size: 20px;
@@ -75,7 +88,11 @@ main{
 .movie-info h4{
     color: cornsilk;
     font-weight: 150;
-    font-size: 16px;
+    font-size: 14px;
+}
+.movie-title >h3{
+    font-weight: 800;
+    margin-bottom: 2px;
 }
 .movie_playdate{
     margin-top: 20px;

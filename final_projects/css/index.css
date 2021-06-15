@@ -1,10 +1,60 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    height: auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 *{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 body {
-    background-color: rgb(61, 58, 58);
+    background-color:  rgb(46, 44, 44);
 }
 .header_control{
     top: 0;
@@ -18,14 +68,6 @@ body {
 
 .menu-right-toggle2{
     display: dl;
-}
-.search-btn{
-    background: none;
-    border: none;
-    outline: none;
-}
-.search-btn:focus{
-    outline: none;
 }
 /*------title box-----*/
 .title-box{
@@ -42,68 +84,68 @@ body {
     display: inline-block;
     margin: 0;
 }
-@media screen and (max-width: 1200px) {
-    .title-box{
-        padding: 10px 20px 20px 20px;
-        margin-top: 20px;
-    }
-}
+
 /*------swiper -----*/
 .slider-banner{
-    margin: 50px 0;
+    text-align: center !important;
+    margin-top: 50px;
 }
 .swiper-container{
     width: 100%;
     height: 100%;
 
 }
+.newmovie-top{
+    width: 100%;
+}
 .swiper-slide {
-    text-align: center;
+    width: 90%;
+    margin: 0 auto;
     font-size: 18px;
+    /* margin: 0 20px; */
+    height: auto;
     
 }
 .movie-list{
+ width: 100%;
     color: #fff;
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
+}
+.movie-box{
+width: 100%;
+}
+.movie-info-box{
+    width: 100%;
+    font-weight: 800;
+    font-size: 30px;
+    /* height: 100px; */
+}
+.movie-info-box img{
+    max-width:200px;
+    height: auto;
 }
 .movie-info-box h1{
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .s2_book_btn{
     background-color: rgb(51, 42, 42);
     color: #fff;
-}
-@media screen and (max-width: 500px) {
-    .movie-box{
-        position: relative;
-        top: 0%;
-}
-.movie-inner{
-        width: 100%;
-        height: 100%;
-        /* background: rgba(0, 0, 0, 0.3);    */
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: 0.5s;
-        padding:30px 20px ;
-
-}
-.movie_inner:hover {
-    opacity: 0; 
- }
-}
-
-.s2_book_btn{
-    padding: 10px;
+    padding: 5px 10px;
+    font-weight: 300;
     border-radius: 10%;
-
+    border-radius: 100px;
+}
+.s2_book_btn:hover{
+    background-color: aliceblue;
+    color: #000;
 }
 
 
 /*---戲院介紹-------*/
 .section_3{
 width: 100%;
+height: 100%;
+overflow: hidden
 }
 .section_3-box{
     width: 100%;
@@ -142,6 +184,8 @@ width: 100%;
     align-items: center;
     flex-shrink: 0;
     width: 40%;
+    letter-spacing: 2px;
+    line-height: 28px;
     margin-left: 20px;
     color: rgb(252, 247, 227);
 }
@@ -152,42 +196,29 @@ width: 100%;
 .environment-title{
     font-weight: 700;
 }
-@media screen and (max-width: 768px) {
-    .section_3-box{
-        width: 100%;
-    }
-    .envir-item{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .envir-img{
-        width: 100%;
-        margin: 0 auto;
-        font-size: 0px;
-
-    }
-
-    .envir-text{
-        position: relative;
-        width: 100%;
-        font-size: 14px;
-        margin: 20px auto;
-    }
-    .envir-text-2 {
-        order: 0;
-    }
+.more-btn-box{
+    margin-top: 20px;
+    
+}
+.btn-more{
+    border-radius: 100px;
+    padding: 10px 30px;
 }
 /*---footer-------*/
 footer{
     text-align: center;
+    /* background-color: yellow; */
+    width: 100%;
+    height: auto;
     position: relative;
     color: #fff;
+    z-index: 99;
+    top: 0;
+    left: 0;
 }
 .footer-r {
     margin: auto;
+  
 }
 .footer-r a{
     margin: 10px 20px;
@@ -210,13 +241,72 @@ footer{
     right: 10%;   
     
 }
-.footer-icon i{
+.footer-icon .link{
     color: #fff;
 }
-.footer-icon i:hover{
-    color: #878787;
+.footer-icon .link:nth-child(1):hover{
+    color: rgb(0, 107, 230);
+    transition: .8s;
 }
-@media screen and (max-width: 768px) {
+.footer-icon a:nth-child(2):hover{
+    color: rgb(92, 160, 177);
+    transition: .8s;
+}
+.footer-icon a:nth-child(3):hover{
+    color: rgb(230, 0, 210);
+    transition: .8s;
+}
+.footer-icon a:nth-child(4):hover{
+    color: rgb(230, 0, 0);
+    transition: .8s;
+}
+/* .footer-icon i:hover{
+    color: #878787;
+    transition: .8s;
+} */
+@media screen and (max-width: 1200px) {
+    .title-box{
+        padding: 10px 20px 20px 20px;
+        margin-top: 20px;
+    }
+
+
+    .section_3-box{
+        width: 100%;
+        height: 100%;
+    }
+    .envir-item{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .envir-img{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 0px;
+
+    }
+
+    .envir-text{
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+    .envir-text-2 {
+        order: 0;
+    }
+    
+    .swiper-slide{
+        width: 150px;
+    }
+    footer{
+        position: relative;
+        z-index: 99;
+    }
     .footer-icon{
         position: static;
         margin-top: 10px;
@@ -225,4 +315,38 @@ footer{
     .footer-icon i{
         margin-bottom: 15px;
     }
+}
+@media screen and (max-width:1024px) and(min-width:376px){
+
+}
+
+@media screen and (max-width:376px){
+    .swiper-slide{
+        width: 200px;
+        margin-top: 50px;
+    }
+    .movie-box{
+        /* position: relative; */
+        top: 0%;
+    }
+
+    .movie_inner:hover {
+    opacity: 0; 
+    }
+
+    .slider-banner{
+        margin-top: 0px;
+    }
+    .movie-inner{
+        width: 100%;
+        height: 100%;
+        /* background: rgba(0, 0, 0, 0.3);    */
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        padding:0px 20px ;
+    }
+
+    
 }

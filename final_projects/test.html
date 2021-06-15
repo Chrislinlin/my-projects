@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/test.css">
+
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 100%;
+
+            width: 100%;
+        }
+
+        .aa {
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+        }
+
+        .bb {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            background-color: blue;
+        }
+    </style>
+    <script src="./js/textboard.js"></script>
+    <script src="./vendors/jQuery/js/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="total-box">
+        <div class="lg-img-box">
+            <img src="./image/now_play/11_conanMoviePoster.jpeg" alt="" srcset="">
+        </div>
+        <div class="t-box">
+
+            <div class="t-title">
+                <p>Lin!in CINEMA PRESENT</p>
+                <h4>名偵探柯南: 緋色的彈丸</h4>
+            </div>
+            <div class="small-img-box">
+                <img src="./image/now_play/11_conanMoviePoster.jpeg" alt="" srcset="">
+            </div>
+
+            <div class="inner-box">
+                <div class="inner-box-1">
+                    <div class="inner-text">
+                        <h5>SCREEN</h5>
+                        <div class="screen-num">12</div>
+                    </div>
+                    <div class="inner-text">
+                        <h5>PRICE</h5>
+                        <div class="price-num">$100</div>
+                    </div>
+                </div>
+                <div class="inner-box-2">
+                    <div class="inner-text">
+                        <h5>ROW</h5>
+                        <div class="row-num">B</div>
+                    </div>
+                    <div class="inner-text">
+                        <h5>DATE</h5>
+                        <div class="date-num">6/14</div>
+                    </div>
+                </div>
+                <div class="inner-box-3">
+                    <div class="inner-text">
+                        <h5>SEAT</h5>
+                        <div class="seat-num">15</div>
+                    </div>
+                    <div class="inner-text">
+                        <h5>TIME</h5>
+                        <div class="time-num">15:00</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="barcode-box"></div>
+        </div>
+    </div>
+
+
+    </div>
+    <div class="container" id='box'>
+        <ul>
+            <li v-for='(i, index) in stars' :key=index>
+                {{ index}}----{{ i.rate}}----{{i.time}}
+            </li>
+
+
+        </ul>
+        <input type="text" v-model="message">
+        <div>{{message}}</div>
+        <div>{{time2}}</div>
+
+        <!-- 
+        <ul>
+            <li v-for='(j, index) in filterDate' :key=index>{{j.time}}</li>
+        </ul> -->
+
+
+
+        <button @click="sort('rate')">rate</button>
+        <button @click="sort('time')">time+</button>
+        <button @click="sort('time3')">time-</button>
+        <!-- <button @click="sortFn(2)">--</button>
+        <button @click="sortTfn(3)">time-</button> -->
+        <div id="todolist">aaa</div>
+        <section class="section_1">
+
+            <form action="">
+
+                <div class="form-group stars">
+                    <label for="name">你的評分：</label>
+                    <div class="original-star">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <textarea name="content" id="input" cols="30" rows="10"></textarea>
+                </div>
+                <button type="button" class="btn btn-light" id="c-btn">Submmit</button>
+            </form>
+        </section>
+    </div>
+
+
+
+    <script src="./vendors/vue.js"></script>
+
+
+    <script src="./js/sortCommand.js"></script>
+
+</body>
+
+</html>
