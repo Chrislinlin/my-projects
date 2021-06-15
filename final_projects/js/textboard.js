@@ -140,13 +140,11 @@
                         </div>
                     </div>
                 </div>`;
-                    todoList.appendChild(item);
-                        console.log(33)
                 }
         
             //事件
             cBtn.onclick= addComment;
-            todoList.innerHTML='sssss'
+ 
             }
         };
         

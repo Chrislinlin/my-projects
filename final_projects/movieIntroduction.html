@@ -122,8 +122,8 @@
                                 <div class="col-md-8">
                                     <div class="filter_icon_box">
                                         <div>排序: </div>
-                                        <div class="filter_on" @click="sort('time')">發表時間(新到舊)</div>
-                                        <div class="filterbtn" @click="sort('num')">評分(低到高)</div>
+                                        <div class="filterbtn" @click="sort('time')">發表時間</div>
+                                        <div class="filterbtn1" @click="sort('num')">&nbsp評分</div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -228,16 +228,14 @@
     </footer>
     <!---------end of footer-------------------->
     <script src="./vendors/vue.min.js"></script>
+    <!------ sortcommand.js ---------->
+    <script src="./js/sortCommand.js"></script>
     <!---------- bootstrap.js ------------->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <!----movieintroduction.js------>
     <script src="./js/movieintroduction.js"></script>
-    <!------ sortcommand.js ---------->
-    <script src="./js/sortCommand.js"></script>
-    <!--------textboard.js------------->
-    <script src="./js/textboard.js"></script>
     <!------- hamburger.js ----------->
     <script src="./js/hamburger.js"></script>
 </body>

@@ -99,10 +99,14 @@ main{
 .filter_on{
     color: blanchedalmond !important;
 }
-.filterbtn{
+
+.filterbtn, .filterbtn1{
     color: rgb(63, 60, 60);
 }
 .filterbtn:hover{
+    color: blanchedalmond!important;
+}
+.filterbtn1:hover{
     color: blanchedalmond!important;
 }
 .section_1{
