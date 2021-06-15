@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    height: auto;
 }
 ol, ul {
 	list-style: none;
@@ -143,6 +144,8 @@ width: 100%;
 /*---戲院介紹-------*/
 .section_3{
 width: 100%;
+height: 100%;
+overflow: hidden
 }
 .section_3-box{
     width: 100%;
@@ -204,9 +207,14 @@ width: 100%;
 /*---footer-------*/
 footer{
     text-align: center;
+    /* background-color: yellow; */
+    width: 100%;
+    height: auto;
     position: relative;
     color: #fff;
     z-index: 99;
+    top: 0;
+    left: 0;
 }
 .footer-r {
     margin: auto;
@@ -261,10 +269,11 @@ footer{
         padding: 10px 20px 20px 20px;
         margin-top: 20px;
     }
-}
-@media screen and (max-width: 768px) {
+
+
     .section_3-box{
         width: 100%;
+        height: 100%;
     }
     .envir-item{
         display: flex;
@@ -307,7 +316,9 @@ footer{
         margin-bottom: 15px;
     }
 }
+@media screen and (max-width:1024px) and(min-width:376px){
 
+}
 
 @media screen and (max-width:376px){
     .swiper-slide{
@@ -336,9 +347,6 @@ footer{
         transition: 0.5s;
         padding:0px 20px ;
     }
-        footer{
-            position: relative;
-            z-index: 99;
-        }
+
     
 }

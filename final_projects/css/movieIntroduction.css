@@ -4,6 +4,7 @@
 body{
     /* background-color: #000; */
     width: 100%;
+    height: 100%;
     color: #fff;
 }
 main{
@@ -104,7 +105,9 @@ main{
 .filterbtn:hover{
     color: blanchedalmond!important;
 }
-
+.section_1{
+    height: 100%;
+}
 .iwanttext{
     right:0;
     background-color: #fff;
@@ -184,10 +187,13 @@ main{
 }
 /*-----第五部分--------*/
 .msg-box{
-    background-color: rgb(78, 78, 78);
+    /* background-color: rgb(78, 78, 78); */
+    background-color: transparent;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    /* height: 50%; */
+    /* position: relative; */
 }
 .rate-words{
     margin: 10px 0;
@@ -197,6 +203,18 @@ main{
 }
 .submit-btn{
     color: #fff;
+}
+@media screen and (min-width:376px) and (max-width:1024px){
+    .movie-introduction{
+        height: 10% !important;
+    }
+    .section_1{
+        max-height: 50%;
+    }
+    .msg-box{
+        position: relative;
+        z-index: -1;
+    }
 }
 
 /* .original-star span,.user-star span{
