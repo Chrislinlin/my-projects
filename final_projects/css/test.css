@@ -1,179 +1,118 @@
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+body{
+    height: 100%;
+    margin-top: 50px;
+
 }
-body {
-	line-height: 1;
+.container{
+    display: grid;
+    grid: gap 1rem;
+    max-width: 360px;
+    height: 500px;
+    margin: 0 auto;
+}
+.card{
     width: 100%;
-    background-color: grey;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-    
-}
-.t-box{
-    width: 90%;
-    height: 700px;
-    margin: 20px;
-    padding: 20px 0;
-    background-color: #fff;
-    /* border: 2px solid #000; */
+    text-align: center;
     position: relative;
-    display: inline-block;
-}
-
-.t-box:before{
-    content: '';
-    display: block;
-    position: absolute;
-    border-width: 30px 0px 0px 30px;
-    border-radius: 50px 0px 0px 50px;
-    border-style:solid;
-    border-color: gray transparent transparent gray;
-    right:-15px;
-    top:520px;
-}
-.t-box:after{
-    content: '';
-    display: block;
-    position: absolute;
-    border-width: 0px 30px 30px 0px;
-    border-radius: 0px 50px 50px 0px;
-    border-style:solid;
-    border-color:  transparent gray gray transparent ;
-    left:-15px;
-    top: 520px;
-}
-.small-img-box{
-
-    width: 100%;
-    height: 60%;
-    background-color: blue;
-}
-.inner-img-box >img{
-    width: 100%;
-    height: 420px;
-
-}
-
-.t-title{
-    padding-top: 10px;
-    margin: 5px 10px;
-
-}
-.t-title >p{
-    color: gray;
-    font-size: 12px;
-}
-.t-title >h4{
-    font-weight: 700;
-    font-size: 20px;
-    margin: 5px 0;
-}
-.inner-box{
-    width: 90%;
-    /* background-color: red; */
-    margin: 35px 20px 10px 20px;
-    padding-bottom: 5px;
-    border-bottom: 2px dotted #000;
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
-}
-.inner-box-1, .inner-box-2{
-  
+    align-items: flex-end;
+    overflow: hidden;
+    color: #fff;
     background-color: #fff;
+    box-shadow: 0px 1px 1px rgba(0,0,0,.1),
+    0 2px 2px rgba(0,0,0,.1),
+    0 4px 4px rgba(0,0,0,.1),
+    0 8px 8px rgba(0,0,0,.1),
+    0 16px 16px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+
+}
+.card::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+  
+    background-color: rgba(0, 0, 0, 0);
+    /* background-image: linear-gradient(to bottom, 
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 25%,   
+     rgba(0,0,0,0.2) 50%,
+    rgba(0,0,0,0.3) 75%,
+    rgba(0,0,0,0.8) 100%);
+    transform: translateY(-50%); */
+}
+.card:nth-child(1)::before{
+    background-image: url(../image/comingsoon/comingsoon_1.jpg);
+   
+}
+.content{
+    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
 }
-.screen-num, .row-num, .seat-num{
-    font-size: 40px;
-    margin-top: 5px;
-    font-weight: 500;
+.title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    /* line-height: 5; */
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
 }
-.price-num, .date-num, .time-num{
-    font-size: 16px;
-    margin-top: 5px;
+.sub-title{
+    font-size: .5rem;
+    color:gray;
 }
-.inner-text{
-    margin-top: 10px;
+.description{
+    line-height: 1.15rem;
+    color: rgb(185, 179, 96);
+    line-height: 1.35;
 }
-.inner-text >h5{
-    font-size: 16px;
-    color: gray;
+.card:after{
+    
+    transform: translateY(0);
 }
-.barcode-box{
-    width: 90%;
-    margin: 0 auto;
-    height: 50px;
-    background: url(../image/barcode-img.png);
-    background-color: red;
-    background-position: center;
-    background-repeat: no-repeat;
+.content{
+    transform: translateY(100%);
 }
-@media screen and (min-width: 767px ) {
-    .t-box{
-        width: 350px;
-        height: 100%;
-        margin: 0;
-        position: relative;
-    }
-    .small-img-box{
-        display: none;
-    }
-    .total-box{
-        display: flex;
-        width: 100%;
-        padding: 20px;
-        background-color: yellow;
-    }
-    .lg-img-box{
-        width: 30%;
-        height: 312px;
-    }
-    .lg-img-box >img{
-        width: 100%;
-        height: 100%;
-    }
+.card:hover{
+    align-items: center;
+  
 }
+.card:hover::before{
+    transform: translateY(-4%);
+}
+.card:hover::after{
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, .5);
 
+}
+.card:hover .content{
+    transform: translateY(0);
+}
+.card:hover .content > *:not(.title){
+    opacity: 1;
+  
+    transform: translateY(0);
+}
