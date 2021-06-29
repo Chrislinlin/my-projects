@@ -107,7 +107,7 @@ body {
 }
 
 .movie-list{
-    width: 260px;
+    max-width: 260px;
     height: 100%;
     color: #fff;
     margin-bottom: 30px;
@@ -384,7 +384,7 @@ footer{
 
     }
     .movie-list:hover{
-        width: 90%;
+        width: 100%;
         transform: scale(1.05);
         box-shadow: 0px 0px 2px rgb(26, 17, 12);
         transition:transform 03s ease;
