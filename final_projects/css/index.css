@@ -7,7 +7,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,    
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -150,6 +150,11 @@ body {
     text-decoration: none;
     /* height: 100px; */
 }
+.sub-title{
+    margin-top: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
 
 .s2_book_btn{
     background-color: rgb(51, 42, 42);
@@ -167,7 +172,7 @@ body {
 
 /*---戲院介紹-------*/
 .section_3{
-width: 95%;
+width: 100%;
 height: 100%;
 margin: 0 auto;
 overflow: hidden
@@ -188,19 +193,25 @@ overflow: hidden
     border-bottom: 1px solid #878787;
 }
 .envir-item{
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
+    padding: 20px 35px;
     display: flex;
 
 }
 .envir-img{
     width: 60%;
+    /* max-width: 660px; */
     position: relative;
 }
-.envir-img img{
+.envir-img1{
+    width: 57%;
+    position: relative;
+}
+.envir-img img, .envir-img1 img{
     width: 100%;
    height: 100%;
 }
+
 
 .envir-text{
     display: flex;
@@ -209,6 +220,7 @@ overflow: hidden
     align-items: center;
     flex-shrink: 0;
     width: 40%;
+    padding: 0 20px;
     letter-spacing: 2px;
     line-height: 28px;
     margin-left: 20px;
@@ -220,6 +232,8 @@ overflow: hidden
 }
 .environment-title{
     font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
 }
 .more-btn-box{
     margin-top: 20px;
@@ -308,7 +322,7 @@ footer{
         margin-top: 20px;
     }
 
-    .envir-img{
+    .envir-img, .envir-img1{
         width: 100%;
         margin: 0 auto;
         font-size: 0px;
