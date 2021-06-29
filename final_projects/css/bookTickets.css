@@ -30,9 +30,9 @@
 }
 .movie-list-box span{
     border:2px solid #a11;
-    font-size: 14px;
+    font-size: 18px;
     border-radius: 20%;
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     margin: 5px;
     background-color: #a11;
     color: #fff;
@@ -66,12 +66,21 @@ img{
     padding: 6px 10px;
 
 }
+.book-btn{
+    padding: 5px 20px;
+
+}
 .book-btn:hover{
-    background-color: rgb(151, 19, 19);
+    background-color: transparent;
     color: #e00;
+  
     font-weight: 500;
-    border: 2px solid rgb(182, 1, 1);
+    border: 5px solid rgb(182, 1, 1);
     transition: .5s;
+}
+.book-sub-title{
+    margin-top: 5px;
+    text-align: start;
 }
 .time-list > a:hover {
     background-color: #e00;
