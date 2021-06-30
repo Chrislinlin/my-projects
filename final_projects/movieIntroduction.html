@@ -123,8 +123,14 @@
                                     <div class="filter_icon_box">
                                         <div>排序: </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <div class="filterbtn" @click="sort('time')">發表時間</div>
                                         <div class="filterbtn1" @click="sort('num')">&nbsp評分</div>
+=======
+                                        <div v-bind:class="className" @click="sort('time'),changeClass()">
+                                            發表時間</div>
+                                        <div v-bind:class="className2" @click="sort('num'), changeClass_2()">評分</div>
+>>>>>>> final_mission
 =======
                                         <div v-bind:class="className" @click="sort('time'),changeClass()">
                                             發表時間</div>

@@ -30,9 +30,6 @@
         `<i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>`
     ];
     // console.log(starArray[2])
-
-
-
     console.log(year,month, (day+1), hour, minute, second);
 
     for (var i =0;i< spans.length;i++){
@@ -137,21 +134,15 @@
                         </div>
                     </div>
                 </div>`;
-<<<<<<< HEAD
-                }
-        
-            //事件
-            cBtn.onclick= addComment;
- 
-            }
-=======
+
                     todoList.appendChild(item);
 
                 }
+            };
         
 
->>>>>>> final_mission
-        };
+
+    
         
 
             // if(spans[i]==spans.length){
