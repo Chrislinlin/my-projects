@@ -99,34 +99,12 @@ main{
 .filter_on{
     color: blanchedalmond !important;
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-.filterbtn, .filterbtn1{
-=======
-
 .filteroff{
->>>>>>> final_mission
-=======
-
-.filteroff{
->>>>>>> final_mission
     color: rgb(63, 60, 60);
 }
 .filterbtn:hover{
     color: blanchedalmond!important;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-.filterbtn1:hover{
-    color: blanchedalmond!important;
-}
-=======
-
->>>>>>> final_mission
-=======
-
->>>>>>> final_mission
 .section_1{
     height: 100%;
 }
