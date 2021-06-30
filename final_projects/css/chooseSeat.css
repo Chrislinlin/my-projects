@@ -4,7 +4,6 @@
 body{
     /* display: flex; */
     color: #fff
-    
 }
 .process{
     width: 100%;
@@ -51,8 +50,6 @@ body{
 background-color: rgb(61, 155, 179) !important;
 color: #fff;
 }
-
-
 section{
     margin-top: 50px;
     width: 100%;
@@ -62,25 +59,15 @@ table{
     margin: 0px auto;
 }
 .container{
-    
     margin-bottom:30px
 }
 th{
     margin: 18px !important;
     padding-bottom: 8px;
    text-align: center;
-   
     color: skyblue;
 }
-.th{
-    /* margin: 10px 50px; */
-    border-bottom: 1px solid #fff;
-}
-.th-bottom{
-    width: 200px;
-    height: 5px;
-    background-color: #fff;
-}
+
 td{
     text-align: center;
 }
@@ -129,9 +116,7 @@ a:link,a:visited{
 }
 .ticket_next_btn{
     color: #fff;
-   
 }
-
 /* -----選位區 ---------*/
 .theater{
     width: 100%;
@@ -243,7 +228,6 @@ a:link,a:visited{
 .bottom-line >li{
     display: flex;
 }
-.bottom-line
 
 .info-box{
     width: 90%;
@@ -251,15 +235,11 @@ a:link,a:visited{
     margin: 50px auto;
 }
 
-
-
-
 /* ------第四部分----------- */
 .img-box img{
     max-width: 100%;
     height: 300px;
     margin: 10px;
-  
 }
 .final-title{
     text-align: center;
@@ -276,7 +256,6 @@ a:link,a:visited{
 .ticket-box{
     width: 100%;
     display: flex;
-  
     justify-content: center;
  
 }
@@ -309,7 +288,6 @@ a:link,a:visited{
     padding: 3px 0;
     background-color: rgb(216, 216, 216);
     color: #000;
-    /* display: flex; */
     border: 2px solid rgb(51, 51, 51);
 }
 .ticket-info > i{
@@ -320,7 +298,6 @@ a:link,a:visited{
     margin: 10px;
     /* background-color: rgb(57, 156, 173); */
 }
-
 
 @media screen and (max-width:720px){
     .container{
@@ -401,7 +378,6 @@ a:link,a:visited{
     }
     .bottom-line{
         margin: 5px 0;
-        
     }
     .txt-s{
         font-size: 10px;
@@ -418,20 +394,23 @@ a:link,a:visited{
     .ticket-info > span{
         font-size: 15px;
     }
-
 }
+
+
 .t-box{
     width: 90%;
-    height: 700px;
+    /* height: 700px; */
     margin: 20px;
     padding: 20px 0;
     background-color: #fff;
-    /* border: 2px solid #000; */
     position: relative;
     display: inline-block;
     color: #000;
+    /* width: 60%; */
+    height: 100%;
+    margin: 0;
+    /* position: relative; */
 }
-
 
 .t-title{
     padding-top: 10px;
@@ -486,13 +465,6 @@ a:link,a:visited{
     width: 100%;
     padding: 20px;
     /* background-color: yellow; */
-}
-
-.t-box{
-    width: 60%;
-    height: 100%;
-    margin: 0;
-    position: relative;
 }
 
 .lg-img-box{
@@ -551,6 +523,34 @@ a:link,a:visited{
     border-color: transparent transparent rgb(46, 44, 44) rgb(46, 44, 44);
     right:150px;
     top:-10px;
+    }
+.t-box:after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-width: 30px 30px 0px 0px ;
+    border-radius: 50px 50px 0px 0px;
+    border-style:solid;
+    border-color:rgb(46, 44, 44) rgb(46, 44, 44) transparent transparent ;
+    right:150px;
+    bottom: -10px;
+    }
+}
+@media screen and (min-width: 720px ) and (max-width:1024px){
+    .small-img-box{
+        display: none;
+    }
+
+.t-box:before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-width: 0px 0px 30px 30px;
+    border-radius: 0px 0px 50px 50px;
+    border-style:solid;
+    border-color: transparent transparent rgb(46, 44, 44) rgb(46, 44, 44);
+    right:150px;
+    top:-10px;
 }
 .t-box:after{
     content: '';
@@ -564,36 +564,8 @@ a:link,a:visited{
     bottom: -10px;
 }
 
-
 }
-
 @media screen and (max-width: 720px ) {
-    .small-img-box{
-        display: none;
-    }
-
-    .t-box:before{
-        content: '';
-        display: block;
-        position: absolute;
-        border-width: 0px 0px 30px 30px;
-        border-radius: 0px 0px 50px 50px;
-        border-style:solid;
-        border-color: transparent transparent rgb(46, 44, 44) rgb(46, 44, 44);
-        right:150px;
-        top:-10px;
-    }
-    .t-box:after{
-        content: '';
-        display: block;
-        position: absolute;
-        border-width: 30px 30px 0px 0px ;
-        border-radius: 50px 50px 0px 0px;
-        border-style:solid;
-        border-color:rgb(46, 44, 44) rgb(46, 44, 44) transparent transparent ;
-        right:150px;
-        bottom: -10px;
-    }
     .t-box{
         width:100%;
         height: 100%;
@@ -643,8 +615,6 @@ a:link,a:visited{
         left:-15px;
         top: 520px;
     }
-    
-
 }
 
 
