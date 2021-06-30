@@ -2,11 +2,8 @@
     window.onload=function(){
     var input = document.getElementById('input')
     var todoList = document.getElementById('todolist')
-
-
     var cBtn = document.getElementById('c-btn')
     var spans = document.getElementsByTagName('span');
-
     var index;
     var d = new Date()
     var year = d.getFullYear();
@@ -158,8 +155,6 @@
         //     spans[i].style.color ="white"
         // }
     }
-
-
 }
     // cBtn.onclick= mouseTest;
 

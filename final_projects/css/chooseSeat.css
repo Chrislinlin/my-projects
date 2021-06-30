@@ -167,16 +167,7 @@ a:link,a:visited{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-@media screen and (max-width:376px){
-    .seat{
-        width: 15px;
-        height: 12px;
-        background-color: #444451;
-        margin: 3px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    } 
-}
+
 .seat.selected{
     background-color: #6feaf6;
 }
@@ -192,7 +183,15 @@ a:link,a:visited{
 .seat:nth-last-of-type(1) {
     margin-left: 28px;
 }
-@media screen and (max-width:376px){
+@media screen and (max-width:720px){
+.seat{
+    width: 15px;
+    height: 12px;
+    background-color: #444451;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} 
    /* 選取座位區第二個元素並使用margin-left把走道做出來 */
 .seat:nth-of-type(1) {
     margin-right: 18px;
@@ -323,7 +322,7 @@ a:link,a:visited{
 }
 
 
-@media screen and (max-width:376px){
+@media screen and (max-width:720px){
     .container{
         width: 100%;
     }
@@ -517,7 +516,7 @@ a:link,a:visited{
     background-position: center;
     background-repeat: no-repeat;
 }
-@media screen and (min-width: 767px ) {
+@media screen and (min-width: 720px ) {
 
     .small-img-box{
         display: none;
@@ -567,36 +566,34 @@ a:link,a:visited{
 
 
 }
-@media screen and (min-width: 377px ) and (max-width:768px){
+
+@media screen and (max-width: 720px ) {
     .small-img-box{
         display: none;
     }
 
-.t-box:before{
-    content: '';
-    display: block;
-    position: absolute;
-    border-width: 0px 0px 30px 30px;
-    border-radius: 0px 0px 50px 50px;
-    border-style:solid;
-    border-color: transparent transparent rgb(46, 44, 44) rgb(46, 44, 44);
-    right:150px;
-    top:-10px;
-}
-.t-box:after{
-    content: '';
-    display: block;
-    position: absolute;
-    border-width: 30px 30px 0px 0px ;
-    border-radius: 50px 50px 0px 0px;
-    border-style:solid;
-    border-color:rgb(46, 44, 44) rgb(46, 44, 44) transparent transparent ;
-    right:150px;
-    bottom: -10px;
-}
-
-}
-@media screen and (max-width: 378px ) {
+    .t-box:before{
+        content: '';
+        display: block;
+        position: absolute;
+        border-width: 0px 0px 30px 30px;
+        border-radius: 0px 0px 50px 50px;
+        border-style:solid;
+        border-color: transparent transparent rgb(46, 44, 44) rgb(46, 44, 44);
+        right:150px;
+        top:-10px;
+    }
+    .t-box:after{
+        content: '';
+        display: block;
+        position: absolute;
+        border-width: 30px 30px 0px 0px ;
+        border-radius: 50px 50px 0px 0px;
+        border-style:solid;
+        border-color:rgb(46, 44, 44) rgb(46, 44, 44) transparent transparent ;
+        right:150px;
+        bottom: -10px;
+    }
     .t-box{
         width:100%;
         height: 100%;

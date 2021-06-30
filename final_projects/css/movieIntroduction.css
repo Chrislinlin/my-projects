@@ -207,7 +207,7 @@ main{
 .submit-btn{
     color: #fff;
 }
-@media screen and (min-width:376px) and (max-width:1024px){
+@media screen and (min-width:720px) and (max-width:1200px){
     .newmovie_top_inner {
         padding: 40px 50px;
     }
@@ -234,7 +234,7 @@ main{
 .original-star .fullStar::after, .user-star .fullStar::after{
     content: '★';
 } */
-@media screen and (max-width:376px) {
+@media screen and (max-width:720px) {
     .newmovie_top_inner {
         padding: 20px 40px;
     }
