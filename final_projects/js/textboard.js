@@ -97,9 +97,6 @@
         
             function addCommentDOM(comment) {
                 const item = document.createElement("div");
-                // console.log(item);
-                // console.log(index1);
-                // starArray[index1]
 
                     item.innerHTML= `
                     <div class="member">
@@ -141,13 +138,10 @@
                     </div>
                 </div>`;
                     todoList.appendChild(item);
-                        console.log(33)
+
                 }
         
-            //事件
-            cBtn.onclick= addComment;
-            todoList.innerHTML='sssss'
-            }
+
         };
         
 
@@ -163,7 +157,7 @@
         // for(var i =index+1;i < spans.length;i++){
         //     spans[i].style.color ="white"
         // }
-
+    }
 
 
 }

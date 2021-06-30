@@ -24,6 +24,8 @@
         <link rel="stylesheet" href="./css/breadcrumb.css">
         <!------nowcomingout css------->
         <link rel="stylesheet" href="./css/nowComingOut.css">
+        <!------hamburger css------->
+        <link rel="stylesheet" href="./css/hamburger.css">
         <!-- Swiper v4.1.0 -->
         <link rel="stylesheet" href="./vendors/swiper/swiper.min.css">
 
@@ -37,12 +39,15 @@
         <div class="header_control">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand font-weight-bold text-light" href="./index.html">Lin!in</a>
-                <button class="btn-light navbar-toggler" type="button" data-toggle="collapse"
+                <button class="navbar-toggler second-button btn-dark" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <!-- <i class="fal fa-bars" style="color:#fff; font-size:28px;"></i> -->
-                    </span>
+                    <div class="animated-icon2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </button>
 
                 <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
@@ -52,13 +57,13 @@
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="./nowComingOut.html">現正熱映</a>
+                            <a class="nav-link text-light" href="nowComingOut.html">現正熱映</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="./commingsoon.html">即將上片</a>
+                            <a class="nav-link text-light" href="/final_projects/commingsoon.html">即將上片</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="./ticketInfo.html">票價資訊</a>
+                            <a class="nav-link text-light" href="./ticketInfo.html">戲院介紹</a>
                         </li>
                     </ul>
                 </div>
@@ -372,6 +377,13 @@
             $(document).ready(function () {
                 AOS.init();
             })
+        </script>
+
+        <!------hamburger js--------->
+        <script src="./js/hamburger.js"></script>
+        <!--bootstraps cdn--->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
 </body>
 

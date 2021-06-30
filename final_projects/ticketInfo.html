@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="./css/breadcrumb.css">
     <!-------hamburger.css------------------>
     <link rel="stylesheet" href="./css/hamburger.css">
-    <title>票價資訊</title>
+    <!-------slick.css------------------>
+    <link rel="stylesheet" href="./vendors/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./vendors/slick-1.8.1/slick/slick-theme.css">
+    <title>戲院介紹</title>
 
 </head>
 
-<body>
+<div>
     <!--第0區域 nav bar-->
     <header>
         <div class="header_control">
@@ -53,7 +56,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="./ticketInfo.html">票價資訊</a>
+                            <a class="nav-link text-light" href="./ticketInfo.html">戲院介紹</a>
                         </li>
                     </ul>
 
@@ -61,157 +64,295 @@
             </nav>
 
         </div>
-        <!--end of Navbar-->
-        <!-- ----第一部分 麵包屑 breadcrumb---- -->
-        <div class="breadcrumb">
-            <div class="breadcrumb_box">
-                <ul class="breadcrumb_list">
-                    <li><a href="./index.html" class="breadcrumb_link">首頁</a></li>
-                    <li><a class="now_page">票價資訊</a></li>
+    </header>
+    <!--end of Navbar-->
+    <!-- ----第一部分 麵包屑 breadcrumb---- -->
+    <div class="breadcrumb">
+        <div class="breadcrumb_box">
+            <ul class="breadcrumb_list">
+                <li><a href="./index.html" class="breadcrumb_link">首頁</a></li>
+                <li><a class="now_page">票價資訊</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 主要內容 文字 -->
+    <!----側邊選單-->
+    <div class="content_box">
+        <div class="aside_box">
+            <div class="aside_menu_box">
+                <div class="menu_title">Ｑ-List</div>
+                <ul class="menu_list">
+                    <li>
+                        <a href="#key01" id="icon01"><img src="./image/ticketInfo/info_01@2x.png" alt="" srcset=""></a>
+                    </li>
+                    <li>
+                        <a href="#key02" id="icon02"><img src="./image/ticketInfo/info_04@2x.png" alt="" srcset=""></a>
+                    </li>
+                    <li>
+                        <a href="#key03" id="icon03"><img src="./image/ticketInfo/info_03@2x.png" alt="" srcset=""></a>
+                    </li>
+
+                    <li>
+                        <a href="#key04" id="icon04"><img src="./image/ticketInfo/info_02@2x.png" alt="" srcset=""></a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <!-- 主要內容 文字 -->
-        <!-------第二部分 票價資訊------>
-        <div class="bg"></div>
-        <div class="container top-title">
-            <!-- 頁面提示 文字 -->
-            <h2 class="page_title">
-                票價資訊
-            </h2>
-            <!-- <div class="row">
-                <div class="col-md-12"> -->
 
-            <table class="table table-dark ">
-                <thead class="thead-light">
-                    <tr>
-                        <th scope="col">票種</th>
-                        <th scope="col">金額</th>
-                    </tr>
+        <!-------第二部分 1/4 影城資訊------>
+        <section class="main-box">
+            <section id="key01" class="section section_1">
 
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>全票
-                            <p style="color: #fff;">Adult Tickets</p>
-                        </td>
+                <div class="text-box left-box">
+                    <h4 class="section1_title">戲院簡介 </h4>
+                    <p class="text-content">「Lin!in
+                        Cinema」位於台北市中正區主要幹道上，交通便利且提供相當充裕的停車位。是台北市中正區結合影城、商場、美食街及大賣場的豪華娛樂影城新地標！
+                        影城設有8個國際級影廳，含無障礙座位共有1636席，搭配全新原裝進口西班牙Figueras高級座椅，流線人體工學設計，寬敞舒適的座墊及椅背，讓每一個顧客都能享受觀影的舒適環境。
+                        搭配最新Dolby®
+                        Atmos™ 杜比®全景聲音響系統及全廳院設置杜比Dolby Surround 7.1聲道數位環繞音響，結合全台獨家D-BOX動感座椅，以及世界知名Harkness
+                        Hall超寬透聲銀幕，提供每一位消費者最極致的觀影體驗。</p>
 
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>半票
-                            <p class="price-ticket__subtitle">ConcessionTicket</p>
-                        </td>
-                        <td>100</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        </div>
-        </div>
-        <!-------end of 票價資訊---------------->
-        <!--------注意事項--------------------->
-        <section class="notice">
-            <div class="container">
+                </div>
+                <div class="right-box">
+                    <img src="./image/ticketInfo/bade_ev_01.png" alt="01">
+                    <img src="./image/ticketInfo/bade_ev_02.png" alt="02">
+                    <img src="./image/ticketInfo/bade_ev_03.png" alt="03">
+                    <img src="./image/ticketInfo/bade_ev_04.png" alt="04">
+                </div>
+            </section>
 
-                <div class="row">
-                    <div class="col-md-12 notice-title">
+            <!-------第二部分 2/4 票價資訊------>
 
-                        <h6><i class="fas fa-exclamation-triangle text-light"></i><span>注意事項 NOTICE</span></h6>
+            <section id="key02" class="s2">
+                <div class="bg"></div>
+                <div class="section section_2">
+                    <div class="top-title">
 
+                        <!-- 頁面提示 文字 -->
+                        <h2 class="section2_title">
+                            票價資訊
+                        </h2>
+                        <!-- <div class="row">
+                    <div class="col-md-12"> -->
+
+                        <table class="table table-dark ">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">票種</th>
+                                    <th scope="col">金額</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>全票
+                                        <p style="color: #fff;">Adult Tickets</p>
+                                    </td>
+
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>半票
+                                        <p class="price-ticket__subtitle">ConcessionTicket</p>
+                                    </td>
+                                    <td>100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--------注意事項--------------------->
+
+
+
+                    <section class="notice">
+
+
+                        <h1 class="notice-head"><i class="fas fa-exclamation-triangle text-light"></i><span>注意事項
+                                NOTICE</span>
+                        </h1>
+
+
+                        <div class="Notice_class">
+                            <h4 class="Notice_title">禁止攜入影廳食物須知</h4>
+                            <ul class="Notice_list">
+                                <li>
+                                    為維護清潔舒適的觀影環境及觀賞品質，禁止攜帶味道嗆辣、濃郁、高溫熱湯（飲）或食用時會發出聲響之食物進入影廳。點選觀看外食公告。
+                                </li>
+                                <li>本影城全面禁煙、酒類及嚼食檳榔；請勿攜帶玻璃瓶、鐵鋁罐或寵物入場</li>
+                            </ul>
+                        </div>
+                        <div class="Notice_class">
+                            <h4 class="Notice_title">兒童權益須知</h4>
+                            <ol class="Notice_list">
+                                <li>
+                                    未滿2歲且不占位之兒童可免費入場，恕不提供座位，但每位兒童須由一位已購票之成人陪同。免費入場之兒童如觀賞3D電影亦不提供3D眼鏡，如欲租用3D眼鏡須另外支付NT50元；二歲以上且未滿十二歲之兒童，請購買優待票入場。以上兒童均應遵守電影分級制度入場。
+                                </li>
+                                <li>請注意您身邊兒童的安全。</li>
+                            </ol>
+                        </div>
+                        <div class="Notice_class">
+                            <h4 class="Notice_title">購票與退票須知</h4>
+                            <ol class="Notice_list">
+                                <li>購買優待票觀眾請出示相關有效證明文件。</li>
+                                <li>請遵守影片分級制度相關規定。</li>
+                                <li>電影票於開演前30分鐘恕不退換</li>
+                                <li>各式票券經劃位兌換後恕不退換。</li>
+                                <li>請當面清點您的找零及票券，離開櫃檯後恕不負責。</li>
+                            </ol>
+                        </div>
+                        <div class="Notice_class">
+                            <h4 class="Notice_title">其他影城使用須知</h4>
+                            <ol class="Notice_list">
+                                <li>影城內全面禁止攝影及錄音。</li>
+                                <li>飲酒過量顯有醉意者，請勿入內。</li>
+                                <li>觀賞電影時，請勿大聲喧嘩或擱足於前排座椅。</li>
+                                <li>
+                                    入內者請勿隨地吐痰、檳榔汁（渣）、口香糖、便溺、瓜果皮核、棄置廢棄物或有其他污染行為。
+                                </li>
+                                <li>垃圾請丟入垃圾桶。</li>
+                                <li>本場所若有任何待改進事項，歡迎立即向服務人員反應。</li>
+                            </ol>
+                        </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="section section_3" id="key03">
+                <h3 class="section3_title">特殊影廳</h3>
+                <div class="cinema-introduction">
+                    <li>
+                        <div class="intro-txt">
+                            LUXURY SEAT
+                        </div>
+                        <img class="intro-img" src="./image/superseat.jpeg" alt="" srcset="">
+
+                    </li>
+                    <li>
+                        <div class="intro-txt">
+                            DOLBY
+                        </div>
+                        <img class=" intro-img" src="./image/dolby.jpeg" alt="" srcset="">
+                    </li>
+                    <li>
+                        <div class="intro-txt">
+                            D-BOX
+                        </div>
+                        <img class=" intro-img" src="./image/d-box.jpeg" alt="" srcset="">
+                    </li>
+                </div>
+
+
+                <div class="chair">
+                    <div class="chair_title chair_box">
+                        <div>廳別</div>
+                        <div>座位數</div>
+                    </div>
+                    <div class="chair_box1 chair_box">
+                        <div>1 廳</div>
+                        <div>205席-本廳設有無障礙座位3席</div>
+                    </div>
+                    <div class="chair_box2 chair_box">
+                        <div>2 廳</div>
+                        <div>223席-本廳設有無障礙座位3席</div>
+                    </div>
+                    <div class="chair_box1 chair_box">
+                        <div>3 廳</div>
+                        <div>203席-本廳設有無障礙座位3席</div>
+                    </div>
+                    <div class="chair_box2 chair_box">
+                        <div>4 廳</div>
+                        <div>205席-本廳設有無障礙座位3席</div>
+                    </div>
+                    <div class="chair_box1 chair_box">
+                        <div>5 廳</div>
+                        <div>185席-本廳設有無障礙座位3席</div>
+                    </div>
+                    <div class="chair_box2 chair_box">
+                        <div>6 廳</div>
+                        <div>185席-本廳設有無障礙座位3席</div>
+                    </div>
+                    <div class="chair_box1 chair_box">
+                        <div>7 廳</div>
+                        <div>225席-本廳設有無障礙座位3席</div>
+                    </div>
+                    <div class="chair_box2 chair_box">
+                        <div>8 廳</div>
+                        <div>205席-本廳設有無障礙座位3席</div>
                     </div>
                 </div>
-            </div>
-            <div class="container notice-words">
+                <div class="Barrier-free">
+                    <h4>無障礙設施</h4>
+                    <ol>
+                        <li>無障礙購票窗口位於1樓臨櫃窗口，便於行動不便顧客購票。</li>
+                        <li>無障礙廁所位置於1、3樓樓面。</li>
+                        <li>無障礙電梯位置於1樓大廳有無障礙電梯可至各樓層(服務人員引導搭乘)。</li>
+                        <li>服務及申訴專線：03-123-7899。</li>
+                    </ol>
+                </div>
+            </section>
 
-                <div class="row">
 
-                    <div class=" col-sm-12 col-md-6 li-group">
-                        <ul class="text-light">
-                            <li>．請勿攜帶熱食進入影廳</li>
-                            <li>．退票零錢請當面確認點清離櫃後恕不負責</li>
-                            <li>．退票僅限於開演前20分鐘</li>
-
-                        </ul>
+            <section class="section section_4" id="key04">
+                <h3 class="section4_title">影城詳細位置</h3>
+                <div class="mapbox">
+                    <div id="map"></div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>地址 : 台北市中正區北平西路3號</span>
                     </div>
-
-                    <div class="col-sm-12 col-md-6">
-                        <ul class=" text-light">
-                            <li>．超過九十公分之民眾，需購票進場</li>
-                            <li>．購買學生票/老人票請需出示證件</li>
-
-                        </ul>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>聯絡電話 : 02-123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>電子信箱：xxxx@google.com</span>
                     </div>
                 </div>
-
-            </div>
-            </div>
-            </div>
+            </section>
 
         </section>
-        <!---------------影城介紹--------------->
-        <h5>特殊影廳</h5>
-        <div class="cinema-introduction">
-            <li>
-                <div class="intro-txt">
-                    LUXURY SEAT
-                </div>
-                <img class="intro-img" src="./image/superseat.jpeg" alt="" srcset="">
+    </div>
 
-            </li>
-            <li>
-                <div class="intro-txt">
-                    DOLBY
-                </div>
-                <img class=" intro-img" src="./image/dolby.jpeg" alt="" srcset="">
-            </li>
-            <li>
-                <div class="intro-txt">
-                    D-BOX
-                </div>
-                <img class=" intro-img" src="./image/d-box.jpeg" alt="" srcset="">
-            </li>
-
-        </div>
-        <!-------google map api----------->
-        <div class="mapbox">
-            <h3>影城詳細位置</h3>
-            <div id="map"></div>
-
-        </div>
-
-
-        <!---------footer-------------------->
-        <footer>
-            <div class="container">
-                <!---social-item-icon----->
-                <div class="footer-icon">
-                    <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
-                </div>
-                <!--end of social-item-icon------>
-                <!----footer-link-------------->
-                <div class="footer-r">
-                    <a href="#">隱私權保護</a>｜
-                    <a href="#">服務條款</a>｜
-                    <a href="#">聯絡我們</a>｜
-                    <a href="#">回到首頁</a>
-                    <div class="footer-copyright">
-                        <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
-                    </div>
+    <!---------footer-------------------->
+    <footer>
+        <div class="container">
+            <!---social-item-icon----->
+            <div class="footer-icon">
+                <a href="#" class="link"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="link"><i class="fab fa-google-plus fa-2x"></i></a>
+            </div>
+            <!--end of social-item-icon------>
+            <!----footer-link-------------->
+            <div class="footer-r">
+                <a href="#">隱私權保護</a>｜
+                <a href="#">服務條款</a>｜
+                <a href="#">聯絡我們</a>｜
+                <a href="#">回到首頁</a>
+                <div class="footer-copyright">
+                    <span>&copy; Copyright 2021 Lin!in CINEMA All Rights Reserved.</span>
                 </div>
             </div>
-        </footer>
-        <!---------end of footer-------------------->
+        </div>
+    </footer>
+    <!---------end of footer-------------------->
 
 
-    </header>
+
 
     <!---導入jQuery--------->
     <script src="./vendors/jQuery/js/jquery-3.5.1.min.js"></script>
+    <!-- 導入slick -->
+    <script src="./vendors/slick-1.8.1/slick/slick.min.js"></script>
     <!--bootstraps cdn--->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
@@ -220,11 +361,14 @@
     <script src="./js/ticketInfo.js"></script>
     <!-----hambuger.js----------->
     <script src="./js/hamburger.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeAWVHXoluofS9sf4aFOjYK7IgtkGsXZs&callback=initMap"
+    <!--mapapi-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeAWVHXoluofS9sf4aFOjYK7IgtkGsXZs&callback=initMap"
         async defer>
-    </script> -->
+    </script>
+    <!-- scrollbar.js -->
+    <script src="./js/scroolbar.js"></script>
 
 
-</body>
+    </body>
 
 </html>

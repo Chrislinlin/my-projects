@@ -99,18 +99,15 @@ main{
 .filter_on{
     color: blanchedalmond !important;
 }
-.filter_on1{
-    color: blanchedalmond !important;
-}
-.filterbtn, .filterbtn1{
+
+
+.filteroff{
     color: rgb(63, 60, 60);
 }
 .filterbtn:hover{
     color: blanchedalmond!important;
 }
-.filterbtn1:hover{
-    color: blanchedalmond!important;
-}
+
 .section_1{
     height: 100%;
 }
@@ -159,6 +156,9 @@ main{
 }
 .comment-text-box{
     margin: 20px 15px;
+}
+.star-color{
+    color: yellow;
 }
 .comment-text-word{
     margin: 5px 0;
@@ -222,7 +222,7 @@ main{
     }
     .msg-box{
         position: relative;
-        z-index: -1;
+     
     }
 }
 
@@ -237,3 +237,8 @@ main{
 .original-star .fullStar::after, .user-star .fullStar::after{
     content: '★';
 } */
+@media screen and (max-width:376px) {
+    .newmovie_top_inner {
+        padding: 20px 40px;
+    }
+}

@@ -46,7 +46,7 @@
                 </button>
                 <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item active" id="nav-item">
                             <a class="nav-link text-light" href="./bookingTickets.html">立即購票 <span
                                     class="sr-only">(current)</span></a>
                         </li>
@@ -57,7 +57,7 @@
                             <a class="nav-link text-light" href="./commingsoon.html">即將上片</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="./ticketInfo.html">票價資訊</a>
+                            <a class="nav-link text-light" href="./ticketInfo.html">戲院介紹</a>
                         </li>
                     </ul>
                 </div>
@@ -106,7 +106,7 @@
 
         </div>
     </div>
-    <!-----ueser comment--------->
+    <!-----user comment--------->
     <div class="container-fluid section_1">
         <div class="box" id="box">
             <div class="user-comment-box" id="comment-box">
@@ -122,8 +122,9 @@
                                 <div class="col-md-8">
                                     <div class="filter_icon_box">
                                         <div>排序: </div>
-                                        <div class="filter_on" @click="sort('time')">發表時間(新到舊)</div>
-                                        <div class="filterbtn" @click="sort('num')">評分(低到高)</div>
+                                        <div v-bind:class="className" @click="sort('time'),changeClass()">
+                                            發表時間</div>
+                                        <div v-bind:class="className2" @click="sort('num'), changeClass_2()">評分</div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -149,7 +150,7 @@
                                         <!---text1----star-->
                                         <div class="comment-text-1">
                                             <div>網友評分：
-                                                <span style="color: rgb(255, 255, 153);">{{i.star}}</span>
+                                                <span class="star-color">{{i.star}}</span>
 
                                             </div>
                                         </div>

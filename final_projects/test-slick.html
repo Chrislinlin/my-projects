@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendors/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./vendors/slick-1.8.1/slick/slick-theme.css">
+    <!-- jQuery部分 -->
+    <script src="/final_projects/vendors/jQuery/js/jquery-3.5.1.min.js"></script>
+    <!-- js部分（注意！套件js部分需設定在jQuery之後）不然會沒反應 -->
+    <script src="../final_projects/vendors/slick-1.8.1/slick/slick.min.js"></script>
+    <title>slick-test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: aquamarine;
+        }
+
+        .show-box {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        #pic-box {
+
+            width: 100%;
+        }
+
+        img {
+            margin: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="show-box">
+        <div id="pic-box">
+            <img src="https://fakeimg.pl/350x200/?text=Hello-1">
+            <img src="https://fakeimg.pl/350x200/?text=Hello-2">
+            <img src="https://fakeimg.pl/350x200/?text=Hello-3">
+            <img src="https://fakeimg.pl/350x200/?text=Hello-4">
+            <img src="https://fakeimg.pl/350x200/?text=Hello-5">
+            <img src="https://fakeimg.pl/350x200/?text=Hello-6">
+        </div>
+    </div>
+
+
+    <script>
+        $(function () {
+
+            $('#pic-box').slick({
+                slidesToShow: 3,
+                infinite: true,
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                centerMode: true,
+            })
+        })
+    </script>
+
+
+
+
+
+</body>
+
+</html>
