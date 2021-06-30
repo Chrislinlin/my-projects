@@ -303,7 +303,7 @@ footer{
     color: #878787;
     transition: .8s;
 } */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     .title-box{
         padding: 10px 20px 20px 20px;
         margin-top: 20px;
@@ -349,10 +349,9 @@ footer{
         margin-bottom: 15px;
     }
 }
-@media only screen and (min-width:375px) and(max-width:780px){
-}
 
-@media screen and (max-width:376px){
+
+@media screen and (max-width:720px){
     .swiper-slide{
         width: 355px;
         margin-top: 50px;

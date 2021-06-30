@@ -283,7 +283,7 @@ h5{
     position: relative;
 }
 
-@media screen and (max-width: 376px){
+@media screen and (max-width: 720px){
     .main-box{
         width: 100%;
     }
@@ -380,7 +380,7 @@ h5{
         height: 100%;
     }
 }
-@media screen and (min-width: 376px) and (max-width: 1024px){
+@media screen and (min-width: 720px) and (max-width: 1024px){
     .cinema-introduction{
         flex-direction: column;
     }

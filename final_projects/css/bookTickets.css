@@ -90,7 +90,7 @@ img{
 .movie_time_box{
     margin-top: 20px;
 }
-@media screen and (max-width:756px){
+@media screen and (max-width:720px){
 img{
         width: 100%;
     }
