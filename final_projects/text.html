@@ -5,284 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>!!test</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'
-        integrity='sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=='
-        crossorigin='anonymous' />
-    <style>
-        .aaa {
-            display: flex;
-        }
+    <title>card practice</title>
+    <link rel="stylesheet" href="./css/test.css">
 
-        .gread-box {
-            display: flex;
-
-        }
-
-        .gread-box>img {
-            width: 20px;
-            height: 20px;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="box">
+    <div class="container">
 
-        <input type="text" v-model="rate" placeholder="Pls enter rate.." @keyup.enter='addto'>{{rate}}
-        <input type="text" v-model="comment" placeholder="Pls text comment.." @keyup.enter='addto'>
-
-        <button @click="addto">ClickNum</button>
-
-
-        <div class="filterbtn" @click="sort('num')">評分(低到高)</div>
-        <li class="aaa" v-for="(i,index) in stars">{{i.num}}
-            <p>aaa{{i.star}}</p>
-            <p>{{i.comment}}</p>
-            <button type="button" class="btn-delete" @click='removeto(index)'>刪除</button>
-            <br />
-        </li>
-        <div>num:{{starNum}}</div>
-        <div class="gread-box">
-            <img v-for="(i, index) in starArray " :src="i.src" @click='rating(index)' alt="starimg">
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    <h2>操控</h2>
+                    <h5 class="sub-title">Every Breath You Take</h5>
+                    <h4>上映日期：六月十四日</h4>
+                </div>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tenetur corporis
+                    expedita ad neque
+                    quidem optio ratione ab error culpa dolores sapiente deleniti, commodi hic. Aliquam mollitia odio
+                    similique quod.</p>
+            </div>
         </div>
     </div>
-
-
-    <script src="./vendors/vue.js"></script>
-    <script src="./js/test.js"></script>
 
 </body>
 
 </html>
-
-
-<div class="ticket-box">
-    <div class="img-box">
-        <img src="./image/movie-introduction/conanMoviePoster.jpeg" alt="" srcset="">
-    </div>
-
-    <div class="final-info">
-        <li class="ticket-info ticket-title"><i class="fas fa-ticket"></i>&nbspTickets:</li>
-        <li class="ticket-info"><span>名偵探柯南<br></span><span class="txt-s">Dective Conan</span></li>
-        <li class="ticket-info">
-            <span><i class="fas fa-clock"></i>&nbsp110分鐘</span></li>
-        <li class="ticket-info">
-            <!-- &nbsp是html的空格 -->
-            <span><i class="fas fa-map-marker-alt"></i>&nbspLin!in
-                Cinema&nbspA廳</span>
-        </li>
-        <li class="ticket-info">
-            <!-- &nbsp是html的空格 -->
-            <span><i class="fas fa-calendar"></i>&nbsp6月6號&nbsp14:00</span>
-        </li>
-        <li class="ticket-info"> <i class="fas fa-chair"></i><span v-for="seat in selected_seats"
-                :key="seat.id">{{seat.row}}-{{ seat.name }}&nbsp&nbsp</span>
-        </li>
-    </div>
-
-
-    <!-- <div class="bottom-line">
-            <li class="tit">總計</li>
-            <li><span class="total-price">{{ total_price }}</span>元</li>
-        </div> -->
-
-    <style>
-        .img-box img {
-            max-width: 100%;
-            height: 300px;
-            margin: 10px;
-
-        }
-
-        .final-title {
-            text-align: center;
-            font-size: 20px;
-            border-bottom: 1px solid #fff;
-            padding-bottom: 30px;
-            margin: 30px 0;
-
-        }
-
-        .final-box {
-            background-color: rgb(117, 117, 117);
-
-        }
-
-        .ticket-box {
-            width: 100%;
-            display: flex;
-
-            justify-content: center;
-
-        }
-
-        .img-box {
-            width: 25%;
-        }
-
-        .final-info {
-            display: flex;
-            padding: 10px;
-            flex-direction: column;
-            width: 75%;
-            height: 100%;
-            /* border: 5px solid #fff; */
-        }
-
-        .final-info .ticket-title {
-            background-color: rgb(192, 0, 0);
-            font-size: 30px;
-            padding: 3px;
-            color: #fff;
-        }
-
-        .txt-s {
-            font-size: 20px !important;
-            color: rgb(255, 255, 255);
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .ticket-info {
-            width: 100%;
-            font-size: 20px;
-            padding: 3px 0;
-            background-color: rgb(216, 216, 216);
-            color: #000;
-            /* display: flex; */
-            border: 2px solid rgb(51, 51, 51);
-        }
-
-        .ticket-info>i {
-            margin: 10px;
-        }
-
-        .ticket-info>span {
-            font-size: 20px;
-            margin: 10px;
-            /* background-color: rgb(57, 156, 173); */
-        }
-
-
-        @media screen and (max-width:376px) {
-            .container {
-                width: 100%;
-            }
-
-            .item-num {
-                font-size: 20px;
-            }
-
-            .process {
-                display: none;
-            }
-
-            .process2 {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-
-            .step-item {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                position: relative;
-                background-color: rgb(116, 116, 116);
-                box-shadow: 0 0 0 5px rgb(196, 196, 196);
-                /* background-color: brown; */
-
-            }
-
-            .step-item+li {
-                margin-left: 20px;
-            }
-
-            .step-item+li::before {
-                content: '';
-                position: absolute;
-                width: 20px;
-                height: 3px;
-                background-color: rgb(145, 145, 145);
-                left: -20px;
-                z-index: -1;
-            }
-
-            .total {
-                text-align: right;
-
-                /* background-color: wheat; */
-                margin: 20px auto !important;
-            }
-
-            .nextBtn {
-                padding-top: 30px;
-                margin-top: 0;
-                width: 100%;
-
-            }
-
-            .confirm-box {
-                width: 356px;
-            }
-
-            .ticket-box {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-            }
-
-            .img-box {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-
-            .final-info {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-
-            .img-box img {
-                max-width: 370px;
-                height: 370px;
-            }
-
-            .bottom-line {
-                margin: 5px 0;
-
-            }
-
-            .txt-s {
-                font-size: 10px;
-            }
-
-            .final-info>li {
-                margin: 10px 0;
-            }
-
-            .ticket-info {
-                background-color: rgb(0, 0, 0);
-                padding: 2px;
-                color: #fff;
-                border-bottom: 1px solid #fff;
-            }
-
-            .ticket-info>span {
-                font-size: 15px;
-            }
-
-        }
-    </style>
-
-
-
-</div>

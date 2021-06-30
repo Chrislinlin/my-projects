@@ -62,13 +62,11 @@
                             <a class="nav-link text-light" href="./commingsoon.html">即將上片</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="./ticketInfo.html">票價資訊</a>
+                            <a class="nav-link text-light" href="./ticketInfo.html">戲院介紹</a>
                         </li>
                     </ul>
-
                 </div>
             </nav>
-
         </div>
     </header>
     <!--end of Navbar-->
@@ -125,11 +123,9 @@
                 <div class="container">
                     <table>
                         <thead>
-                            <th class="th">票種</span>
-                            </th>
+                            <th class="th">票種</th>
                             <th class="th">數量</th>
                             <th class="th">價格</th>
-
                         </thead>
                         <tbody>
                             <tr v-for="(item, index) in tickets">
@@ -137,16 +133,15 @@
 
                                 <td>
                                     <button class="numBtn" v-on:click="minusBtn(index)"><i
-                                            class="fas fa-minus"></i></button><span class="item-num">
+                                            class="fas fa-minus minus"></i></button><span class="item-num">
                                         {{item.num}}</span>
 
                                     <button class="numBtn" v-on:click="plusBtn(index)"><i
-                                            class="fas fa-plus"></i></button>
+                                            class="fas fa-plus plus"></i></button>
                                 </td>
                                 <td>{{item.prices}}</td>
                             </tr>
                             <tr>
-
                             </tr>
                         </tbody>
                     </table>
@@ -162,9 +157,6 @@
                             <a href="#" class=" ticket_next_btn">下一步</a>
                         </button>
                     </div>
-
-
-
                 </div>
             </div>
 
@@ -189,58 +181,6 @@
 
                     <div class="container">
                         <div class="screen"></div>
-                        <!-- <div class="row">
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                        </div>
-                        <div class="row">
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat selected"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                        </div>
-                        <div class="row">
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat
-                            selected"></div>
-                            <div class="seat"></div>
-                        </div>
-                        <div class="row">
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                            <div class="seat"></div>
-                        </div>
-                    </div>
-                    <div class="nextBtn">
-                        <button class="btn btn-outline-secondary btn-lg">
-                            <a href="#" class=" ticket_next_btn">下一步</a>
-                        </button>
-                    </div> -->
                         <!-- 用vue的方法 -->
                         <div id="container" class="container">
                             <!-- <div class="row" v-for="i in 3">
@@ -262,13 +202,9 @@
 
                     </div>
                 </div>
-
-
         </section>
         <!-- 第３部分確認資訊       -->
         <section class="confirm-info container" v-if="show3">
-
-
             <h5>以下為您的訂購資訊</h5>
             <div class="h5-bottomline"></div>
             <div class="confirm-box">
@@ -302,7 +238,6 @@
                     </li>
                 </div>
                 <div class="bottom-line">
-
                     <li class="tit">總計</li>
                     <li><span class="total-word">{{ total_price }}</span>元</li>
                 </div>
@@ -312,11 +247,7 @@
                         <a href="#" class=" ticket_next_btn">確定付款</a>
                     </button>
                 </div>
-
             </div>
-
-
-
         </section>
         <!-- 第4部分完成       -->
         <section class="container" v-if="show4">
@@ -344,7 +275,11 @@
                                 </div>
                                 <div class="inner-text">
                                     <h5>PRICE</h5>
+<<<<<<< HEAD
                                     <div class="price-num">{{ total_price }}</div>
+=======
+                                    <div class="price-num">${{ total_price }}</div>
+>>>>>>> final_mission
                                 </div>
                             </div>
                             <div class="inner-box-2">
@@ -355,7 +290,7 @@
                                 </div>
                                 <div class="inner-text">
                                     <h5>DATE</h5>
-                                    <div class="date-num">6/14</div>
+                                    <div class="date-num">6/06</div>
                                 </div>
                             </div>
                             <div class="inner-box-3">
@@ -366,10 +301,9 @@
                                 </div>
                                 <div class="inner-text">
                                     <h5>TIME</h5>
-                                    <div class="time-num">15:00</div>
+                                    <div class="time-num">14:00</div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="barcode-box"></div>
                     </div>
@@ -384,7 +318,6 @@
                 </div>
             </ul>
         </section>
-
     </div>
 
     <!---------footer-------------------->
@@ -421,8 +354,6 @@
     <!-- chooseticket.js -->
     <script src="./js/chooseTickets.js"></script>
     <script src="./js/chooseSeat.js"></script>
-
-
 </body>
 
 </html>

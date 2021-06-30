@@ -4,70 +4,125 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-.bg{
+/* ----- 側邊 快速選單 menu -----*/
+
+.aside_box {
+    display: none; /* 先隱藏 等螢幕變大時才顯示*/
+
+    margin-right: 10px;
+    align-self: stretch;
+}
+.aside_menu_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: sticky;
+    top: 82.8px;
+    background-color: #464f69;
+}
+
+.menu_title {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    border-bottom: #fffdfc 1px solid;
+}
+.menu_list > li > a {
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    color: #c4d3e3;
+    text-decoration: none;
+    font-size: 1.6rem;
+    opacity: 0.6;
+}
+.menu_list > li > a > img {
+    width: 60px;
+    height: 60px;
+}
+
+.menu_list > li > a:hover {
+    opacity: 1;
+}
+.section_2, .section_3 {
     width: 100%;
-    height: 400px;
+    margin-top: 10px;
+}
+
+.s2{
+    width: 100%;
+    position: relative;
+
+}
+.section_2{
+    margin: 20px auto;
+    padding: 10px 0px;
+}
+.bg{
     position: absolute;
     z-index: -1;
     width: 100%;
+    height: 100%;
     background: url(../image/cinema.jpeg);
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center;
     background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.75); 
-    background-blend-mode: multiply;
-
 }
 .notice{
     margin: 50px auto;
     width: 100%;
     height: 100%;
 }
-.notice-title{
+.notice-head{
     margin-bottom: 3px;
-}
-.top-title{
-
-    
-    z-index: 10;
-}
-.page_title{
-    margin-top: 20px;
-    width: 100%;
-    height: 100%;
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding-bottom: 20px;
-}
-h6 >i {
-    
     font-size: 20px;
+    margin-left: 5px;
 }
-h6 >span{
-    margin: 0 5px;
-    color: #fff;
+.Notice_title {
+    background-color: #c4d3e3;
+    color: #473e4a;
+    font-size: 1.5rem;
+    padding: 10px 5px;
+    margin-top: 10px;
 }
-.container{
-    /* width: 800px !important; */
+.Notice_list {
+
+    margin-left: 25px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    font-size: 1.3rem;
+    padding: 5px;
 }
+.section2_title{
+    border-bottom: none !important;
+}
+
+
 table{
     margin: 0 auto; 
+    font-size: 20px;
+
 }
 
 td{
-    font-size: 20px;
+    font-size: 24px;
 }
 td >p{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 200;
+    margin-top: 2px;
 }
 
 .cinema-introduction{
     width:100%;
-    height: 100%;
     color: #fff;
     display: flex;
     margin-bottom: 50px;
@@ -116,35 +171,151 @@ h5{
 }
 #map {
     position: absolute;
-    bottom: 0;
-  margin: 20px 0;
+    top: 0px;
     left: 0;
-    height: 80%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     /* background-color: red; */
 
 }
 
 .mapbox {
-    height: 400px;
+    height: 500px;
     width: 100%;
     position: relative;
-    z-index: -1;
     /* background-color: blue; */
+    margin-bottom: 10px;
+}
+.main-box{
+    width: calc(100% - 115px);
+    margin: 0 auto;
+    color: #fff;
+    /* background-color: #000; */
     margin-bottom: 50px;
+}
+.section{
+    width: 100%;
+}
+.section_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-box{
+    width: 100%;
+    margin:0 auto 10px 0;
+}
+
+.section1_title, .section2_title, .section3_title, .section4_title{
+    padding: 15px 10px;
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 2px solid rgb(143, 143, 143) ;
+  margin-bottom: 10px;
 
 }
-.mapbox >h3{
-    color: #fff;
-    padding-bottom: 10px;
-    font-size: 35px;
-    font-weight: 300;
-    /* background-color: red; */
-    border-bottom: 2px solid #fff;
-    margin: 0 20px 10px 20px;
-    padding-left: 15px;
+.text-content{
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    padding: 5px;
 }
-@media screen and (max-width:376px) {
+.contact-box{
+    padding: 5px 10px;
+    background-color: rgb(75, 4, 1);
+}
+.contact-item{
+    line-height: 1.5;
+}
+.left-box {
+    width: 100%;
+
+}
+.right-box {
+    width: 100%;
+}
+.chair{
+    width: 100%;
+}
+.chair_title{
+    background-color: rgb(75, 4, 1);
+    font-size: 1.3rem;
+}
+.chair_box{
+    display: flex;
+
+    line-height: 1.5;
+    letter-spacing: 1px;
+    padding: 5px;
+    text-align: center;
+}
+.chair_box > div:first-child{
+    width: 20%;
+  
+}
+.chair_box > div:nth-child(2) {
+    width: 80%;
+    
+}
+.chair_box1 {
+    font-size: 1.3rem;
+}
+
+.chair_box2 {
+    background-color: #3e3e3f;
+    font-size: 1.3rem;
+}
+.Barrier-free{
+    width: 100%;
+    line-height: 2;
+    font-size: 1.3rem;
+    margin: 20px 0;
+}
+.Barrier-free > h4 {
+    background-color: rgb(75, 4, 1);
+}
+.Barrier-free > li {
+    margin: 5px 10px;
+}
+.section_4{
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 376px){
+    .main-box{
+        width: 100%;
+    }
+    .section1_title, .section2_title, .section3_title, .section4_title{
+        font-size: 30px;
+    }
+    .text-content, .Notice_list{
+        font-size: 14px;
+    }
+    .chair_box1, .chair_box2{
+        font-size: 14px;
+    }
+    .notice-head{
+        font-size: 16px;
+    }
+    .Notice_title {
+
+        font-size: 14px;
+        padding: 10px 25px;
+        margin-top: 5px;
+    }
+
+    .chair{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    .Barrier-free{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+    }
     .page_title, h5{
         font-size: 25px !important;
         font-weight: 300;
@@ -173,45 +344,50 @@ h5{
         font-weight: 500;
     }
 
-    #map {
-        position: absolute;
-        bottom: 0;
-        margin: 50px 0 20px 0;
-        left: 0;
-        height: 80%;
-        width: 100%;
-        background-color: blue;
-    
+}
+@media screen and (min-width: 1024px){
+    .content_box{
+        display: flex;
     }
-    .mapbox >h3{
-        color: #fff;
-        text-align: center;
-        padding-bottom: 5px;
-        font-size: 25px;
-        font-weight: 300;
-        /* background-color: red; */
-        border-bottom: 2px solid #fff;
-        margin: 0 10px 5px 10px;
+    .aside_box {
+        display: block;
+    }
+    .main_box {
+        width: calc(100% - 115px);
+    }
+    .section_1{
+       flex-direction: row;
+       justify-content: center;
+       align-items: flex-start;
+       position: relative;
+    }
+    .contact-box{
+        padding: 5px 10px;
+        background-color: rgb(75, 4, 1);
+    }
+    .left-box{
+        width: calc(60% - 10px);
+        margin-right: 10px;
+    }
+    .right-box{
+        width: 40%;
+        position: absolute;
+        top:20px !important;
       
     }
-
-}
-@media screen and (min-width: 760px) and (max-width: 1024px) {
-    .intro-txt{
-        /* padding-bottom: 50px;
-        padding-left: 20px; */
-        font-weight: 500;
-        font-size: 20px;
-        
+    .right-box > img{
+      
+        height: 100%;
     }
-    #map {
-        position: absolute;
-        bottom: 0;
-        margin: 50px 0 20px 0;
-        left: 0;
-        height: 80%;
-        width: 100%;
-        /* background-color: blue; */
-    
+}
+@media screen and (min-width: 376px) and (max-width: 1024px){
+    .cinema-introduction{
+        flex-direction: column;
+    }
+    .cinema-introduction > li{
+        /* background-color: red; */
+        width: 100%;}
+    .notice-head{
+        font-size: 20px;
     }
 }

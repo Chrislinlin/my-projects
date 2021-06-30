@@ -80,3 +80,7 @@ button:focus {
     width: 0%;
     left: 50%;
 }
+/* .nav-item :focus{
+    background-color: red;
+    color: #000;
+} */

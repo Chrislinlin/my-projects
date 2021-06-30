@@ -7,7 +7,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,    
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -64,7 +64,6 @@ body {
     border-bottom: 1px solid #878787;
 
 }
-.navbar{}
 
 .menu-right-toggle2{
     display: dl;
@@ -87,46 +86,76 @@ body {
 
 /*------swiper -----*/
 .slider-banner{
-    text-align: center !important;
     margin-top: 50px;
 }
 .swiper-container{
     width: 100%;
     height: 100%;
-
+    display: flex;
 }
 .newmovie-top{
     width: 100%;
 }
 .swiper-slide {
     width: 90%;
+    height: 100%;
     margin: 0 auto;
     font-size: 18px;
-    /* margin: 0 20px; */
-    height: auto;
-    
+    display: flex;
+    justify-content: center;
+
 }
+
 .movie-list{
- width: 100%;
+    max-width: 260px;
+    height: 100%;
     color: #fff;
+    margin-bottom: 30px;
+
+    background-color: rgb(46, 44, 44);
     /* padding: 20px 30px; */
 }
+.movie-list:hover{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 17, 12);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px rgb(26, 17, 12);
+    transition:transform 0.25s ease;
+}
+.movie-box > img{
+    opacity: .8 !important;
+    width: 100%;
+
+}
+/* .movie-box:hover{
+    background-color: rgb(240, 80, 0);
+
+}
+     */
 .movie-box{
-width: 100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* background-color: rgb(46, 44, 44); */
 }
 .movie-info-box{
-    width: 100%;
+    width: 260px;
+    height: 100px;
     font-weight: 800;
     font-size: 30px;
+    padding: 20px 0px;
+    color: azure;
+    text-align: center;
+    text-decoration: none;
     /* height: 100px; */
 }
-.movie-info-box img{
-    max-width:200px;
-    height: auto;
+.sub-title{
+    margin-top: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
 }
-.movie-info-box h1{
-    margin: 20px 0;
-}
+
 .s2_book_btn{
     background-color: rgb(51, 42, 42);
     color: #fff;
@@ -144,7 +173,8 @@ width: 100%;
 /*---戲院介紹-------*/
 .section_3{
 width: 100%;
-height: 100%;
+
+margin: 0 auto;
 overflow: hidden
 }
 .section_3-box{
@@ -163,19 +193,25 @@ overflow: hidden
     border-bottom: 1px solid #878787;
 }
 .envir-item{
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
+    padding: 20px 35px;
     display: flex;
 
 }
 .envir-img{
     width: 60%;
+    /* max-width: 660px; */
     position: relative;
 }
-.envir-img img{
+.envir-img1{
+    width: 57%;
+    position: relative;
+}
+.envir-img img, .envir-img1 img{
     width: 100%;
    height: 100%;
 }
+
 
 .envir-text{
     display: flex;
@@ -184,6 +220,7 @@ overflow: hidden
     align-items: center;
     flex-shrink: 0;
     width: 40%;
+    padding: 0 20px;
     letter-spacing: 2px;
     line-height: 28px;
     margin-left: 20px;
@@ -195,6 +232,8 @@ overflow: hidden
 }
 .environment-title{
     font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
 }
 .more-btn-box{
     margin-top: 20px;
@@ -212,7 +251,7 @@ footer{
     height: auto;
     position: relative;
     color: #fff;
-    z-index: 99;
+    /* z-index: 99; */
     top: 0;
     left: 0;
 }
@@ -271,19 +310,16 @@ footer{
     }
 
 
-    .section_3-box{
-        width: 100%;
-        height: 100%;
-    }
     .envir-item{
         display: flex;
         flex-direction: column;
         position: relative;
         margin: 0 auto;
+        bottom: 0;
         margin-top: 20px;
     }
 
-    .envir-img{
+    .envir-img, .envir-img1{
         width: 100%;
         margin: 0 auto;
         font-size: 0px;
@@ -300,13 +336,10 @@ footer{
         order: 0;
     }
     
-    .swiper-slide{
+    /* .swiper-slide{
         width: 150px;
-    }
-    footer{
-        position: relative;
-        z-index: 99;
-    }
+    } */
+
     .footer-icon{
         position: static;
         margin-top: 10px;
@@ -316,18 +349,19 @@ footer{
         margin-bottom: 15px;
     }
 }
-@media screen and (max-width:1024px) and(min-width:376px){
-
+@media only screen and (min-width:375px) and(max-width:780px){
 }
 
 @media screen and (max-width:376px){
     .swiper-slide{
-        width: 200px;
+        width: 355px;
         margin-top: 50px;
+      
     }
     .movie-box{
         /* position: relative; */
         top: 0%;
+        
     }
 
     .movie_inner:hover {
@@ -337,15 +371,17 @@ footer{
     .slider-banner{
         margin-top: 0px;
     }
-    .movie-inner{
+
+    .movie-list{
+        margin-bottom: 20px;
+
+
+    }
+    .movie-list:hover{
         width: 100%;
-        height: 100%;
-        /* background: rgba(0, 0, 0, 0.3);    */
-        /* position: absolute; */
-        top: 0;
-        left: 0;
-        transition: 0.5s;
-        padding:0px 20px ;
+        transform: scale(1.05);
+        box-shadow: 0px 0px 2px rgb(26, 17, 12);
+        transition:transform 03s ease;
     }
 
     

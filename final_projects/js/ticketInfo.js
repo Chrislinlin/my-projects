@@ -16,3 +16,15 @@ function initMap() {
     });
 
 }
+$(function () {
+
+    $('.right-box').slick({
+        slidesToShow: 1,
+        infinite: true,
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1500,
+       
+    })
+})

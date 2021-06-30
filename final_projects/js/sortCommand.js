@@ -74,6 +74,10 @@ let vm = new Vue({
         sortType:'',
         order:false,
         time2:'',
+        className: "filteroff",
+        className2: "filteroff",
+
+
       
     },
     methods:{
@@ -129,16 +133,34 @@ let vm = new Vue({
             this.sortType = type;
             this.stars.sort(this.stars1(type));
         },
-        // sortFn(sortRate){
-
-        //     this.sortRate = sortRate; //參數的sortRate就是 vue的sortrate
-            
-        // },
-        // sortTfn( sortDate){
-
+        changeClass(){		
+            var result = vm.className; 
+           
+            console.log(typeof(result))
+            if(result == "filter_on"){
+                console.log('ooo')
+                vm.className= "filteroff";
+    
+               
+            }else{
+                vm.className= "filter_on";
         
-        //     this.sortDate = sortDate //參數的sortRate就是 vue的sortrate
-        // },
+               
+            }			
+        },
+        changeClass_2(){		
+            var result = vm.className2; 
+           
+            console.log(typeof(result))
+            if(result == "filter_on"){
+                console.log('xxx')
+                vm.className2= "filteroff";
+            }else{
+                vm.className2= "filter_on";
+               
+            }			
+        },
+
         currentTime(){
             setInterval(this.getDate,500)
         },
