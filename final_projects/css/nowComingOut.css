@@ -105,3 +105,8 @@ main{
         margin-bottom: 2px;
     }
 }
+@media screen and (max-width:720px){
+    .nowComing-col{
+        margin-bottom: 0px;
+    }
+}
