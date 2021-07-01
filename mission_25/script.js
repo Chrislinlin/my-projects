@@ -12,7 +12,7 @@ const volumnslider = $('#volumnslider');
 const progressContainer = $('#progress-container')
 
 // Song titles
-const songs = ['Leave the door open','愛人錯過','NATSUMONOGATARI'];
+const songs = ['leave_the_door_open','愛人錯過','NATSUMONOGATARI'];
 const songsArtists = ['Bruno Mars','告五人','柚子'];
 //因為是三首歌所以song index為2
 let songIndex = 2;
