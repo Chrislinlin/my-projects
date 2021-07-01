@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+padding: 0;
+}
+
+.container{
+    /* background-image: linear-gradient(0deg, rgba(247,247,247,1)23.8%, rgba(252,221,221,1) 92%); */
+    /* background: url(./images/b_head.jpg) no-repeat center;
+    background-size: cover; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    position: relative;
+    /* z-index: -1; */
+}
+.bg-image{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+
+}
+.bg-image img{
+    width: 100%;
+    height: 100vh;
+    filter: blur(6px);
+    top: 0;
+    left: 0;
+    background: cover;
+}
+.music-container{
+    background-color: rgba(0,0,0, .4);
+    box-shadow: 0 20px 20px 0 rgba(114, 114, 114, 0.6);
+    display: flex;
+    text-align: center;
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 20px 30px;
+
+
+    justify-content: center;
+    align-items: center;
+}
+.music-info{
+    /* background-color: rgba(255, 255, 255, .5); */
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    top: 0;
+    /* left: 20px; */
+    width: 100%;
+    /* padding: 10px 10px 10px 150px; */
+    margin: 20px 0;
+
+}
+.music-container.play .music-info {
+    /* opacity: 1; */
+    /* transform: translateY(-100%); */
+  }
+.music-info h4 {
+    margin: 0;
+    color: #fff;
+ }
+.img-container{
+    width: 220px;
+    display: flex;
+
+}
+#volume-container{
+    width: 100%;
+    height: 15px;
+    display: flex;
+    margin: 10px 0;
+    z-index: 100;
+    position: relative;
+}
+.font-size{
+    font-size: 20px;
+    color: #fff;
+}
+.slider{
+    width: 100%;
+    height: 2px solid !important;
+    border-radius: 10px;
+    position: relative;
+ 
+}
+/* .img-container::after{
+    content: '';
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+} */
+
+.img-container img{
+    border-radius: 50%;
+    height: 220px;
+    width: 100%;
+    background: cover;
+    width: inherit;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused; /*狀態是暫停的*/
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+}
+.music-container.play .img-container img{
+    animation-play-state: running;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.navigation{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.action-btn{
+    outline: none;
+    background: none;
+    border: none;
+    /* background-color: #fff; */
+    border: 0;
+    font-size: 20px;
+    color: #dfdbdf;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    margin: 0 20px;
+}
+.action-btn.action-btn-big{
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+ /*進度條*/
+ .progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .progress {
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+  @media screen and (min-width: 720px){
+      .music-container{
+          flex-direction:row
+      }
+      .music-info{
+          margin: 0 20px;
+      }
+  }
